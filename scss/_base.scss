@@ -58,7 +58,6 @@ body {
 .section_ttl {
     @include rem(32);
     display: block;
-    text-align: center;
 
 
 
@@ -72,7 +71,6 @@ body {
 .section_inner {
     width: 100%;
     max-width: 335px;
-    margin: 0 auto;
 
 
 
