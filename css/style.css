@@ -41,6 +41,7 @@ body {
 
 .container {
   margin: 0 auto;
+  background: #58656e;
 }
 
 /*************
@@ -99,6 +100,18 @@ body {
 header
 
 *****************************************:*/
+.header {
+  width: 100%;
+  line-height: 43px;
+  background: #000;
+}
+
+.header_ttl {
+  font-size: 32px;
+  /*IE9以前に対応する*/
+  font-size: 2rem;
+}
+
 /****************************************:
 
 nav (ハンバーガーメニュー含む)
