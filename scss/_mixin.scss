@@ -1,0 +1,80 @@
+// mixin
+
+
+/*************
+
+メディアクエリ定義
+
+**************/
+
+
+
+/********* モバイルファーストmixin*********************/
+
+//PC(モバイルファースト)
+@mixin XXl {
+    @media screen and (min-width: $width_XXl) {
+        @content;
+    }
+}
+
+//PC(モバイルファースト)
+@mixin Xl {
+    @media screen and (min-width: $width_Xl) and (max-width: $width_XXl) {
+        @content;
+    }
+}
+
+//PC(モバイルファースト)
+@mixin Lg {
+    @media screen and (min-width: $width_Lg) and (max-width: $width_Xl) {
+        @content;
+    }
+}
+
+//タブレット（モバイルファースト）
+@mixin Tab {
+    @media screen and (min-width: $width_Tab) and (max-width: $width_Lg) {
+        @content;
+    }
+}
+
+//モバイル（モバイルファースト）
+@mixin Sm {
+    @media screen and (min-width: $width_Sm) and (max-width: $width_Tab) {
+        @content;
+    }
+}
+
+
+
+
+
+
+
+/*************
+
+font-size定義
+
+**************/
+//$sizeにpx表示を入れて使う
+
+@mixin rem($size) {
+    font-size: $size + px;
+    /*IE9以前に対応する*/
+    font-size: ($size / 16) + rem;
+}
+
+
+/*************
+
+flex定義
+
+**************/
+
+
+@mixin flex($justify: space-between, $wrap: nowrap) {
+    display: flex;
+    justify-content: $justify;
+    flex-wrap: $wrap;
+}
