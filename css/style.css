@@ -67,6 +67,12 @@ body {
   z-index: 999;
 }
 
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .mock {
+    width: 768px;
+  }
+}
+
 .section_ttl {
   font-size: 22px;
   /*IE9以前に対応する*/
@@ -90,6 +96,12 @@ body {
   width: 100%;
   max-width: 335px;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .section_inner {
+    max-width: 688px;
+  }
 }
 
 @media screen and (min-width: 1400px) {
@@ -135,21 +147,173 @@ fv
 concept
 
 *****************************************:*/
+.concept {
+  padding-top: 50px;
+  margin-top: 717px;
+  margin-bottom: 50px;
+  background-color: #58656e;
+}
+
+.concept .section_ttl {
+  text-align: left;
+  margin-left: 51px;
+  letter-spacing: .15em;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .concept .section_ttl {
+    margin-left: 100px;
+    font-size: 35px;
+    /*IE9以前に対応する*/
+    font-size: 2.1875rem;
+  }
+}
+
+.concept_txt {
+  margin: 10px 30px 0;
+  color: #EBF2EA;
+  font-family: はんなり明朝, serif;
+  font-size: 14px;
+  /*IE9以前に対応する*/
+  font-size: 0.875rem;
+  line-height: 40px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .concept_txt {
+    margin: 50px 60px 0;
+    font-size: 25px;
+    /*IE9以前に対応する*/
+    font-size: 1.5625rem;
+    line-height: 2rem;
+  }
+}
+
+.concept_imgBox {
+  overflow: hidden;
+}
+
+.concept_imgBox:nth-child(2) {
+  width: 191px;
+  height: 297px;
+  margin: 57px 0 0 auto;
+  text-align: center;
+}
+
+.concept_imgBox:nth-child(2) img {
+  -webkit-transform: translateY(-6%);
+          transform: translateY(-6%);
+}
+
+.concept_imgBox:nth-child(3) {
+  width: 289px;
+  height: 191px;
+  margin: 30px 0 15px;
+}
+
+.concept_imgBox:nth-child(4) {
+  width: 289px;
+  height: 191px;
+  margin: 15px 0 0;
+}
+
 /****************************************:
 
 info
 
 *****************************************:*/
+.info {
+  padding-bottom: 49px;
+  margin-left: 51px;
+  color: #FFFFFF;
+  background-color: #58656e;
+}
+
+.info .section_ttl {
+  text-align: left;
+  letter-spacing: .12em;
+}
+
+.info_txt {
+  font-size: 14px;
+  /*IE9以前に対応する*/
+  font-size: 0.875rem;
+  line-height: 1.2rem;
+}
+
+.info_txt:nth-child(1) {
+  margin-top: 26px;
+}
+
+.info_txt:nth-child(2), .info_txt:nth-child(4) {
+  margin-bottom: 33px;
+}
+
+.info_txt:nth-child(5), .info_txt:nth-child(6), .info_txt:nth-child(7) {
+  line-height: 1.5rem;
+}
+
 /****************************************:
 
 contact
 
 *****************************************:*/
+.contact {
+  padding: 50px 0;
+  text-align: center;
+  background-color: #bac1c7;
+}
+
+.contact .section_ttl {
+  letter-spacing: .12em;
+  margin-bottom: 18px;
+}
+
+.contact_icon {
+  width: 26px;
+  margin: 0 auto 7px;
+}
+
+.contact_icon_txt {
+  margin-bottom: 30px;
+  font-family: はんなり明朝;
+  font-size: 14px;
+  /*IE9以前に対応する*/
+  font-size: 0.875rem;
+  letter-spacing: 2.8px;
+}
+
+.contact_txt {
+  margin: 0 25px 26px;
+  font-size: 11px;
+  /*IE9以前に対応する*/
+  font-size: 0.6875rem;
+}
+
+.contact_img {
+  width: 375px;
+  height: 191px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.contact_img img {
+  -webkit-transform: translateY(-13%);
+          transform: translateY(-13%);
+}
+
 /****************************************:
 
 menu
 
 *****************************************:*/
+<<<<<<< HEAD
+=======
+.concept {
+  width: 100%;
+}
+
+>>>>>>> 900ea22f4b707d3d5c2ea0bd2966444d5c84e2d5
 .menu {
   padding: 50px 0 22px;
   background-color: #58656e;
@@ -415,3 +579,73 @@ staff
 footer
 
 *****************************************:*/
+.footer {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #bac1c7;
+}
+
+.footer_flex {
+  padding: 50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .footer_flex {
+    padding: 80px 100px;
+  }
+}
+
+.footer_txt {
+  margin-bottom: -15px;
+  font-size: 32px;
+  /*IE9以前に対応する*/
+  font-size: 2rem;
+  letter-spacing: 4.8px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .footer_txt {
+    font-size: 55px;
+    /*IE9以前に対応する*/
+    font-size: 3.4375rem;
+  }
+}
+
+.footer_right {
+  font-size: 10px;
+  /*IE9以前に対応する*/
+  font-size: 0.625rem;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .footer_right {
+    font-size: 15px;
+    /*IE9以前に対応する*/
+    font-size: 0.9375rem;
+  }
+}
+
+.insta {
+  width: 25px;
+  height: 25px;
+  margin-top: 12px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .insta {
+    width: 39px;
+    height: 39px;
+    margin-top: 22px;
+  }
+}
