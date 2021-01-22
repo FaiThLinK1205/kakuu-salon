@@ -23,11 +23,17 @@ concept
 
 
 .concept{
-  margin-top: 806px;
+  margin-top: 767px;
   margin-bottom: 50px;
 
+  .section_ttl{
+    text-align: left;
+    margin-left: 51px;
+    letter-spacing: .15em;
+  }
+
   &_txt{
-    margin: 0 30px;
+    margin: 10px 30px 0;
     color: #EBF2EA;
     font-family: はんなり明朝, serif;
     @include rem(14);
@@ -77,6 +83,12 @@ info
 .info{
   color: #FFFFFF;
 
+  .section_ttl{
+    text-align: left;
+    margin-left: 51px;
+    letter-spacing: .12em;
+  }
+
   &_txt{
     @include rem(14);
 
@@ -107,6 +119,153 @@ contact
 menu
 
 *****************************************:*/
+// .concept {
+//     background-color: red;
+//     width: 100%;
+//     height: 2780px;
+// }
+
+
+.menu {
+    padding: 50px 0 22px;
+    background-color: $cBlack;
+
+    .section_ttl {
+        margin-bottom: 28px;
+    }
+
+    .section_inner {
+        margin: 0 auto;
+        padding: 0 30px;
+    }
+
+
+    &_table {
+        width: 276px;
+        display: block;
+
+
+
+        &.__cut {
+            margin-bottom: 25px;
+        }
+
+        &.__perm {
+            margin-bottom: 24px;
+
+            .menu_table_headspan {
+                display: block;
+                @include rem(15);
+                margin-left: 0;
+            }
+        }
+
+        &.__clr {
+            margin-bottom: 20px;
+
+            .menu_table_headspan {
+                @include rem(15);
+                margin-left: 0;
+            }
+
+        }
+
+        &.__treat {
+            margin-bottom: 27px;
+
+            .menu_table_headspan {
+                text-align: left;
+                display: block;
+                @include rem(15);
+                margin-left: 0;
+            }
+
+        }
+
+        &.__other {
+            margin-bottom: 25px;
+
+            .menu_table_headspan {
+                @include rem(15);
+                margin-left: 0;
+            }
+
+            .menu_table_right.__fz {
+                @include rem(11px)
+            }
+
+        }
+
+
+
+        &_head {
+            @include rem(20);
+            letter-spacing: .001em;
+
+            &_box {
+                width: 274px;
+                text-align: left;
+                margin-bottom: 17px;
+            }
+
+        }
+
+        &_headspan {
+            letter-spacing: .00064em;
+            margin-left: 22px;
+            @include rem(16);
+            line-height: 1;
+        }
+
+        &_box {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            line-height: 1;
+
+            &.__dire {
+                flex-direction: column;
+
+                .menu_table_left {
+                    margin-bottom: 7px;
+                }
+
+                .menu_table_right.__price_treat {
+                    margin-left: 62px;
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+                .menu_table_right.__price_other {
+                    margin-left: 34px;
+                    @include rem(11);
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+
+        }
+
+        &_left {
+            // padding-right: 205px;
+            @include rem(13);
+        }
+
+        &_right {
+            @include rem(13);
+
+            &.__ml {
+                display: block;
+            }
+        }
+
+        &_txt {
+            margin-bottom: 4px;
+            @include rem(12);
+            letter-spacing: 0;
+        }
+    }
+}
 
 
 
