@@ -307,6 +307,12 @@ contact
 menu
 
 *****************************************:*/
+.concept {
+  background-color: red;
+  width: 100%;
+  height: 2761px;
+}
+
 .menu {
   padding: 50px 0 22px;
   background-color: #58656e;
@@ -486,6 +492,68 @@ menu
 access
 
 *****************************************:*/
+.access {
+  padding: 50px 0 51px;
+  background: #bac1c7;
+}
+
+.access_imgbox {
+  background: url(/img/section-access/accecss.jpg) no-repeat;
+  background-size: cover;
+  width: 335px;
+  height: 167px;
+  margin-left: 40px;
+  margin-bottom: 30px;
+}
+
+.access .section_ttl {
+  margin-bottom: 20px;
+  letter-spacing: .19em;
+}
+
+.access_txtbox {
+  font-size: 14px;
+  /*IE9以前に対応する*/
+  font-size: 0.875rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.access_txt {
+  letter-spacing: .27em;
+  line-height: 1.6;
+  margin-bottom: 19px;
+}
+
+.access_icon {
+  text-align: center;
+  display: inline-block;
+}
+
+.access_icontxt {
+  position: relative;
+  display: inline-block;
+  letter-spacing: .1em;
+  margin-left: 30px;
+}
+
+.access_icontxt::before {
+  position: absolute;
+  display: block;
+  content: '';
+  background: url(/img/svg/map.svg) no-repeat;
+  width: 100%;
+  height: 100%;
+  left: -20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.access_txtspa {
+  margin-left: 5px;
+}
+
 /****************************************:
 
 staff
