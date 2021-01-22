@@ -520,32 +520,30 @@ access
 .access_txt {
   letter-spacing: .27em;
   line-height: 1.6;
-  margin-bottom: 19px;
+  margin-bottom: 12px;
 }
 
 .access_icon {
   text-align: center;
   display: inline-block;
+  margin-left: 9px;
 }
 
 .access_icontxt {
-  position: relative;
   display: inline-block;
-  letter-spacing: .1em;
-  margin-left: 30px;
+  letter-spacing: .15em;
+  margin-left: 10px;
 }
 
-.access_icontxt::before {
-  position: absolute;
-  display: block;
+.access_icontxt:before {
+  display: inline-block;
   content: '';
   background: url(/img/svg/map.svg) no-repeat;
-  width: 100%;
-  height: 100%;
-  left: -20px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  width: 15px;
+  height: 21px;
+  margin-right: 5px;
+  -webkit-transform: translateY(6px);
+          transform: translateY(6px);
 }
 
 .access_txtspa {
@@ -557,6 +555,22 @@ access
 staff
 
 *****************************************:*/
+.staff {
+  padding: 50px 0;
+  background: #58656e;
+}
+
+.staff_imgbox {
+  width: 275px;
+  height: 163px;
+  display: block;
+}
+
+.staff_imgbox.__left {
+  background: url(/img/section-staff/staff1.jpg) no-repeat;
+  background-size: cover;
+}
+
 /****************************************:
 
 footer
