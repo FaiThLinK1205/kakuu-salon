@@ -23,13 +23,20 @@ concept
 
 
 .concept{
-  margin-top: 767px;
+  padding-top: 50px;
+  margin-top: 717px;
   margin-bottom: 50px;
+  background-color: $cBlack;
 
   .section_ttl{
     text-align: left;
     margin-left: 51px;
     letter-spacing: .15em;
+
+    @include Tab{
+      margin-left: 100px;
+      @include rem(35);
+    }
   }
 
   &_txt{
@@ -38,6 +45,12 @@ concept
     font-family: はんなり明朝, serif;
     @include rem(14);
     line-height: 40px;
+
+    @include Tab{
+      margin: 50px 60px 0;
+      @include rem(25);
+      line-height: 2rem;
+    }
   }
 
   &_imgBox{
@@ -46,7 +59,7 @@ concept
     &:nth-child(2){
       width: 191px;
       height: 297px;
-      margin: 97px 0 0 auto;
+      margin: 57px 0 0 auto;
       text-align: center;
 
       img{
@@ -81,19 +94,30 @@ info
 
 
 .info{
+  padding-bottom: 49px;
+  margin-left: 51px;
   color: #FFFFFF;
+  background-color: $cBlack;
 
   .section_ttl{
     text-align: left;
-    margin-left: 51px;
     letter-spacing: .12em;
   }
 
   &_txt{
     @include rem(14);
+    line-height: 1.2rem;
+
+    &:nth-child(1){
+      margin-top: 26px;
+    }
 
     &:nth-child(2), &:nth-child(4){
-      margin-bottom: 30px;
+      margin-bottom: 33px;
+    }
+
+    &:nth-child(5),&:nth-child(6),&:nth-child(7){
+      line-height: 1.5rem;
     }
   }
 }
@@ -109,6 +133,45 @@ contact
 *****************************************:*/
 
 
+
+.contact{
+  padding: 50px 0;
+  text-align: center;
+  background-color: $cGray;
+
+  .section_ttl{
+    letter-spacing: .12em;
+    margin-bottom: 18px;
+  }
+
+  &_icon{
+    width: 26px;
+    margin: 0 auto 7px;
+
+    &_txt{
+      margin-bottom: 30px;
+      font-family: はんなり明朝;
+      @include rem(14);
+      letter-spacing: 2.8px;
+    }
+  }
+
+  &_txt{
+    margin: 0 25px 26px;
+    @include rem(11);
+  }
+
+  &_img{
+    width: 375px;
+    height: 191px;
+    margin: 0 auto;
+    overflow: hidden;
+
+    img{
+      transform: translateY(-13%);
+    }
+  }
+}
 
 
 
