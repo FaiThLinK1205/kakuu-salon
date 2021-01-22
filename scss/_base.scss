@@ -7,7 +7,7 @@ body {
 
     margin: 0 auto;
     font-family: $fontMain;
-    color: $cBlack;
+    color: $cWhite;
 
 }
 
@@ -55,8 +55,12 @@ body {
 
 //共通タイトル
 .section_ttl {
-    @include rem(32);
+    @include rem(22);
     display: block;
+    letter-spacing: .0033em;
+    color: $cWhite;
+    line-height: 1.31;
+    text-align: center;
 
 
 
@@ -70,6 +74,8 @@ body {
 .section_inner {
     width: 100%;
     max-width: 335px;
+    margin: 0 auto;
+
 
 
 
