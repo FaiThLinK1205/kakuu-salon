@@ -49,6 +49,11 @@ body {
     pointer-events: none;
 
     z-index: 999;
+
+    
+    @include Tab{
+        width: 768px;
+    }
 }
 
 
@@ -78,6 +83,10 @@ body {
     margin: 0 auto;
 
 
+
+    @include Tab{
+        max-width: 688px;
+    }
 
 
 
