@@ -31,7 +31,7 @@ body {
   font-size: 1rem;
   margin: 0 auto;
   font-family: "Cinzel", "Hannari", "Noto Serif JP", serif;
-  color: #58656e;
+  color: #ffffff;
 }
 
 * {
@@ -68,10 +68,14 @@ body {
 }
 
 .section_ttl {
-  font-size: 32px;
+  font-size: 22px;
   /*IE9以前に対応する*/
-  font-size: 2rem;
+  font-size: 1.375rem;
   display: block;
+  letter-spacing: .0033em;
+  color: #ffffff;
+  line-height: 1.31;
+  text-align: center;
 }
 
 @media screen and (min-width: 1400px) {
@@ -85,6 +89,7 @@ body {
 .section_inner {
   width: 100%;
   max-width: 335px;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 1400px) {
@@ -145,6 +150,180 @@ contact
 menu
 
 *****************************************:*/
+.menu {
+  padding: 50px 0 22px;
+  background-color: #58656e;
+}
+
+.menu .section_ttl {
+  margin-bottom: 28px;
+}
+
+.menu .section_inner {
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.menu_table {
+  width: 276px;
+  display: block;
+}
+
+.menu_table.__cut {
+  margin-bottom: 25px;
+}
+
+.menu_table.__perm {
+  margin-bottom: 24px;
+}
+
+.menu_table.__perm .menu_table_headspan {
+  display: block;
+  font-size: 15px;
+  /*IE9以前に対応する*/
+  font-size: 0.9375rem;
+  margin-left: 0;
+}
+
+.menu_table.__clr {
+  margin-bottom: 20px;
+}
+
+.menu_table.__clr .menu_table_headspan {
+  font-size: 15px;
+  /*IE9以前に対応する*/
+  font-size: 0.9375rem;
+  margin-left: 0;
+}
+
+.menu_table.__treat {
+  margin-bottom: 27px;
+}
+
+.menu_table.__treat .menu_table_headspan {
+  text-align: left;
+  display: block;
+  font-size: 15px;
+  /*IE9以前に対応する*/
+  font-size: 0.9375rem;
+  margin-left: 0;
+}
+
+.menu_table.__other {
+  margin-bottom: 25px;
+}
+
+.menu_table.__other .menu_table_headspan {
+  font-size: 15px;
+  /*IE9以前に対応する*/
+  font-size: 0.9375rem;
+  margin-left: 0;
+}
+
+.menu_table.__other .menu_table_right.__fz {
+  font-size: 11pxpx;
+  /*IE9以前に対応する*/
+  font-size: 0.6875pxrem;
+}
+
+.menu_table_head {
+  font-size: 20px;
+  /*IE9以前に対応する*/
+  font-size: 1.25rem;
+  letter-spacing: .001em;
+}
+
+.menu_table_head_box {
+  width: 274px;
+  text-align: left;
+  margin-bottom: 17px;
+}
+
+.menu_table_headspan {
+  letter-spacing: .00064em;
+  margin-left: 22px;
+  font-size: 16px;
+  /*IE9以前に対応する*/
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.menu_table_box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 15px;
+  line-height: 1;
+}
+
+.menu_table_box.__dire {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.menu_table_box.__dire .menu_table_left {
+  margin-bottom: 7px;
+}
+
+.menu_table_box.__dire .menu_table_right.__price_treat {
+  margin-left: 62px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.menu_table_box.__dire .menu_table_right.__price_other {
+  margin-left: 34px;
+  font-size: 11px;
+  /*IE9以前に対応する*/
+  font-size: 0.6875rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.menu_table_left {
+  font-size: 13px;
+  /*IE9以前に対応する*/
+  font-size: 0.8125rem;
+}
+
+.menu_table_right {
+  font-size: 13px;
+  /*IE9以前に対応する*/
+  font-size: 0.8125rem;
+}
+
+.menu_table_right.__ml {
+  display: block;
+}
+
+.menu_table_txt {
+  margin-bottom: 4px;
+  font-size: 12px;
+  /*IE9以前に対応する*/
+  font-size: 0.75rem;
+  letter-spacing: 0;
+}
+
 /****************************************:
 
 access
