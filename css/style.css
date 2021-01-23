@@ -623,7 +623,7 @@ concept
   padding-top: 50px;
   margin-bottom: 50px;
   background-color: #58656e;
-  margin-top: 661px;
+  margin-top: 81px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -770,28 +770,28 @@ concept
   }
 }
 
-.concept:nth-child(5) {
+.concept_imgBox:nth-child(5) {
   width: 289px;
   height: 191px;
   margin: 15px 0 0;
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  .concept:nth-child(5) {
+  .concept_imgBox:nth-child(5) {
     width: 628px;
     height: 366px;
   }
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
-  .concept:nth-child(5) {
+  .concept_imgBox:nth-child(5) {
     width: 475px;
     height: 300px;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  .concept:nth-child(5) img {
+  .concept_imgBox:nth-child(5) img {
     -webkit-transform: translateY(-4%);
             transform: translateY(-4%);
   }
@@ -870,38 +870,38 @@ info
   }
 }
 
-.info:nth-child(2) {
+.info_txt:nth-child(2) {
   margin-top: 26px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  .info:nth-child(2) {
+  .info_txt:nth-child(2) {
     margin-top: 50px;
   }
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
-  .info:nth-child(2) {
+  .info_txt:nth-child(2) {
     margin-top: 35px;
   }
 }
 
-.info:nth-child(3), .info:nth-child(5) {
+.info_txt:nth-child(3), .info_txt:nth-child(5) {
   margin-bottom: 33px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  .info:nth-child(3), .info:nth-child(5) {
+  .info_txt:nth-child(3), .info_txt:nth-child(5) {
     margin-bottom: 50px;
   }
 }
 
-.info:nth-child(6), .info:nth-child(7), .info:nth-child(8) {
+.info_txt:nth-child(6), .info_txt:nth-child(7), .info_txt:nth-child(8) {
   line-height: 1.5rem;
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  .info:nth-child(6), .info:nth-child(7), .info:nth-child(8) {
+  .info_txt:nth-child(6), .info_txt:nth-child(7), .info_txt:nth-child(8) {
     line-height: 2.4rem;
   }
 }
