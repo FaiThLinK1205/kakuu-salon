@@ -36,6 +36,11 @@ concept
     margin-bottom: 86px;
   }
 
+  @include Xl{
+    padding-top: 150px;
+    margin-bottom: 86px;
+  }
+
   .section_ttl{
     text-align: left;
     margin-left: 30px;
