@@ -84,6 +84,16 @@ body {
   text-align: center;
 }
 
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .section_ttl {
+    font-size: 35px;
+    /*IE9以前に対応する*/
+    font-size: 2.1875rem;
+    line-height: 1.34;
+    letter-spacing: .16em;
+  }
+}
+
 @media screen and (min-width: 1400px) {
   .section_ttl {
     font-size: 80px;
@@ -458,17 +468,25 @@ contact
 menu
 
 *****************************************:*/
-.concept {
-  width: 100%;
-}
-
 .menu {
   padding: 50px 0 22px;
   background-color: #58656e;
 }
 
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .menu {
+    padding: 110px 0 50px;
+  }
+}
+
 .menu .section_ttl {
   margin-bottom: 28px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .menu .section_ttl {
+    margin-bottom: 60px;
+  }
 }
 
 .menu .section_inner {
@@ -479,14 +497,33 @@ menu
 .menu_table {
   width: 276px;
   display: block;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .menu_table {
+    width: 90%;
+  }
 }
 
 .menu_table.__cut {
   margin-bottom: 25px;
 }
 
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .menu_table.__cut {
+    margin-bottom: 77px;
+  }
+}
+
 .menu_table.__perm {
   margin-bottom: 24px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .menu_table.__perm {
+    margin-bottom: 70px;
+  }
 }
 
 .menu_table.__perm .menu_table_headspan {
@@ -497,8 +534,23 @@ menu
   margin-left: 0;
 }
 
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .menu_table.__perm .menu_table_headspan {
+    font-size: 20px;
+    /*IE9以前に対応する*/
+    font-size: 1.25rem;
+    margin-bottom: 32px;
+  }
+}
+
 .menu_table.__clr {
   margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .menu_table.__clr {
+    margin-bottom: 85px;
+  }
 }
 
 .menu_table.__clr .menu_table_headspan {
@@ -510,6 +562,12 @@ menu
 
 .menu_table.__treat {
   margin-bottom: 27px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .menu_table.__treat {
+    margin-bottom: 72px;
+  }
 }
 
 .menu_table.__treat .menu_table_headspan {
@@ -538,6 +596,16 @@ menu
   font-size: 0.6875pxrem;
 }
 
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .menu_table.__other .menu_table_box.__dire {
+    -webkit-box-orient: initial;
+    -webkit-box-direction: initial;
+    -webkit-flex-direction: initial;
+        -ms-flex-direction: initial;
+            flex-direction: initial;
+  }
+}
+
 .menu_table_head {
   font-size: 20px;
   /*IE9以前に対応する*/
@@ -545,10 +613,25 @@ menu
   letter-spacing: .001em;
 }
 
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .menu_table_head {
+    font-size: 25px;
+    /*IE9以前に対応する*/
+    font-size: 1.5625rem;
+  }
+}
+
 .menu_table_head_box {
   width: 274px;
   text-align: left;
   margin-bottom: 17px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .menu_table_head_box {
+    width: 100%;
+    margin-bottom: 23px;
+  }
 }
 
 .menu_table_headspan {
@@ -558,6 +641,14 @@ menu
   /*IE9以前に対応する*/
   font-size: 1rem;
   line-height: 1;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .menu_table_headspan {
+    font-size: 20px;
+    /*IE9以前に対応する*/
+    font-size: 1.25rem;
+  }
 }
 
 .menu_table_box {
@@ -571,6 +662,12 @@ menu
           justify-content: space-between;
   margin-bottom: 15px;
   line-height: 1;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .menu_table_box {
+    margin-bottom: 27px;
+  }
 }
 
 .menu_table_box.__dire {
@@ -597,6 +694,18 @@ menu
           justify-content: space-between;
 }
 
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .menu_table_box.__dire .menu_table_right.__price_treat {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .menu_table_box.__dire .menu_table_right.__price_treat span {
+    margin-left: 25px;
+  }
+}
+
 .menu_table_box.__dire .menu_table_right.__price_other {
   margin-left: 34px;
   font-size: 11px;
@@ -612,16 +721,44 @@ menu
           justify-content: space-between;
 }
 
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .menu_table_box.__dire .menu_table_right.__price_other {
+    font-size: 20px;
+    /*IE9以前に対応する*/
+    font-size: 1.25rem;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
 .menu_table_left {
   font-size: 13px;
   /*IE9以前に対応する*/
   font-size: 0.8125rem;
 }
 
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .menu_table_left {
+    font-size: 20px;
+    /*IE9以前に対応する*/
+    font-size: 1.25rem;
+  }
+}
+
 .menu_table_right {
   font-size: 13px;
   /*IE9以前に対応する*/
   font-size: 0.8125rem;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .menu_table_right {
+    font-size: 20px;
+    /*IE9以前に対応する*/
+    font-size: 1.25rem;
+  }
 }
 
 .menu_table_right.__ml {
@@ -634,6 +771,14 @@ menu
   /*IE9以前に対応する*/
   font-size: 0.75rem;
   letter-spacing: 0;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .menu_table_txt {
+    font-size: 18px;
+    /*IE9以前に対応する*/
+    font-size: 1.125rem;
+  }
 }
 
 /****************************************:
