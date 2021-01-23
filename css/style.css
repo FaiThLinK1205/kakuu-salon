@@ -73,6 +73,12 @@ body {
   }
 }
 
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .mock {
+    width: 1200px;
+  }
+}
+
 .section_ttl {
   font-size: 22px;
   /*IE9以前に対応する*/
