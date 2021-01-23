@@ -5,11 +5,156 @@
 
 /****************************************:
 
-fv
+fv/スライダー
 
 *****************************************:*/
 
 
+.swiper-slide {
+  width: 100%;
+  overflow: hidden;
+  padding-left: 5%;
+
+}
+
+.fv_img {
+  height: 578px;
+  object-fit: cover;
+
+
+  @include Tab {
+    height: 910px;
+  }
+
+  @include Xl {
+    height: 538px;
+  }
+}
+
+
+.fv {
+
+  &_scroll {
+    display: inline-block;
+    position: absolute;
+    left: 14px;
+    bottom: 24px;
+    z-index: 2;
+    padding: 10px 10px 110px;
+    overflow: hidden;
+    color: white;
+    @include rem(15);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    writing-mode: vertical-lr;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 2px;
+      height: 107px;
+      background: rgba(255, 255, 255, .4);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 2px;
+      height: 107px;
+      background: #fff;
+      animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+    }
+  }
+}
+
+@include Tab {
+  .fv {
+
+    &_scroll {
+      display: inline-block;
+      position: absolute;
+      left: 42px;
+      bottom: -18px;
+      z-index: 2;
+      padding: 10px 10px 280px;
+      overflow: hidden;
+      color: white;
+      @include rem(22);
+      font-weight: bold;
+      text-transform: uppercase;
+      text-decoration: none;
+      writing-mode: vertical-lr;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 117px;
+        left: 50%;
+        width: 2px;
+        height: 215px;
+        background: rgba(255, 255, 255, .4);
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 117px;
+        left: 50%;
+        width: 2px;
+        height: 215px;
+        background: #fff;
+        animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+      }
+    }
+  }
+}
+
+@include Xl {
+  .fv {
+
+    &_scroll {
+      display: inline-block;
+      position: absolute;
+      left: 65px;
+      bottom: 0px;
+      z-index: 2;
+      padding: 10px 10px 150px;
+      overflow: hidden;
+      color: white;
+      @include rem(14);
+      font-weight: bold;
+      text-transform: uppercase;
+      text-decoration: none;
+      writing-mode: vertical-lr;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 79px;
+        left: 50%;
+        width: 2px;
+        height: 125px;
+        background: rgba(255, 255, 255, .4);
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 79px;
+        left: 50%;
+        width: 2px;
+        height: 125px;
+        background: #fff;
+        animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+      }
+    }
+  }
+}
 
 
 
@@ -22,31 +167,31 @@ concept
 *****************************************:*/
 
 
-.concept{
+.concept {
   padding-top: 50px;
   margin-bottom: 50px;
   background-color: $cBlack;
-  
+
   // TO DO あとで消す---
   margin-top: 661px;
   // -------
 
-  @include Tab{
+  @include Tab {
     padding-top: 80px;
     margin-bottom: 86px;
   }
 
-  @include Xl{
+  @include Xl {
     padding-top: 150px;
     margin-bottom: 86px;
   }
 
-  .section_ttl{
+  .section_ttl {
     text-align: left;
     margin-left: 30px;
     letter-spacing: .15em;
 
-    @include Tab{
+    @include Tab {
       margin-left: 60px;
       @include rem(35);
     }
@@ -57,14 +202,14 @@ concept
     }
   }
 
-  &_txt{
+  &_txt {
     margin: 10px 30px 0;
     color: $cWhite_2;
     font-family: はんなり明朝, serif;
     @include rem(14);
     line-height: 40px;
 
-    @include Tab{
+    @include Tab {
       margin: 48px 60px 0;
       @include rem(25);
       line-height: 3rem;
@@ -78,16 +223,16 @@ concept
     }
   }
 
-  &_imgBox{
+  &_imgBox {
     overflow: hidden;
-    
-    &:nth-child(3){
+
+    &:nth-child(3) {
       width: 191px;
       height: 297px;
       margin: 57px 0 0 auto;
       text-align: center;
 
-      @include Tab{
+      @include Tab {
         width: 390px;
         height: 586px;
         margin: 69px 0 0 auto;
@@ -99,10 +244,10 @@ concept
         margin: -183px 0 0 auto;
       }
 
-      img{
+      img {
         transform: translateY(-6%);
 
-        @include Tab{
+        @include Tab {
           transform: translateY(-8%);
         }
 
@@ -112,12 +257,12 @@ concept
       }
     }
 
-    &:nth-child(4){
+    &:nth-child(4) {
       width: 289px;
       height: 191px;
       margin: 30px 0 15px;
 
-      @include Tab{
+      @include Tab {
         width: 628px;
         height: 350px;
         margin: 80px 0 26px;
@@ -129,38 +274,36 @@ concept
         margin: -368px 0 33px;
       }
 
-      img{
+      img {
 
-        @include Tab{
+        @include Tab {
           transform: translateY(-4%);
         }
       }
     }
+  }
 
-    &:nth-child(5){
-      width: 289px;
-      height: 191px;
-      margin: 15px 0 0;
+  &:nth-child(5) {
+    width: 289px;
+    height: 191px;
+    margin: 15px 0 0;
 
+    @include Tab {
+      width: 628px;
+      height: 366px;
+    }
+
+    @include Xl{
+      width: 475px;
+      height: 300px;
+    }
+
+    img {
       @include Tab{
-        width: 628px;
-        height: 366px;
+        transform: translateY(-4%);
       }
 
       @include Xl{
-        width: 475px;
-        height: 300px;
-      }
-
-      img{
-
-        @include Tab{
-          transform: translateY(-4%);
-        }
-
-        @include Xl{
-          transform: translateY(-4%);
-        }
       }
     }
   }
@@ -179,10 +322,10 @@ info
 
 
 .info {
-    padding-bottom: 49px;
-    margin-left: 51px;
-    color: #FFFFFF;
-    background-color: $cBlack;
+  padding-bottom: 49px;
+  margin-left: 51px;
+  color: #FFFFFF;
+  background-color: $cBlack;
 
   @include Tab{
     padding-bottom: 80px;
@@ -221,6 +364,8 @@ info
       @include rem(19);
       line-height: 2rem;
     }
+  }
+
 
     &:nth-child(2){
       margin-top: 26px;
@@ -250,7 +395,6 @@ info
       }
     }
   }
-}
 
 
 
@@ -393,241 +537,241 @@ menu
 
 
 .menu {
-    padding: 50px 0 22px;
-    background-color: $cBlack;
+  padding: 50px 0 22px;
+  background-color: $cBlack;
+
+  @include Tab {
+    padding: 110px 0 50px;
+  }
+
+  .section_ttl {
+    margin-bottom: 28px;
 
     @include Tab {
-        padding: 110px 0 50px;
+      margin-bottom: 60px;
+    }
+  }
+
+  .section_inner {
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+
+
+  &_table {
+    width: 276px;
+    display: block;
+    margin: 0 auto;
+
+    @include Tab {
+      width: 90%;
     }
 
-    .section_ttl {
-        margin-bottom: 28px;
 
-        @include Tab {
-            margin-bottom: 60px;
-        }
+
+    &.__cut {
+      margin-bottom: 25px;
+
+      @include Tab {
+        margin-bottom: 77px;
+      }
     }
 
-    .section_inner {
-        margin: 0 auto;
-        padding: 0 30px;
-    }
+    &.__perm {
+      margin-bottom: 24px;
 
+      @include Tab {
+        margin-bottom: 70px;
+      }
 
-    &_table {
-        width: 276px;
+      .menu_table_headspan {
         display: block;
-        margin: 0 auto;
+        @include rem(15);
+        margin-left: 0;
+
 
         @include Tab {
-            width: 90%;
+          @include rem(20);
+          margin-bottom: 32px;
         }
-
-
-
-        &.__cut {
-            margin-bottom: 25px;
-
-            @include Tab {
-                margin-bottom: 77px;
-            }
-        }
-
-        &.__perm {
-            margin-bottom: 24px;
-
-            @include Tab {
-                margin-bottom: 70px;
-            }
-
-            .menu_table_headspan {
-                display: block;
-                @include rem(15);
-                margin-left: 0;
-
-
-                @include Tab {
-                    @include rem(20);
-                    margin-bottom: 32px;
-                }
-            }
-        }
-
-        &.__clr {
-            margin-bottom: 20px;
-
-            @include Tab {
-                margin-bottom: 85px;
-            }
-
-            .menu_table_headspan {
-                @include rem(15);
-                margin-left: 0;
-            }
-
-        }
-
-        &.__treat {
-            margin-bottom: 27px;
-
-            @include Tab {
-                margin-bottom: 72px;
-            }
-
-            .menu_table_headspan {
-                text-align: left;
-                display: block;
-                @include rem(15);
-                margin-left: 0;
-            }
-
-        }
-
-        &.__other {
-            margin-bottom: 25px;
-
-            .menu_table_headspan {
-                @include rem(15);
-                margin-left: 0;
-            }
-
-            .menu_table_right.__fz {
-                @include rem(11px);
-
-
-            }
-
-
-            @include Tab {
-                .menu_table_box.__dire {
-                    flex-direction: initial;
-                }
-            }
-
-        }
-
-
-
-        &_head {
-            @include rem(20);
-            letter-spacing: .001em;
-
-
-            @include Tab {
-                @include rem(25);
-            }
-
-            &_box {
-                width: 274px;
-                text-align: left;
-                margin-bottom: 17px;
-
-                @include Tab {
-                    width: 100%;
-                    margin-bottom: 23px;
-                }
-            }
-
-        }
-
-        &_headspan {
-            letter-spacing: .00064em;
-            margin-left: 22px;
-            @include rem(16);
-            line-height: 1;
-
-            @include Tab {
-                @include rem(20);
-            }
-        }
-
-        &_box {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 15px;
-            line-height: 1;
-
-
-            @include Tab {
-                margin-bottom: 27px;
-            }
-
-            &.__dire {
-                flex-direction: column;
-
-                .menu_table_left {
-                    margin-bottom: 7px;
-                }
-
-                .menu_table_right.__price_treat {
-                    margin-left: 62px;
-                    display: flex;
-                    justify-content: space-between;
-
-
-                    @include Tab {
-                        justify-content: flex-end;
-
-
-                        span {
-                            margin-left: 25px;
-                        }
-                    }
-                }
-
-                .menu_table_right.__price_other {
-                    margin-left: 34px;
-                    @include rem(11);
-                    display: flex;
-                    justify-content: space-between;
-
-
-                    @include Tab {
-                        @include rem(20);
-                        justify-content: flex-end;
-                    }
-                }
-
-
-
-
-
-            }
-
-        }
-
-        &_left {
-            @include rem(13);
-
-            @include Tab {
-                @include rem(20);
-            }
-        }
-
-        &_right {
-            @include rem(13);
-
-            @include Tab {
-                @include rem(20);
-            }
-
-
-            &.__ml {
-                display: block;
-            }
-        }
-
-        &_txt {
-            margin-bottom: 4px;
-            @include rem(12);
-            letter-spacing: 0;
-
-
-            @include Tab {
-                @include rem(18);
-            }
-        }
+      }
     }
+
+    &.__clr {
+      margin-bottom: 20px;
+
+      @include Tab {
+        margin-bottom: 85px;
+      }
+
+      .menu_table_headspan {
+        @include rem(15);
+        margin-left: 0;
+      }
+
+    }
+
+    &.__treat {
+      margin-bottom: 27px;
+
+      @include Tab {
+        margin-bottom: 72px;
+      }
+
+      .menu_table_headspan {
+        text-align: left;
+        display: block;
+        @include rem(15);
+        margin-left: 0;
+      }
+
+    }
+
+    &.__other {
+      margin-bottom: 25px;
+
+      .menu_table_headspan {
+        @include rem(15);
+        margin-left: 0;
+      }
+
+      .menu_table_right.__fz {
+        @include rem(11px);
+
+
+      }
+
+
+      @include Tab {
+        .menu_table_box.__dire {
+          flex-direction: initial;
+        }
+      }
+
+    }
+
+
+
+    &_head {
+      @include rem(20);
+      letter-spacing: .001em;
+
+
+      @include Tab {
+        @include rem(25);
+      }
+
+      &_box {
+        width: 274px;
+        text-align: left;
+        margin-bottom: 17px;
+
+        @include Tab {
+          width: 100%;
+          margin-bottom: 23px;
+        }
+      }
+
+    }
+
+    &_headspan {
+      letter-spacing: .00064em;
+      margin-left: 22px;
+      @include rem(16);
+      line-height: 1;
+
+      @include Tab {
+        @include rem(20);
+      }
+    }
+
+    &_box {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      line-height: 1;
+
+
+      @include Tab {
+        margin-bottom: 27px;
+      }
+
+      &.__dire {
+        flex-direction: column;
+
+        .menu_table_left {
+          margin-bottom: 7px;
+        }
+
+        .menu_table_right.__price_treat {
+          margin-left: 62px;
+          display: flex;
+          justify-content: space-between;
+
+
+          @include Tab {
+            justify-content: flex-end;
+
+
+            span {
+              margin-left: 25px;
+            }
+          }
+        }
+
+        .menu_table_right.__price_other {
+          margin-left: 34px;
+          @include rem(11);
+          display: flex;
+          justify-content: space-between;
+
+
+          @include Tab {
+            @include rem(20);
+            justify-content: flex-end;
+          }
+        }
+
+
+
+
+
+      }
+
+    }
+
+    &_left {
+      @include rem(13);
+
+      @include Tab {
+        @include rem(20);
+      }
+    }
+
+    &_right {
+      @include rem(13);
+
+      @include Tab {
+        @include rem(20);
+      }
+
+
+      &.__ml {
+        display: block;
+      }
+    }
+
+    &_txt {
+      margin-bottom: 4px;
+      @include rem(12);
+      letter-spacing: 0;
+
+
+      @include Tab {
+        @include rem(18);
+      }
+    }
+  }
 }
 
 
@@ -695,10 +839,11 @@ access
             transform: translateY(6px);
         }
     }
+  
 
-    &_txtspa {
-        margin-left: 5px;
-    }
+  &_txtspa {
+    margin-left: 5px;
+  }
 }
 
 
@@ -758,8 +903,9 @@ staff
         @include rem(15);
     }
 
-    &_txt_en {
-        @include rem(12);
 
-    }
+  &_txt_en {
+    @include rem(12);
+
+  }
 }

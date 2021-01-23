@@ -20,6 +20,7 @@
   <meta name='keywords' content=''>
   <link rel="icon" type="image/x-icon" href="">
   <link rel="apple-touch-icon" sizes="180×180" href="">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/aos.css">
@@ -42,51 +43,75 @@
     <header class="header">
       <h1 class="header_ttl">
         <a href="index.html">
-          <img src="" alt="">
           SALON
         </a>
       </h1><!-- /.header_ttl -->
 
       <!-- ハンバーガーメニュー部分 -->
-      <div class="nav_ham">
-
+      <div class="ham_nav" id="js-nav_toggle">
+        <span></span>
+        <span></span>
       </div><!-- ハンバーガーメニューここまで -->
 
 
       <!-- ナビ -->
-      <nav class="nav" id="nav">
-        <ul class="nav_list">
-          <li class="nav_item">
-            <a href="#" class="nav_link"></a>
-          </li>
-          <!-- /.nav_item -->
-          <li class="nav_item">
-            <a href="#" class="nav_link"></a>
-          </li>
-          <!-- /.nav_item -->
-          <li class="nav_item">
-            <a href="#" class="nav_link"></a>
-          </li>
-          <!-- /.nav_item -->
-          <li class="nav_item">
-            <a href="#" class="nav_link"></a>
-          </li>
-          <!-- /.nav_item -->
-          <li class="nav_item">
-            <a href="#" class="nav_link"></a>
-          </li>
-          <!-- /.nav_item -->
-          <li class="nav_item">
-            <a href="#" class="nav_link"></a>
-          </li>
-          <!-- /.nav_item -->
-        </ul>
-      </nav>
+      <div id="js-global_nav" class="global_nav">
+        <div class="global_nav_circle">
+          <nav class="nav" id="nav">
+            <ul class="nav_list">
+              <li class="nav_item">
+                <a href="#" class="nav_link">CONCEPT</a>
+              </li>
+              <!-- /.nav_item -->
+              <li class="nav_item">
+                <a href="#" class="nav_link">INFORMATION</a>
+              </li>
+              <!-- /.nav_item -->
+              <li class="nav_item">
+                <a href="#" class="nav_link">CONTACT</a>
+              </li>
+              <!-- /.nav_item -->
+              <li class="nav_item">
+                <a href="#" class="nav_link">MENU</a>
+              </li>
+              <!-- /.nav_item -->
+              <li class="nav_item">
+                <a href="#" class="nav_link">ACCESS</a>
+              </li>
+              <!-- /.nav_item -->
+              <li class="nav_item">
+                <a href="#" class="nav_link">STAFF</a>
+              </li>
+              <!-- /.nav_item -->
+            </ul>
+          </nav>
+        </div>
+      </div>
       <!-- /.nav -->
     </header>
 
-    <div class="fv">
-
+    <div class="swiper-container fv">
+      <div class="swiper-wrapper fv_box">
+        <div class="swiper-slide">
+          <img src="img/top/fv-1_sp.jpg" alt="fv画像" class="fv_img">
+        </div>
+        <div class="swiper-slide">
+          <img src="img/top/fv-2_sp.jpg" alt="fv画像" class="fv_img">
+        </div>
+        <div class="swiper-slide">
+          <img src="img/top/fv-3_sp.jpg" alt="fv画像" class="fv_img">
+        </div>
+        <div class="swiper-slide">
+          <img src="img/top/fv-1_pc.jpg" alt="fv画像" class="fv_img">
+        </div>
+        <div class="swiper-slide">
+          <img src="img/top/fv-2_pc.jpg" alt="fv画像" class="fv_img">
+        </div>
+        <div class="swiper-slide">
+          <img src="img/top/fv-3_pc.jpg" alt="fv画像" class="fv_img">
+        </div>
+      </div>
+      <a href="#" class="fv_scroll">Scroll</a>
     </div><!-- /.fv -->
 
 
@@ -371,7 +396,6 @@
           <!-- treatmentここまで -->
 
 
-          </table>
         </div>
       </section>
 
@@ -453,6 +477,7 @@
   </div><!-- /.container -->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/aos.js"></script>
   <script src="js/main.js"></script>
 </body>
