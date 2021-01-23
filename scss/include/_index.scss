@@ -295,19 +295,27 @@ contact
 menu
 
 *****************************************:*/
-.concept {
-    // background-color: red;
-    width: 100%;
-    // height: 2761px;
-}
+// .concept {
+//     background-color: red;
+//     width: 100%;
+//     height: 2890px;
+// }
 
 
 .menu {
     padding: 50px 0 22px;
     background-color: $cBlack;
 
+    @include Tab {
+        padding: 110px 0 50px;
+    }
+
     .section_ttl {
         margin-bottom: 28px;
+
+        @include Tab {
+            margin-bottom: 60px;
+        }
     }
 
     .section_inner {
@@ -319,25 +327,48 @@ menu
     &_table {
         width: 276px;
         display: block;
+        margin: 0 auto;
+
+        @include Tab {
+            width: 90%;
+        }
 
 
 
         &.__cut {
             margin-bottom: 25px;
+
+            @include Tab {
+                margin-bottom: 77px;
+            }
         }
 
         &.__perm {
             margin-bottom: 24px;
 
+            @include Tab {
+                margin-bottom: 70px;
+            }
+
             .menu_table_headspan {
                 display: block;
                 @include rem(15);
                 margin-left: 0;
+
+
+                @include Tab {
+                    @include rem(20);
+                    margin-bottom: 32px;
+                }
             }
         }
 
         &.__clr {
             margin-bottom: 20px;
+
+            @include Tab {
+                margin-bottom: 85px;
+            }
 
             .menu_table_headspan {
                 @include rem(15);
@@ -348,6 +379,10 @@ menu
 
         &.__treat {
             margin-bottom: 27px;
+
+            @include Tab {
+                margin-bottom: 72px;
+            }
 
             .menu_table_headspan {
                 text-align: left;
@@ -367,7 +402,16 @@ menu
             }
 
             .menu_table_right.__fz {
-                @include rem(11px)
+                @include rem(11px);
+
+
+            }
+
+
+            @include Tab {
+                .menu_table_box.__dire {
+                    flex-direction: initial;
+                }
             }
 
         }
@@ -378,10 +422,20 @@ menu
             @include rem(20);
             letter-spacing: .001em;
 
+
+            @include Tab {
+                @include rem(25);
+            }
+
             &_box {
                 width: 274px;
                 text-align: left;
                 margin-bottom: 17px;
+
+                @include Tab {
+                    width: 100%;
+                    margin-bottom: 23px;
+                }
             }
 
         }
@@ -391,6 +445,10 @@ menu
             margin-left: 22px;
             @include rem(16);
             line-height: 1;
+
+            @include Tab {
+                @include rem(20);
+            }
         }
 
         &_box {
@@ -398,6 +456,11 @@ menu
             justify-content: space-between;
             margin-bottom: 15px;
             line-height: 1;
+
+
+            @include Tab {
+                margin-bottom: 27px;
+            }
 
             &.__dire {
                 flex-direction: column;
@@ -410,6 +473,16 @@ menu
                     margin-left: 62px;
                     display: flex;
                     justify-content: space-between;
+
+
+                    @include Tab {
+                        justify-content: flex-end;
+
+
+                        span {
+                            margin-left: 25px;
+                        }
+                    }
                 }
 
                 .menu_table_right.__price_other {
@@ -417,18 +490,37 @@ menu
                     @include rem(11);
                     display: flex;
                     justify-content: space-between;
+
+
+                    @include Tab {
+                        @include rem(20);
+                        justify-content: flex-end;
+                    }
                 }
+
+
+
+
+
             }
 
         }
 
         &_left {
-            // padding-right: 205px;
             @include rem(13);
+
+            @include Tab {
+                @include rem(20);
+            }
         }
 
         &_right {
             @include rem(13);
+
+            @include Tab {
+                @include rem(20);
+            }
+
 
             &.__ml {
                 display: block;
@@ -439,6 +531,11 @@ menu
             margin-bottom: 4px;
             @include rem(12);
             letter-spacing: 0;
+
+
+            @include Tab {
+                @include rem(18);
+            }
         }
     }
 }
