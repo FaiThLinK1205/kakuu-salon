@@ -19,6 +19,10 @@ fv/スライダー
     height: 910px;
   }
 
+  @include XXl {
+    height: 887px;
+  }
+
 }
 
 .fv {

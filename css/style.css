@@ -32,6 +32,10 @@ body {
   margin: 0 auto;
   font-family: "Cinzel", "Hannari", "Noto Serif JP", serif;
   color: #ffffff;
+  -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+          text-size-adjust: 100%;
 }
 
 * {
@@ -180,6 +184,12 @@ nav (ハンバーガーメニュー含む)
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .ham_nav {
+    display: none;
+  }
+}
+
 .ham_nav span {
   position: absolute;
   left: 0;
@@ -246,37 +256,6 @@ nav (ハンバーガーメニュー含む)
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  .global_nav ul {
-    padding-top: 150px;
-    padding-bottom: 150px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 992px) {
-  .global_nav li {
-    height: calc(100vh/7);
-  }
-  .global_nav li:nth-child(1) {
-    margin-right: 95px;
-  }
-  .global_nav li:nth-child(2) {
-    margin-right: 100px;
-  }
-  .global_nav li:nth-child(3) {
-    padding-right: 280px;
-  }
-  .global_nav li:nth-child(4) {
-    padding-right: 400px;
-  }
-  .global_nav li:nth-child(5) {
-    padding-right: 280px;
-  }
-  .global_nav li:nth-child(6) {
-    padding-right: 180px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 992px) {
   .global_nav_circle {
     background: url(../img/top/maru.png) no-repeat;
     background-position: -25% 50%;
@@ -293,51 +272,126 @@ nav (ハンバーガーメニュー含む)
   opacity: 1;
 }
 
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .open .global_nav ul {
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+}
+
 .open .global_nav li {
   opacity: 0;
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
 
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .open .global_nav li {
+    height: calc(100vh/7);
+  }
+}
+
 .open .global_nav li:nth-child(1) {
-  -webkit-animation: example 0.3s ease 0.3s 1 forwards;
-          animation: example 0.3s ease 0.3s 1 forwards;
+  -webkit-animation: fade 0.3s ease 0.3s 1 forwards;
+          animation: fade 0.3s ease 0.3s 1 forwards;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .open .global_nav li:nth-child(1) {
+    margin-right: 95px;
+  }
 }
 
 .open .global_nav li:nth-child(2) {
-  -webkit-animation: example 0.4s ease 0.4s 1 forwards;
-          animation: example 0.4s ease 0.4s 1 forwards;
+  -webkit-animation: fade 0.4s ease 0.4s 1 forwards;
+          animation: fade 0.4s ease 0.4s 1 forwards;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .open .global_nav li:nth-child(2) {
+    margin-right: 100px;
+  }
 }
 
 .open .global_nav li:nth-child(3) {
-  -webkit-animation: example 0.5s ease 0.5s 1 forwards;
-          animation: example 0.5s ease 0.5s 1 forwards;
+  -webkit-animation: fade 0.5s ease 0.5s 1 forwards;
+          animation: fade 0.5s ease 0.5s 1 forwards;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .open .global_nav li:nth-child(3) {
+    padding-right: 280px;
+  }
 }
 
 .open .global_nav li:nth-child(4) {
-  -webkit-animation: example 0.6s ease 0.6s 1 forwards;
-          animation: example 0.6s ease 0.6s 1 forwards;
+  -webkit-animation: fade 0.6s ease 0.6s 1 forwards;
+          animation: fade 0.6s ease 0.6s 1 forwards;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .open .global_nav li:nth-child(4) {
+    padding-right: 400px;
+  }
 }
 
 .open .global_nav li:nth-child(5) {
-  -webkit-animation: example 0.7s ease 0.7s 1 forwards;
-          animation: example 0.7s ease 0.7s 1 forwards;
+  -webkit-animation: fade 0.7s ease 0.7s 1 forwards;
+          animation: fade 0.7s ease 0.7s 1 forwards;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .open .global_nav li:nth-child(5) {
+    padding-right: 280px;
+  }
 }
 
 .open .global_nav li:nth-child(6) {
-  -webkit-animation: example 0.8s ease 0.8s 1 forwards;
-          animation: example 0.8s ease 0.8s 1 forwards;
+  -webkit-animation: fade 0.8s ease 0.8s 1 forwards;
+          animation: fade 0.8s ease 0.8s 1 forwards;
 }
 
-@-webkit-keyframes example {
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .open .global_nav li:nth-child(6) {
+    padding-right: 180px;
+  }
+}
+
+@-webkit-keyframes fade {
   100% {
     opacity: 1;
   }
 }
 
-@keyframes example {
+@keyframes fade {
   100% {
     opacity: 1;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .global_nav {
+    visibility: visible;
+    opacity: 1;
+    background-color: transparent;
+    color: #ffffff;
+    -webkit-transition: none;
+    transition: none;
+    position: static;
+    padding: 0;
+  }
+  .nav_list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
   }
 }
 
@@ -360,6 +414,12 @@ fv/スライダー
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .swiper-slide {
     height: 910px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .swiper-slide {
+    height: 887px;
   }
 }
 
