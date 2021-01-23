@@ -11,19 +11,26 @@ fv/スライダー
 
 
 .swiper-slide {
-  height: 578px;
-  width: 95%;
+  width: 100%;
+  overflow: hidden;
   padding-left: 5%;
+
+}
+
+.fv_img {
+  height: 578px;
+  object-fit: cover;
+
 
   @include Tab {
     height: 910px;
   }
 
-  @include XXl {
-    height: 887px;
+  @include Xl {
+    height: 538px;
   }
-
 }
+
 
 .fv {
 
@@ -108,6 +115,49 @@ fv/スライダー
 
 }
 
+@include Xl {
+  .fv {
+
+    &_scroll {
+      display: inline-block;
+      position: absolute;
+      left: 65px;
+      bottom: 0px;
+      z-index: 2;
+      padding: 10px 10px 150px;
+      overflow: hidden;
+      color: white;
+      @include rem(14);
+      font-weight: bold;
+      text-transform: uppercase;
+      text-decoration: none;
+      writing-mode: vertical-lr;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 79px;
+        left: 50%;
+        width: 2px;
+        height: 125px;
+        background: rgba(255, 255, 255, .4);
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 79px;
+        left: 50%;
+        width: 2px;
+        height: 125px;
+        background: #fff;
+        animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+      }
+    }
+  }
+
+}
+
 @keyframes scroll {
   0% {
     transform: scale(1, 0);
@@ -140,44 +190,44 @@ concept
 *****************************************:*/
 
 
-.concept{
+.concept {
   padding-top: 50px;
   margin-bottom: 50px;
   background-color: $cBlack;
-  
+
   // TO DO あとで消す---
   margin-top: 661px;
   // -------
 
-  @include Tab{
+  @include Tab {
     padding-top: 80px;
     margin-bottom: 86px;
   }
 
-  @include Xl{
+  @include Xl {
     padding-top: 150px;
     margin-bottom: 86px;
   }
 
-  .section_ttl{
+  .section_ttl {
     text-align: left;
     margin-left: 30px;
     letter-spacing: .15em;
 
-    @include Tab{
+    @include Tab {
       margin-left: 60px;
       @include rem(35);
     }
   }
 
-  &_txt{
+  &_txt {
     margin: 10px 30px 0;
     color: $cWhite_2;
     font-family: はんなり明朝, serif;
     @include rem(14);
     line-height: 40px;
 
-    @include Tab{
+    @include Tab {
       margin: 48px 60px 0;
       @include rem(25);
       line-height: 3rem;
@@ -185,62 +235,62 @@ concept
     }
   }
 
-  &_imgBox{
+  &_imgBox {
     overflow: hidden;
-    
-    &:nth-child(3){
+
+    &:nth-child(3) {
       width: 191px;
       height: 297px;
       margin: 57px 0 0 auto;
       text-align: center;
 
-      @include Tab{
+      @include Tab {
         width: 390px;
         height: 586px;
         margin: 69px 0 0 auto;
       }
 
-      img{
+      img {
         transform: translateY(-6%);
 
-        @include Tab{
+        @include Tab {
           transform: translateY(-8%);
         }
       }
     }
 
-    &:nth-child(4){
+    &:nth-child(4) {
       width: 289px;
       height: 191px;
       margin: 30px 0 15px;
 
-      @include Tab{
+      @include Tab {
         width: 628px;
         height: 350px;
         margin: 80px 0 26px;
       }
 
-      img{
+      img {
 
-        @include Tab{
+        @include Tab {
           transform: translateY(-4%);
         }
       }
     }
 
-    &:nth-child(5){
+    &:nth-child(5) {
       width: 289px;
       height: 191px;
       margin: 15px 0 0;
 
-      @include Tab{
+      @include Tab {
         width: 628px;
         height: 366px;
       }
 
-      img{
+      img {
 
-        @include Tab{
+        @include Tab {
           transform: translateY(-4%);
         }
       }
@@ -261,55 +311,58 @@ info
 
 
 .info {
-    padding-bottom: 49px;
-    margin-left: 51px;
-    color: #FFFFFF;
-    background-color: $cBlack;
+  padding-bottom: 49px;
+  margin-left: 51px;
+  color: #FFFFFF;
+  background-color: $cBlack;
 
-  @include Tab{
+  @include Tab {
     padding-bottom: 80px;
     margin-left: 100px;
   }
 
-  .section_ttl{
+  .section_ttl {
     text-align: left;
     letter-spacing: .12em;
 
-    @include Tab{
+    @include Tab {
       @include rem(35);
       letter-spacing: .35rem;
     }
   }
 
-    &_txt {
-        @include rem(14);
-        line-height: 1.2rem;
+  &_txt {
+    @include rem(14);
+    line-height: 1.2rem;
 
-    @include Tab{
+    @include Tab {
       @include rem(25);
       line-height: 2.1rem;
     }
 
-    &:nth-child(2){
+    &:nth-child(2) {
       margin-top: 26px;
 
-      @include Tab{
+      @include Tab {
         margin-top: 50px;
       }
     }
 
-    &:nth-child(3), &:nth-child(5){
+    &:nth-child(3),
+    &:nth-child(5) {
       margin-bottom: 33px;
 
-      @include Tab{
+      @include Tab {
         margin-bottom: 50px;
       }
     }
 
-    &:nth-child(6),&:nth-child(7),&:nth-child(8){
+    &:nth-child(6),
+    &:nth-child(7),
+    &:nth-child(8) {
       line-height: 1.5rem;
 
-      @include Tab{
+      @include Tab {
         line-height: 2.4rem;
       }
     }
@@ -333,74 +386,74 @@ contact
   text-align: center;
   background-color: $cGray;
 
-  @include Tab{
+  @include Tab {
     padding: 78px 0;
 
     // TO DO あとで消す
     margin-top: 42px;
   }
 
-  .section_ttl{
+  .section_ttl {
     letter-spacing: .12em;
     margin-bottom: 18px;
 
-    @include Tab{
+    @include Tab {
       @include rem(35);
       margin-bottom: 62px;
     }
   }
 
-  &_icon{
+  &_icon {
     width: 26px;
     margin: 0 auto 12px;
 
-    @include Tab{
+    @include Tab {
       width: 42px;
       margin: 0 auto 15px;
     }
 
-    &_txt{
+    &_txt {
       margin-bottom: 30px;
       font-family: はんなり明朝;
       @include rem(14);
       letter-spacing: 2.8px;
 
-      @include Tab{
+      @include Tab {
         margin-bottom: 50px;
         @include rem(25);
       }
     }
   }
 
-  &_txt{
+  &_txt {
     margin: 0 25px 26px;
     @include rem(11);
 
-    @include Tab{
+    @include Tab {
       margin: 0 90px 60px;
       @include rem(20);
       line-height: 2rem;
     }
   }
 
-    &_img {
-      width: 375px;
-      height: 191px;
-      margin: 0 auto;
-      overflow: hidden;
+  &_img {
+    width: 375px;
+    height: 191px;
+    margin: 0 auto;
+    overflow: hidden;
 
-      @include Tab{
-        width: 768px;
-        height: 295px;
+    @include Tab {
+      width: 768px;
+      height: 295px;
+    }
+
+    img {
+      transform: translateY(-13%);
+
+      @include Tab {
+        transform: translateY(-22%);
       }
-
-      img{
-        transform: translateY(-13%);
-
-        @include Tab{
-          transform: translateY(-22%);
-        }
-      }
+    }
   }
 }
 
@@ -421,241 +474,241 @@ menu
 
 
 .menu {
-    padding: 50px 0 22px;
-    background-color: $cBlack;
+  padding: 50px 0 22px;
+  background-color: $cBlack;
+
+  @include Tab {
+    padding: 110px 0 50px;
+  }
+
+  .section_ttl {
+    margin-bottom: 28px;
 
     @include Tab {
-        padding: 110px 0 50px;
+      margin-bottom: 60px;
+    }
+  }
+
+  .section_inner {
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+
+
+  &_table {
+    width: 276px;
+    display: block;
+    margin: 0 auto;
+
+    @include Tab {
+      width: 90%;
     }
 
-    .section_ttl {
-        margin-bottom: 28px;
 
-        @include Tab {
-            margin-bottom: 60px;
-        }
+
+    &.__cut {
+      margin-bottom: 25px;
+
+      @include Tab {
+        margin-bottom: 77px;
+      }
     }
 
-    .section_inner {
-        margin: 0 auto;
-        padding: 0 30px;
-    }
+    &.__perm {
+      margin-bottom: 24px;
 
+      @include Tab {
+        margin-bottom: 70px;
+      }
 
-    &_table {
-        width: 276px;
+      .menu_table_headspan {
         display: block;
-        margin: 0 auto;
+        @include rem(15);
+        margin-left: 0;
+
 
         @include Tab {
-            width: 90%;
+          @include rem(20);
+          margin-bottom: 32px;
         }
-
-
-
-        &.__cut {
-            margin-bottom: 25px;
-
-            @include Tab {
-                margin-bottom: 77px;
-            }
-        }
-
-        &.__perm {
-            margin-bottom: 24px;
-
-            @include Tab {
-                margin-bottom: 70px;
-            }
-
-            .menu_table_headspan {
-                display: block;
-                @include rem(15);
-                margin-left: 0;
-
-
-                @include Tab {
-                    @include rem(20);
-                    margin-bottom: 32px;
-                }
-            }
-        }
-
-        &.__clr {
-            margin-bottom: 20px;
-
-            @include Tab {
-                margin-bottom: 85px;
-            }
-
-            .menu_table_headspan {
-                @include rem(15);
-                margin-left: 0;
-            }
-
-        }
-
-        &.__treat {
-            margin-bottom: 27px;
-
-            @include Tab {
-                margin-bottom: 72px;
-            }
-
-            .menu_table_headspan {
-                text-align: left;
-                display: block;
-                @include rem(15);
-                margin-left: 0;
-            }
-
-        }
-
-        &.__other {
-            margin-bottom: 25px;
-
-            .menu_table_headspan {
-                @include rem(15);
-                margin-left: 0;
-            }
-
-            .menu_table_right.__fz {
-                @include rem(11px);
-
-
-            }
-
-
-            @include Tab {
-                .menu_table_box.__dire {
-                    flex-direction: initial;
-                }
-            }
-
-        }
-
-
-
-        &_head {
-            @include rem(20);
-            letter-spacing: .001em;
-
-
-            @include Tab {
-                @include rem(25);
-            }
-
-            &_box {
-                width: 274px;
-                text-align: left;
-                margin-bottom: 17px;
-
-                @include Tab {
-                    width: 100%;
-                    margin-bottom: 23px;
-                }
-            }
-
-        }
-
-        &_headspan {
-            letter-spacing: .00064em;
-            margin-left: 22px;
-            @include rem(16);
-            line-height: 1;
-
-            @include Tab {
-                @include rem(20);
-            }
-        }
-
-        &_box {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 15px;
-            line-height: 1;
-
-
-            @include Tab {
-                margin-bottom: 27px;
-            }
-
-            &.__dire {
-                flex-direction: column;
-
-                .menu_table_left {
-                    margin-bottom: 7px;
-                }
-
-                .menu_table_right.__price_treat {
-                    margin-left: 62px;
-                    display: flex;
-                    justify-content: space-between;
-
-
-                    @include Tab {
-                        justify-content: flex-end;
-
-
-                        span {
-                            margin-left: 25px;
-                        }
-                    }
-                }
-
-                .menu_table_right.__price_other {
-                    margin-left: 34px;
-                    @include rem(11);
-                    display: flex;
-                    justify-content: space-between;
-
-
-                    @include Tab {
-                        @include rem(20);
-                        justify-content: flex-end;
-                    }
-                }
-
-
-
-
-
-            }
-
-        }
-
-        &_left {
-            @include rem(13);
-
-            @include Tab {
-                @include rem(20);
-            }
-        }
-
-        &_right {
-            @include rem(13);
-
-            @include Tab {
-                @include rem(20);
-            }
-
-
-            &.__ml {
-                display: block;
-            }
-        }
-
-        &_txt {
-            margin-bottom: 4px;
-            @include rem(12);
-            letter-spacing: 0;
-
-
-            @include Tab {
-                @include rem(18);
-            }
-        }
+      }
     }
+
+    &.__clr {
+      margin-bottom: 20px;
+
+      @include Tab {
+        margin-bottom: 85px;
+      }
+
+      .menu_table_headspan {
+        @include rem(15);
+        margin-left: 0;
+      }
+
+    }
+
+    &.__treat {
+      margin-bottom: 27px;
+
+      @include Tab {
+        margin-bottom: 72px;
+      }
+
+      .menu_table_headspan {
+        text-align: left;
+        display: block;
+        @include rem(15);
+        margin-left: 0;
+      }
+
+    }
+
+    &.__other {
+      margin-bottom: 25px;
+
+      .menu_table_headspan {
+        @include rem(15);
+        margin-left: 0;
+      }
+
+      .menu_table_right.__fz {
+        @include rem(11px);
+
+
+      }
+
+
+      @include Tab {
+        .menu_table_box.__dire {
+          flex-direction: initial;
+        }
+      }
+
+    }
+
+
+
+    &_head {
+      @include rem(20);
+      letter-spacing: .001em;
+
+
+      @include Tab {
+        @include rem(25);
+      }
+
+      &_box {
+        width: 274px;
+        text-align: left;
+        margin-bottom: 17px;
+
+        @include Tab {
+          width: 100%;
+          margin-bottom: 23px;
+        }
+      }
+
+    }
+
+    &_headspan {
+      letter-spacing: .00064em;
+      margin-left: 22px;
+      @include rem(16);
+      line-height: 1;
+
+      @include Tab {
+        @include rem(20);
+      }
+    }
+
+    &_box {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      line-height: 1;
+
+
+      @include Tab {
+        margin-bottom: 27px;
+      }
+
+      &.__dire {
+        flex-direction: column;
+
+        .menu_table_left {
+          margin-bottom: 7px;
+        }
+
+        .menu_table_right.__price_treat {
+          margin-left: 62px;
+          display: flex;
+          justify-content: space-between;
+
+
+          @include Tab {
+            justify-content: flex-end;
+
+
+            span {
+              margin-left: 25px;
+            }
+          }
+        }
+
+        .menu_table_right.__price_other {
+          margin-left: 34px;
+          @include rem(11);
+          display: flex;
+          justify-content: space-between;
+
+
+          @include Tab {
+            @include rem(20);
+            justify-content: flex-end;
+          }
+        }
+
+
+
+
+
+      }
+
+    }
+
+    &_left {
+      @include rem(13);
+
+      @include Tab {
+        @include rem(20);
+      }
+    }
+
+    &_right {
+      @include rem(13);
+
+      @include Tab {
+        @include rem(20);
+      }
+
+
+      &.__ml {
+        display: block;
+      }
+    }
+
+    &_txt {
+      margin-bottom: 4px;
+      @include rem(12);
+      letter-spacing: 0;
+
+
+      @include Tab {
+        @include rem(18);
+      }
+    }
+  }
 }
 
 
@@ -672,61 +725,61 @@ access
 
 
 .access {
-    padding: 50px 0 51px;
-    background: $cGray;
+  padding: 50px 0 51px;
+  background: $cGray;
 
-    &_imgbox {
-        background: url(/img/section-access/accecss.jpg) no-repeat;
-        background-size: cover;
-        width: 335px;
-        height: 167px;
-        margin-left: auto;
-        margin-bottom: 30px;
+  &_imgbox {
+    background: url(/img/section-access/accecss.jpg) no-repeat;
+    background-size: cover;
+    width: 335px;
+    height: 167px;
+    margin-left: auto;
+    margin-bottom: 30px;
+  }
+
+  .section_ttl {
+    margin-bottom: 20px;
+    letter-spacing: .19em
+  }
+
+  &_txtbox {
+    @include rem(14);
+    // width: 252px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  &_txt {
+    letter-spacing: .27em;
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+
+  &_icon {
+    text-align: center;
+    display: inline-block;
+    margin-left: 9px;
+  }
+
+  &_icontxt {
+    display: inline-block;
+    letter-spacing: .15em;
+    margin-left: 10px;
+
+    &:before {
+      display: inline-block;
+      content: '';
+      background: url(/img/svg/map.svg) no-repeat;
+      width: 15px;
+      height: 21px;
+      margin-right: 5px;
+      transform: translateY(6px);
     }
+  }
 
-    .section_ttl {
-        margin-bottom: 20px;
-        letter-spacing: .19em
-    }
-
-    &_txtbox {
-        @include rem(14);
-        // width: 252px;
-        text-align: center;
-        margin: 0 auto;
-    }
-
-    &_txt {
-        letter-spacing: .27em;
-        line-height: 1.6;
-        margin-bottom: 12px;
-    }
-
-    &_icon {
-        text-align: center;
-        display: inline-block;
-        margin-left: 9px;
-    }
-
-    &_icontxt {
-        display: inline-block;
-        letter-spacing: .15em;
-        margin-left: 10px;
-
-        &:before {
-            display: inline-block;
-            content: '';
-            background: url(/img/svg/map.svg) no-repeat;
-            width: 15px;
-            height: 21px;
-            margin-right: 5px;
-            transform: translateY(6px);
-        }
-    }
-
-    &_txtspa {
-        margin-left: 5px;
-    }
+  &_txtspa {
+    margin-left: 5px;
+  }
 }
 
 
@@ -739,55 +792,55 @@ staff
 *****************************************:*/
 
 .staff {
-    padding: 50px 0 18px;
-    background: $cBlack;
+  padding: 50px 0 18px;
+  background: $cBlack;
 
-    .section_ttl {
-        margin-bottom: 21px;
+  .section_ttl {
+    margin-bottom: 21px;
+  }
+
+  &_content {
+    display: block;
+  }
+
+  &_box {
+    width: 275px;
+    overflow: hidden;
+    margin: 0 auto 30px;
+  }
+
+
+  &_imgbox {
+    // width: 275px;
+    height: 163px;
+    display: block;
+    margin: 0 auto 8px;
+
+    &.__left {
+      background: url(/img/section-staff/staff1.jpg) no-repeat;
+      background-size: 167%;
+      background-position: 50% 60%;
     }
 
-    &_content {
-        display: block;
+    &.__center {
+      background: url(/img/section-staff/staff2.jpg) no-repeat;
+      background-size: 100%;
+      background-position: 50% 26%;
     }
 
-    &_box {
-        width: 275px;
-        overflow: hidden;
-        margin: 0 auto 30px;
+    &.__right {
+      background: url(/img/section-staff/staff3.jpg) no-repeat;
+      background-size: 134%;
+      background-position: 56% 40%;
     }
+  }
 
+  &_txt_ja {
+    @include rem(15);
+  }
 
-    &_imgbox {
-        // width: 275px;
-        height: 163px;
-        display: block;
-        margin: 0 auto 8px;
+  &_txt_en {
+    @include rem(12);
 
-        &.__left {
-            background: url(/img/section-staff/staff1.jpg) no-repeat;
-            background-size: 167%;
-            background-position: 50% 60%;
-        }
-
-        &.__center {
-            background: url(/img/section-staff/staff2.jpg) no-repeat;
-            background-size: 100%;
-            background-position: 50% 26%;
-        }
-
-        &.__right {
-            background: url(/img/section-staff/staff3.jpg) no-repeat;
-            background-size: 134%;
-            background-position: 56% 40%;
-        }
-    }
-
-    &_txt_ja {
-        @include rem(15);
-    }
-
-    &_txt_en {
-        @include rem(12);
-
-    }
+  }
 }
