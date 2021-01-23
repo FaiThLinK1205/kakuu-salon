@@ -57,7 +57,7 @@ body {
   left: 0;
   right: 0;
   margin: 0 auto;
-  width: 375px;
+  width: 768px;
   opacity: 0.3;
   /* 反転 */
   -webkit-filter: hue-rotate(180deg);
@@ -100,14 +100,34 @@ header
 *****************************************:*/
 .header {
   width: 100%;
-  line-height: 43px;
-  background: #000;
+  line-height: 80px;
+  color: white;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .header {
+    line-height: 109px;
+  }
 }
 
 .header_ttl {
+  margin-left: 20px;
+  padding-top: 8px;
   font-size: 32px;
   /*IE9以前に対応する*/
   font-size: 2rem;
+  letter-spacing: 4.8px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .header_ttl {
+    margin-left: 40px;
+    padding-top: 5px;
+    font-size: 55px;
+    /*IE9以前に対応する*/
+    font-size: 3.4375rem;
+    letter-spacing: 9px;
+  }
 }
 
 /****************************************:
@@ -115,6 +135,185 @@ header
 nav (ハンバーガーメニュー含む)
 
 *****************************************:*/
+.ham_nav {
+  position: fixed;
+  top: 38px;
+  right: 20px;
+  width: 25px;
+  height: 35px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .ham_nav {
+    width: 35px;
+    top: 45px;
+    right: 40px;
+  }
+}
+
+.ham_nav span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #c0542d;
+}
+
+.ham_nav span:nth-child(1) {
+  top: 0;
+}
+
+.ham_nav span:nth-child(2) {
+  top: 11px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .ham_nav span:nth-child(2) {
+    top: 18px;
+  }
+}
+
+.global_nav {
+  padding-top: 87px;
+  color: #58656e;
+  background: #bac1c7;
+  font-size: 25px;
+  /*IE9以前に対応する*/
+  font-size: 1.5625rem;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 3.75px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  visibility: hidden;
+  z-index: 990;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .global_nav {
+    padding: 0;
+    color: white;
+    background: #58656e;
+    font-size: 40px;
+    /*IE9以前に対応する*/
+    font-size: 2.5rem;
+    letter-spacing: 6px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .global_nav ul {
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .global_nav li {
+    height: calc(100vh/7);
+  }
+  .global_nav li:nth-child(1) {
+    margin-right: 95px;
+  }
+  .global_nav li:nth-child(2) {
+    margin-right: 100px;
+  }
+  .global_nav li:nth-child(3) {
+    padding-right: 280px;
+  }
+  .global_nav li:nth-child(4) {
+    padding-right: 400px;
+  }
+  .global_nav li:nth-child(5) {
+    padding-right: 280px;
+  }
+  .global_nav li:nth-child(6) {
+    padding-right: 180px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .global_nav_circle {
+    background: url(../img/top/maru.png) no-repeat;
+    background-position: -25% 50%;
+  }
+}
+
+/* open */
+.open {
+  overflow: hidden;
+}
+
+.open .global_nav {
+  visibility: visible;
+  opacity: 1;
+}
+
+.open .global_nav li {
+  opacity: 0;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.open .global_nav li:nth-child(1) {
+  -webkit-animation: example 0.3s ease 0.3s 1 forwards;
+          animation: example 0.3s ease 0.3s 1 forwards;
+}
+
+.open .global_nav li:nth-child(2) {
+  -webkit-animation: example 0.4s ease 0.4s 1 forwards;
+          animation: example 0.4s ease 0.4s 1 forwards;
+}
+
+.open .global_nav li:nth-child(3) {
+  -webkit-animation: example 0.5s ease 0.5s 1 forwards;
+          animation: example 0.5s ease 0.5s 1 forwards;
+}
+
+.open .global_nav li:nth-child(4) {
+  -webkit-animation: example 0.6s ease 0.6s 1 forwards;
+          animation: example 0.6s ease 0.6s 1 forwards;
+}
+
+.open .global_nav li:nth-child(5) {
+  -webkit-animation: example 0.7s ease 0.7s 1 forwards;
+          animation: example 0.7s ease 0.7s 1 forwards;
+}
+
+.open .global_nav li:nth-child(6) {
+  -webkit-animation: example 0.8s ease 0.8s 1 forwards;
+          animation: example 0.8s ease 0.8s 1 forwards;
+}
+
+@-webkit-keyframes example {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes example {
+  100% {
+    opacity: 1;
+  }
+}
+
 /****************************************:
 
 各ページのスタイル読み込み
@@ -122,9 +321,159 @@ nav (ハンバーガーメニュー含む)
 *****************************************:*/
 /****************************************:
 
-fv
+fv/スライダー
 
 *****************************************:*/
+.swiper-slide {
+  height: 578px;
+  width: 95%;
+  padding-left: 5%;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .swiper-slide {
+    height: 910px;
+  }
+}
+
+.fv_scroll {
+  display: inline-block;
+  position: absolute;
+  left: 14px;
+  bottom: 24px;
+  z-index: 2;
+  padding: 10px 10px 110px;
+  overflow: hidden;
+  color: white;
+  font-size: 15px;
+  /*IE9以前に対応する*/
+  font-size: 0.9375rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+}
+
+.fv_scroll::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  height: 107px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.fv_scroll::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  height: 107px;
+  background: #fff;
+  -webkit-animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+          animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .fv_scroll {
+    display: inline-block;
+    position: absolute;
+    left: 42px;
+    bottom: -18px;
+    z-index: 2;
+    padding: 10px 10px 280px;
+    overflow: hidden;
+    color: white;
+    font-size: 22px;
+    /*IE9以前に対応する*/
+    font-size: 1.375rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    -webkit-writing-mode: vertical-lr;
+        -ms-writing-mode: tb-lr;
+            writing-mode: vertical-lr;
+  }
+  .fv_scroll::before {
+    content: '';
+    position: absolute;
+    top: 117px;
+    left: 50%;
+    width: 2px;
+    height: 215px;
+    background: rgba(255, 255, 255, 0.4);
+  }
+  .fv_scroll::after {
+    content: '';
+    position: absolute;
+    top: 117px;
+    left: 50%;
+    width: 2px;
+    height: 215px;
+    background: #fff;
+    -webkit-animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+            animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+  }
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+  }
+  50% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+  }
+  50.1% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+  }
+  100% {
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+    -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+  }
+  50% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+  }
+  50.1% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+  }
+  100% {
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+    -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+  }
+}
+
 /****************************************:
 
 concept

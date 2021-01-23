@@ -5,11 +5,25 @@ header
 *****************************************:*/
 .header {
   width: 100%;
-  line-height: 43px;
-  background: #000;
+  line-height: 80px;
+  color: white;
+
+  @include Tab {
+    line-height: 109px;
+  }
 
   &_ttl {
+    margin-left: 20px;
+    padding-top: 8px;
     @include rem(32);
+    letter-spacing: 4.8px;
+
+    @include Tab {
+      margin-left: 40px;
+      padding-top: 5px;
+      @include rem(55);
+      letter-spacing: 9px;
+    }
   }
 }
 
@@ -23,5 +37,183 @@ nav (ハンバーガーメニュー含む)
 
 *****************************************:*/
 
+.ham_nav {
+  position: fixed;
+  top: 38px;
+  right: 20px;
+  width: 25px;
+  height: 35px;
+  cursor: pointer;
+  z-index: 1000;
+
+  @include Tab {
+    width: 35px;
+    top: 45px;
+    right: 40px;
+  }
 
 
+  span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: $cOrange;
+
+    &:nth-child(1) {
+      top: 0;
+    }
+
+    &:nth-child(2) {
+      top: 11px;
+
+      @include Tab {
+        top: 18px;
+      }
+    }
+  }
+}
+
+
+.global_nav {
+  padding-top: 87px;
+  color: $cBlack;
+  background: $cGray;
+  @include rem(25);
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 3.75px;
+  display: flex;
+  // align-items: center;
+  flex-direction: column;
+  visibility: hidden;
+  z-index: 990;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: all 0.5s ease;
+
+
+
+  @include Tab {
+    padding: 0;
+    color: white;
+    background: $cBlack;
+    @include rem(40);
+    letter-spacing: 6px;
+
+  }
+
+
+  ul {
+    @include Tab {
+      padding-top: 150px;
+      padding-bottom: 150px;
+    }
+  }
+
+  li {
+    @include Tab {
+      height: calc(100vh/7);
+
+
+      &:nth-child(1) {
+        margin-right: 95px;
+
+      }
+
+      &:nth-child(2) {
+        margin-right: 100px;
+      }
+
+      &:nth-child(3) {
+        padding-right: 280px;
+      }
+
+      &:nth-child(4) {
+        padding-right: 400px;
+
+      }
+
+      &:nth-child(5) {
+        padding-right: 280px;
+      }
+
+      &:nth-child(6) {
+        padding-right: 180px;
+      }
+    }
+
+
+  }
+
+  &_circle {
+    @include Tab {
+      background: url(../img/top/maru.png) no-repeat;
+      background-position: -25% 50%;
+
+    }
+
+  }
+}
+
+
+/* open */
+.open {
+  overflow: hidden;
+
+  .global_nav {
+    visibility: visible;
+    opacity: 1;
+
+
+    li {
+      opacity: 0;
+      transform: translateX(0);
+
+      &:nth-child(1) {
+        animation: example 0.3s ease 0.3s 1 forwards;
+
+      }
+
+      &:nth-child(2) {
+        animation: example 0.4s ease 0.4s 1 forwards;
+
+      }
+
+      &:nth-child(3) {
+        animation: example 0.5s ease 0.5s 1 forwards;
+
+      }
+
+      &:nth-child(4) {
+        animation: example 0.6s ease 0.6s 1 forwards;
+
+      }
+
+      &:nth-child(5) {
+        animation: example 0.7s ease 0.7s 1 forwards;
+
+      }
+
+      &:nth-child(6) {
+        animation: example 0.8s ease 0.8s 1 forwards;
+
+      }
+
+    }
+  }
+}
+
+
+
+@keyframes example {
+
+
+  100% {
+    opacity: 1;
+  }
+}
