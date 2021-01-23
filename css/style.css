@@ -77,6 +77,12 @@ body {
   }
 }
 
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .mock {
+    width: 1200px;
+  }
+}
+
 .section_ttl {
   font-size: 22px;
   /*IE9以前に対応する*/
@@ -115,6 +121,12 @@ body {
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .section_inner {
     max-width: 688px;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .section_inner {
+    max-width: 950px;
   }
 }
 
@@ -570,12 +582,19 @@ concept
   padding-top: 50px;
   margin-bottom: 50px;
   background-color: #58656e;
-  margin-top: 1061px;
+  margin-top: 661px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .concept {
     padding-top: 80px;
+    margin-bottom: 86px;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .concept {
+    padding-top: 150px;
     margin-bottom: 86px;
   }
 }

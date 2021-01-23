@@ -146,11 +146,16 @@ concept
   background-color: $cBlack;
   
   // TO DO あとで消す---
-  margin-top: 1061px;
+  margin-top: 661px;
   // -------
 
   @include Tab{
     padding-top: 80px;
+    margin-bottom: 86px;
+  }
+
+  @include Xl{
+    padding-top: 150px;
     margin-bottom: 86px;
   }
 
