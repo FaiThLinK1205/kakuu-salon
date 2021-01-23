@@ -54,6 +54,11 @@ body {
     @include Tab {
         width: 768px;
     }
+
+    @include Xl {
+        width: 1200px;
+    }
+
 }
 
 
@@ -96,7 +101,7 @@ body {
 
 
     @include Xl {
-        max-width: 820px;
+        max-width: 950px;
     }
 
 
