@@ -651,7 +651,7 @@ access
   background-size: cover;
   width: 335px;
   height: 167px;
-  margin-left: 40px;
+  margin-left: auto;
   margin-bottom: 30px;
 }
 
@@ -671,32 +671,30 @@ access
 .access_txt {
   letter-spacing: .27em;
   line-height: 1.6;
-  margin-bottom: 19px;
+  margin-bottom: 12px;
 }
 
 .access_icon {
   text-align: center;
   display: inline-block;
+  margin-left: 9px;
 }
 
 .access_icontxt {
-  position: relative;
   display: inline-block;
-  letter-spacing: .1em;
-  margin-left: 30px;
+  letter-spacing: .15em;
+  margin-left: 10px;
 }
 
-.access_icontxt::before {
-  position: absolute;
-  display: block;
+.access_icontxt:before {
+  display: inline-block;
   content: '';
   background: url(/img/svg/map.svg) no-repeat;
-  width: 100%;
-  height: 100%;
-  left: -20px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  width: 15px;
+  height: 21px;
+  margin-right: 5px;
+  -webkit-transform: translateY(6px);
+          transform: translateY(6px);
 }
 
 .access_txtspa {
@@ -708,6 +706,61 @@ access
 staff
 
 *****************************************:*/
+.staff {
+  padding: 50px 0 18px;
+  background: #58656e;
+}
+
+.staff .section_ttl {
+  margin-bottom: 21px;
+}
+
+.staff_content {
+  display: block;
+}
+
+.staff_box {
+  width: 275px;
+  overflow: hidden;
+  margin: 0 auto 30px;
+}
+
+.staff_imgbox {
+  height: 163px;
+  display: block;
+  margin: 0 auto 8px;
+}
+
+.staff_imgbox.__left {
+  background: url(/img/section-staff/staff1.jpg) no-repeat;
+  background-size: 167%;
+  background-position: 50% 60%;
+}
+
+.staff_imgbox.__center {
+  background: url(/img/section-staff/staff2.jpg) no-repeat;
+  background-size: 100%;
+  background-position: 50% 26%;
+}
+
+.staff_imgbox.__right {
+  background: url(/img/section-staff/staff3.jpg) no-repeat;
+  background-size: 134%;
+  background-position: 56% 40%;
+}
+
+.staff_txt_ja {
+  font-size: 15px;
+  /*IE9以前に対応する*/
+  font-size: 0.9375rem;
+}
+
+.staff_txt_en {
+  font-size: 12px;
+  /*IE9以前に対応する*/
+  font-size: 0.75rem;
+}
+
 /****************************************:
 
 footer
