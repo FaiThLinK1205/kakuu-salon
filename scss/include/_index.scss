@@ -28,7 +28,7 @@ concept
   background-color: $cBlack;
   
   // TO DO あとで消す---
-  margin-top: 661px;
+  // margin-top: 661px;
   // -------
 
   @include Tab{
@@ -50,6 +50,11 @@ concept
       margin-left: 60px;
       @include rem(35);
     }
+
+    @include Xl{
+      margin-left: 0;
+      @include rem(32);
+    }
   }
 
   &_txt{
@@ -64,6 +69,12 @@ concept
       @include rem(25);
       line-height: 3rem;
       letter-spacing: .01rem;
+    }
+
+    @include Xl{
+      margin: 16px 476px 0 0;
+      @include rem(15.5);
+      line-height: 3rem;
     }
   }
 
@@ -82,10 +93,20 @@ concept
         margin: 69px 0 0 auto;
       }
 
+      @include Xl{
+        width: 417px;
+        height: 630px;
+        margin: -183px 0 0 auto;
+      }
+
       img{
         transform: translateY(-6%);
 
         @include Tab{
+          transform: translateY(-8%);
+        }
+
+        @include Xl{
           transform: translateY(-8%);
         }
       }
@@ -100,6 +121,12 @@ concept
         width: 628px;
         height: 350px;
         margin: 80px 0 26px;
+      }
+
+      @include Xl{
+        width: 475px;
+        height: 300px;
+        margin: -368px 0 33px;
       }
 
       img{
@@ -120,9 +147,18 @@ concept
         height: 366px;
       }
 
+      @include Xl{
+        width: 475px;
+        height: 300px;
+      }
+
       img{
 
         @include Tab{
+          transform: translateY(-4%);
+        }
+
+        @include Xl{
           transform: translateY(-4%);
         }
       }
@@ -153,6 +189,11 @@ info
     margin-left: 100px;
   }
 
+  @include Xl{
+    padding-bottom: 92px;
+    margin: -267px 0px 0 647px;
+  }
+
   .section_ttl{
     text-align: left;
     letter-spacing: .12em;
@@ -161,15 +202,24 @@ info
       @include rem(35);
       letter-spacing: .35rem;
     }
+
+    @include Xl{
+      @include rem(33);
+    }
   }
 
-    &_txt {
-        @include rem(14);
-        line-height: 1.2rem;
+  &_txt {
+    @include rem(14);
+    line-height: 1.2rem;
 
     @include Tab{
       @include rem(25);
       line-height: 2.1rem;
+    }
+
+    @include Xl{
+      @include rem(19);
+      line-height: 2rem;
     }
 
     &:nth-child(2){
@@ -177,6 +227,10 @@ info
 
       @include Tab{
         margin-top: 50px;
+      }
+
+      @include Xl{
+        margin-top: 35px;
       }
     }
 
@@ -211,15 +265,12 @@ contact
 
 
 .contact {
-  padding: 50px 0;
+  padding: 91px 0;
   text-align: center;
   background-color: $cGray;
 
   @include Tab{
     padding: 78px 0;
-
-    // TO DO あとで消す
-    margin-top: 42px;
   }
 
   .section_ttl{
@@ -229,6 +280,19 @@ contact
     @include Tab{
       @include rem(35);
       margin-bottom: 62px;
+    }
+
+    @include Xl{
+      @include rem(33);
+      margin-bottom: 30px;
+    }
+  }
+
+  &_flex{
+
+    @include Xl{
+      margin: 0 122px 60px;
+      @include flex();
     }
   }
 
@@ -241,6 +305,11 @@ contact
       margin: 0 auto 15px;
     }
 
+    @include Xl{
+      width: 36px;
+      line-height: 36px;
+    }
+
     &_txt{
       margin-bottom: 30px;
       font-family: はんなり明朝;
@@ -250,6 +319,11 @@ contact
       @include Tab{
         margin-bottom: 50px;
         @include rem(25);
+      }
+
+      @include Xl{
+        @include rem(19);
+        margin-bottom: 0;
       }
     }
   }
@@ -261,6 +335,12 @@ contact
     @include Tab{
       margin: 0 90px 60px;
       @include rem(20);
+      line-height: 2rem;
+    }
+
+    @include Xl{
+      margin: 0 280px 68px;
+      @include rem(15);
       line-height: 2rem;
     }
   }
@@ -276,10 +356,20 @@ contact
         height: 295px;
       }
 
+      @include Xl{
+        width: 1130px;
+        height: 415px;
+        margin-right: 100px;
+      }
+
       img{
         transform: translateY(-13%);
 
         @include Tab{
+          transform: translateY(-22%);
+        }
+
+        @include Xl{
           transform: translateY(-22%);
         }
       }
