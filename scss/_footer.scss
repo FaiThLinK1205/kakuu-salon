@@ -3,3 +3,49 @@
 footer
 
 *****************************************:*/
+
+.footer{
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: $cGray;
+
+  &_flex{
+    padding: 50px;
+    @include flex();
+
+    @include Tab{
+      padding: 80px 100px;
+    }
+  }
+
+  &_txt{
+    margin-bottom: -15px;
+    @include rem(32);
+    letter-spacing: 4.8px;
+
+    @include Tab{
+      @include rem(55);
+    }
+  }
+
+  &_right{
+    @include rem(10);
+
+    @include Tab{
+      @include rem(15);
+    }
+  }
+}
+
+
+.insta{
+  width: 25px;
+  height: 25px;
+  margin-top: 12px;
+
+  @include Tab{
+    width: 39px;
+  height: 39px;
+    margin-top: 22px;
+  }
+}
