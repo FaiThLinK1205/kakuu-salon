@@ -112,7 +112,6 @@ fv/スライダー
       }
     }
   }
-
 }
 
 @include Xl {
@@ -155,30 +154,8 @@ fv/スライダー
       }
     }
   }
-
 }
 
-@keyframes scroll {
-  0% {
-    transform: scale(1, 0);
-    transform-origin: 0 0;
-  }
-
-  50% {
-    transform: scale(1, 1);
-    transform-origin: 0 0;
-  }
-
-  50.1% {
-    transform: scale(1, 1);
-    transform-origin: 0 100%;
-  }
-
-  100% {
-    transform: scale(1, 0);
-    transform-origin: 0 100%;
-  }
-}
 
 
 
@@ -218,6 +195,11 @@ concept
       margin-left: 60px;
       @include rem(35);
     }
+
+    @include Xl{
+      margin-left: 0;
+      @include rem(32);
+    }
   }
 
   &_txt {
@@ -232,6 +214,12 @@ concept
       @include rem(25);
       line-height: 3rem;
       letter-spacing: .01rem;
+    }
+
+    @include Xl{
+      margin: 16px 476px 0 0;
+      @include rem(15.5);
+      line-height: 3rem;
     }
   }
 
@@ -250,10 +238,20 @@ concept
         margin: 69px 0 0 auto;
       }
 
+      @include Xl{
+        width: 417px;
+        height: 630px;
+        margin: -183px 0 0 auto;
+      }
+
       img {
         transform: translateY(-6%);
 
         @include Tab {
+          transform: translateY(-8%);
+        }
+
+        @include Xl{
           transform: translateY(-8%);
         }
       }
@@ -270,6 +268,12 @@ concept
         margin: 80px 0 26px;
       }
 
+      @include Xl{
+        width: 475px;
+        height: 300px;
+        margin: -368px 0 33px;
+      }
+
       img {
 
         @include Tab {
@@ -277,22 +281,29 @@ concept
         }
       }
     }
+  }
 
-    &:nth-child(5) {
-      width: 289px;
-      height: 191px;
-      margin: 15px 0 0;
+  &:nth-child(5) {
+    width: 289px;
+    height: 191px;
+    margin: 15px 0 0;
 
-      @include Tab {
-        width: 628px;
-        height: 366px;
+    @include Tab {
+      width: 628px;
+      height: 366px;
+    }
+
+    @include Xl{
+      width: 475px;
+      height: 300px;
+    }
+
+    img {
+      @include Tab{
+        transform: translateY(-4%);
       }
 
-      img {
-
-        @include Tab {
-          transform: translateY(-4%);
-        }
+      @include Xl{
       }
     }
   }
@@ -316,18 +327,27 @@ info
   color: #FFFFFF;
   background-color: $cBlack;
 
-  @include Tab {
+  @include Tab{
     padding-bottom: 80px;
     margin-left: 100px;
   }
 
-  .section_ttl {
+  @include Xl{
+    padding-bottom: 92px;
+    margin: -267px 0px 0 647px;
+  }
+
+  .section_ttl{
     text-align: left;
     letter-spacing: .12em;
 
-    @include Tab {
+    @include Tab{
       @include rem(35);
       letter-spacing: .35rem;
+    }
+
+    @include Xl{
+      @include rem(33);
     }
   }
 
@@ -335,39 +355,46 @@ info
     @include rem(14);
     line-height: 1.2rem;
 
-    @include Tab {
+    @include Tab{
       @include rem(25);
       line-height: 2.1rem;
     }
 
-    &:nth-child(2) {
+    @include Xl{
+      @include rem(19);
+      line-height: 2rem;
+    }
+  }
+
+
+    &:nth-child(2){
       margin-top: 26px;
 
-      @include Tab {
+      @include Tab{
         margin-top: 50px;
+      }
+
+      @include Xl{
+        margin-top: 35px;
       }
     }
 
-    &:nth-child(3),
-    &:nth-child(5) {
+    &:nth-child(3), &:nth-child(5){
       margin-bottom: 33px;
 
-      @include Tab {
+      @include Tab{
         margin-bottom: 50px;
       }
     }
 
-    &:nth-child(6),
-    &:nth-child(7),
-    &:nth-child(8) {
+    &:nth-child(6),&:nth-child(7),&:nth-child(8){
       line-height: 1.5rem;
 
-      @include Tab {
+      @include Tab{
         line-height: 2.4rem;
       }
     }
   }
-}
 
 
 
@@ -382,78 +409,114 @@ contact
 
 
 .contact {
-  padding: 50px 0;
+  padding: 90px 0;
   text-align: center;
   background-color: $cGray;
 
-  @include Tab {
+  @include Tab{
     padding: 78px 0;
-
-    // TO DO あとで消す
-    margin-top: 42px;
   }
 
-  .section_ttl {
+  .section_ttl{
     letter-spacing: .12em;
     margin-bottom: 18px;
 
-    @include Tab {
+    @include Tab{
       @include rem(35);
       margin-bottom: 62px;
     }
+
+    @include Xl{
+      @include rem(33);
+      margin-bottom: 30px;
+    }
   }
 
-  &_icon {
+  &_flex{
+
+    @include Xl{
+      margin: 0 122px 60px;
+      @include flex();
+    }
+  }
+
+  &_icon{
     width: 26px;
     margin: 0 auto 12px;
 
-    @include Tab {
+    @include Tab{
       width: 42px;
       margin: 0 auto 15px;
     }
 
-    &_txt {
+    @include Xl{
+      width: 36px;
+      line-height: 36px;
+    }
+
+    &_txt{
       margin-bottom: 30px;
       font-family: はんなり明朝;
       @include rem(14);
       letter-spacing: 2.8px;
 
-      @include Tab {
+      @include Tab{
         margin-bottom: 50px;
         @include rem(25);
+      }
+
+      @include Xl{
+        @include rem(19);
+        margin-bottom: 0;
       }
     }
   }
 
-  &_txt {
+  &_txt{
     margin: 0 25px 26px;
     @include rem(11);
 
-    @include Tab {
+    @include Tab{
       margin: 0 90px 60px;
       @include rem(20);
       line-height: 2rem;
     }
+
+    @include Xl{
+      margin: 0 280px 68px;
+      @include rem(15);
+      line-height: 2rem;
+    }
   }
 
-  &_img {
-    width: 375px;
-    height: 191px;
-    margin: 0 auto;
-    overflow: hidden;
+    &_img {
+      width: 375px;
+      height: 191px;
+      margin: 0 auto;
+      overflow: hidden;
 
-    @include Tab {
-      width: 768px;
-      height: 295px;
-    }
-
-    img {
-      transform: translateY(-13%);
-
-      @include Tab {
-        transform: translateY(-22%);
+      @include Tab{
+        width: 768px;
+        height: 295px;
       }
-    }
+
+      @include Xl{
+        width: 1130px;
+        height: 415px;
+        margin-right: 100px;
+      }
+
+      img{
+        transform: translateY(-13%);
+
+        @include Tab{
+          transform: translateY(-22%);
+        }
+
+        @include Xl{
+          transform: translateY(-22%);
+        }
+      }
   }
 }
 
@@ -725,57 +788,58 @@ access
 
 
 .access {
-  padding: 50px 0 51px;
-  background: $cGray;
+    padding: 50px 0 51px;
+    background: $cGray;
 
-  &_imgbox {
-    background: url(/img/section-access/accecss.jpg) no-repeat;
-    background-size: cover;
-    width: 335px;
-    height: 167px;
-    margin-left: auto;
-    margin-bottom: 30px;
-  }
-
-  .section_ttl {
-    margin-bottom: 20px;
-    letter-spacing: .19em
-  }
-
-  &_txtbox {
-    @include rem(14);
-    // width: 252px;
-    text-align: center;
-    margin: 0 auto;
-  }
-
-  &_txt {
-    letter-spacing: .27em;
-    line-height: 1.6;
-    margin-bottom: 12px;
-  }
-
-  &_icon {
-    text-align: center;
-    display: inline-block;
-    margin-left: 9px;
-  }
-
-  &_icontxt {
-    display: inline-block;
-    letter-spacing: .15em;
-    margin-left: 10px;
-
-    &:before {
-      display: inline-block;
-      content: '';
-      background: url(/img/svg/map.svg) no-repeat;
-      width: 15px;
-      height: 21px;
-      margin-right: 5px;
-      transform: translateY(6px);
+    &_imgbox {
+        background: url(/img/section-access/accecss.jpg) no-repeat;
+        background-size: cover;
+        width: 335px;
+        height: 167px;
+        margin-left: auto;
+        margin-bottom: 30px;
     }
-  }
+
+    .section_ttl {
+        margin-bottom: 20px;
+        letter-spacing: .19em
+    }
+
+    &_txtbox {
+        @include rem(14);
+        // width: 252px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    &_txt {
+        letter-spacing: .27em;
+        line-height: 1.6;
+        margin-bottom: 12px;
+    }
+
+    &_icon {
+        text-align: center;
+        display: inline-block;
+        margin-left: 9px;
+    }
+
+    &_icontxt {
+        display: inline-block;
+        letter-spacing: .15em;
+        margin-left: 10px;
+
+        &:before {
+            display: inline-block;
+            content: '';
+            background: url(/img/svg/map.svg) no-repeat;
+            width: 15px;
+            height: 21px;
+            margin-right: 5px;
+            transform: translateY(6px);
+        }
+    }
+  
 
   &_txtspa {
     margin-left: 5px;
@@ -792,52 +856,53 @@ staff
 *****************************************:*/
 
 .staff {
-  padding: 50px 0 18px;
-  background: $cBlack;
+    padding: 50px 0 18px;
+    background: $cBlack;
 
-  .section_ttl {
-    margin-bottom: 21px;
-  }
-
-  &_content {
-    display: block;
-  }
-
-  &_box {
-    width: 275px;
-    overflow: hidden;
-    margin: 0 auto 30px;
-  }
-
-
-  &_imgbox {
-    // width: 275px;
-    height: 163px;
-    display: block;
-    margin: 0 auto 8px;
-
-    &.__left {
-      background: url(/img/section-staff/staff1.jpg) no-repeat;
-      background-size: 167%;
-      background-position: 50% 60%;
+    .section_ttl {
+        margin-bottom: 21px;
     }
 
-    &.__center {
-      background: url(/img/section-staff/staff2.jpg) no-repeat;
-      background-size: 100%;
-      background-position: 50% 26%;
+    &_content {
+        display: block;
     }
 
-    &.__right {
-      background: url(/img/section-staff/staff3.jpg) no-repeat;
-      background-size: 134%;
-      background-position: 56% 40%;
+    &_box {
+        width: 275px;
+        overflow: hidden;
+        margin: 0 auto 30px;
     }
-  }
 
-  &_txt_ja {
-    @include rem(15);
-  }
+
+    &_imgbox {
+        // width: 275px;
+        height: 163px;
+        display: block;
+        margin: 0 auto 8px;
+
+        &.__left {
+            background: url(/img/section-staff/staff1.jpg) no-repeat;
+            background-size: 167%;
+            background-position: 50% 60%;
+        }
+
+        &.__center {
+            background: url(/img/section-staff/staff2.jpg) no-repeat;
+            background-size: 100%;
+            background-position: 50% 26%;
+        }
+
+        &.__right {
+            background: url(/img/section-staff/staff3.jpg) no-repeat;
+            background-size: 134%;
+            background-position: 56% 40%;
+        }
+    }
+
+    &_txt_ja {
+        @include rem(15);
+    }
+
 
   &_txt_en {
     @include rem(12);

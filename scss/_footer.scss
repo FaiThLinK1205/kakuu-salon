@@ -16,6 +16,10 @@ footer
     @include Tab{
       padding: 80px 100px;
     }
+
+    @include Xl{
+      padding: 90px 115px;
+    }
   }
 
   &_txt{
@@ -26,6 +30,12 @@ footer
     @include Tab{
       @include rem(55);
     }
+
+    @include Xl{
+      margin-bottom: -6px;
+      @include rem(50);
+      letter-spacing: 7.8px;
+    }
   }
 
   &_right{
@@ -33,6 +43,10 @@ footer
 
     @include Tab{
       @include rem(15);
+    }
+
+    @include Xl{
+      @include rem(13);
     }
   }
 }
@@ -45,7 +59,14 @@ footer
 
   @include Tab{
     width: 39px;
-  height: 39px;
+    height: 39px;
+    margin-top: 22px;
+  }
+
+  
+  @include Xl{
+    width: 36px;
+    height: 36px;
     margin-top: 22px;
   }
 }
