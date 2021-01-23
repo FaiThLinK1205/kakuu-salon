@@ -149,20 +149,27 @@ concept
 *****************************************:*/
 .concept {
   padding-top: 50px;
-  margin-top: 717px;
   margin-bottom: 50px;
   background-color: #58656e;
+  margin-top: 1061px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .concept {
+    padding-top: 80px;
+    margin-bottom: 86px;
+  }
 }
 
 .concept .section_ttl {
   text-align: left;
-  margin-left: 51px;
+  margin-left: 30px;
   letter-spacing: .15em;
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .concept .section_ttl {
-    margin-left: 100px;
+    margin-left: 60px;
     font-size: 35px;
     /*IE9以前に対応する*/
     font-size: 2.1875rem;
@@ -181,11 +188,12 @@ concept
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .concept_txt {
-    margin: 50px 60px 0;
+    margin: 48px 60px 0;
     font-size: 25px;
     /*IE9以前に対応する*/
     font-size: 1.5625rem;
-    line-height: 2rem;
+    line-height: 3rem;
+    letter-spacing: .01rem;
   }
 }
 
@@ -193,28 +201,72 @@ concept
   overflow: hidden;
 }
 
-.concept_imgBox:nth-child(2) {
+.concept_imgBox:nth-child(3) {
   width: 191px;
   height: 297px;
   margin: 57px 0 0 auto;
   text-align: center;
 }
 
-.concept_imgBox:nth-child(2) img {
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .concept_imgBox:nth-child(3) {
+    width: 390px;
+    height: 586px;
+    margin: 69px 0 0 auto;
+  }
+}
+
+.concept_imgBox:nth-child(3) img {
   -webkit-transform: translateY(-6%);
           transform: translateY(-6%);
 }
 
-.concept_imgBox:nth-child(3) {
-  width: 289px;
-  height: 191px;
-  margin: 30px 0 15px;
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .concept_imgBox:nth-child(3) img {
+    -webkit-transform: translateY(-8%);
+            transform: translateY(-8%);
+  }
 }
 
 .concept_imgBox:nth-child(4) {
   width: 289px;
   height: 191px;
+  margin: 30px 0 15px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .concept_imgBox:nth-child(4) {
+    width: 628px;
+    height: 350px;
+    margin: 80px 0 26px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .concept_imgBox:nth-child(4) img {
+    -webkit-transform: translateY(-4%);
+            transform: translateY(-4%);
+  }
+}
+
+.concept_imgBox:nth-child(5) {
+  width: 289px;
+  height: 191px;
   margin: 15px 0 0;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .concept_imgBox:nth-child(5) {
+    width: 628px;
+    height: 366px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .concept_imgBox:nth-child(5) img {
+    -webkit-transform: translateY(-4%);
+            transform: translateY(-4%);
+  }
 }
 
 /****************************************:
@@ -229,9 +281,25 @@ info
   background-color: #58656e;
 }
 
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .info {
+    padding-bottom: 80px;
+    margin-left: 100px;
+  }
+}
+
 .info .section_ttl {
   text-align: left;
   letter-spacing: .12em;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .info .section_ttl {
+    font-size: 35px;
+    /*IE9以前に対応する*/
+    font-size: 2.1875rem;
+    letter-spacing: .35rem;
+  }
 }
 
 .info_txt {
@@ -241,16 +309,43 @@ info
   line-height: 1.2rem;
 }
 
-.info_txt:nth-child(1) {
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .info_txt {
+    font-size: 25px;
+    /*IE9以前に対応する*/
+    font-size: 1.5625rem;
+    line-height: 2.1rem;
+  }
+}
+
+.info_txt:nth-child(2) {
   margin-top: 26px;
 }
 
-.info_txt:nth-child(2), .info_txt:nth-child(4) {
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .info_txt:nth-child(2) {
+    margin-top: 50px;
+  }
+}
+
+.info_txt:nth-child(3), .info_txt:nth-child(5) {
   margin-bottom: 33px;
 }
 
-.info_txt:nth-child(5), .info_txt:nth-child(6), .info_txt:nth-child(7) {
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .info_txt:nth-child(3), .info_txt:nth-child(5) {
+    margin-bottom: 50px;
+  }
+}
+
+.info_txt:nth-child(6), .info_txt:nth-child(7), .info_txt:nth-child(8) {
   line-height: 1.5rem;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .info_txt:nth-child(6), .info_txt:nth-child(7), .info_txt:nth-child(8) {
+    line-height: 2.4rem;
+  }
 }
 
 /****************************************:
@@ -264,14 +359,37 @@ contact
   background-color: #bac1c7;
 }
 
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .contact {
+    padding: 78px 0;
+    margin-top: 42px;
+  }
+}
+
 .contact .section_ttl {
   letter-spacing: .12em;
   margin-bottom: 18px;
 }
 
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .contact .section_ttl {
+    font-size: 35px;
+    /*IE9以前に対応する*/
+    font-size: 2.1875rem;
+    margin-bottom: 62px;
+  }
+}
+
 .contact_icon {
   width: 26px;
-  margin: 0 auto 7px;
+  margin: 0 auto 12px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .contact_icon {
+    width: 42px;
+    margin: 0 auto 15px;
+  }
 }
 
 .contact_icon_txt {
@@ -283,11 +401,30 @@ contact
   letter-spacing: 2.8px;
 }
 
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .contact_icon_txt {
+    margin-bottom: 50px;
+    font-size: 25px;
+    /*IE9以前に対応する*/
+    font-size: 1.5625rem;
+  }
+}
+
 .contact_txt {
   margin: 0 25px 26px;
   font-size: 11px;
   /*IE9以前に対応する*/
   font-size: 0.6875rem;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .contact_txt {
+    margin: 0 90px 60px;
+    font-size: 20px;
+    /*IE9以前に対応する*/
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
 }
 
 .contact_img {
@@ -297,9 +434,23 @@ contact
   overflow: hidden;
 }
 
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .contact_img {
+    width: 768px;
+    height: 295px;
+  }
+}
+
 .contact_img img {
   -webkit-transform: translateY(-13%);
           transform: translateY(-13%);
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .contact_img img {
+    -webkit-transform: translateY(-22%);
+            transform: translateY(-22%);
+  }
 }
 
 /****************************************:
