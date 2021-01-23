@@ -500,7 +500,7 @@ access
   background-size: cover;
   width: 335px;
   height: 167px;
-  margin-left: 40px;
+  margin-left: auto;
   margin-bottom: 30px;
 }
 
@@ -556,19 +556,58 @@ staff
 
 *****************************************:*/
 .staff {
-  padding: 50px 0;
+  padding: 50px 0 18px;
   background: #58656e;
 }
 
-.staff_imgbox {
+.staff .section_ttl {
+  margin-bottom: 21px;
+}
+
+.staff_content {
+  display: block;
+}
+
+.staff_box {
   width: 275px;
+  overflow: hidden;
+  margin: 0 auto 30px;
+}
+
+.staff_imgbox {
   height: 163px;
   display: block;
+  margin: 0 auto 8px;
 }
 
 .staff_imgbox.__left {
   background: url(/img/section-staff/staff1.jpg) no-repeat;
-  background-size: cover;
+  background-size: 167%;
+  background-position: 50% 60%;
+}
+
+.staff_imgbox.__center {
+  background: url(/img/section-staff/staff2.jpg) no-repeat;
+  background-size: 100%;
+  background-position: 50% 26%;
+}
+
+.staff_imgbox.__right {
+  background: url(/img/section-staff/staff3.jpg) no-repeat;
+  background-size: 134%;
+  background-position: 56% 40%;
+}
+
+.staff_txt_ja {
+  font-size: 15px;
+  /*IE9以前に対応する*/
+  font-size: 0.9375rem;
+}
+
+.staff_txt_en {
+  font-size: 12px;
+  /*IE9以前に対応する*/
+  font-size: 0.75rem;
 }
 
 /****************************************:
