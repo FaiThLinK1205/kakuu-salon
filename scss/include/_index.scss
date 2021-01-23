@@ -355,7 +355,7 @@ access
         background-size: cover;
         width: 335px;
         height: 167px;
-        margin-left: 40px;
+        margin-left: auto;
         margin-bottom: 30px;
     }
 
@@ -414,18 +414,55 @@ staff
 *****************************************:*/
 
 .staff {
-    padding: 50px 0;
+    padding: 50px 0 18px;
     background: $cBlack;
+
+    .section_ttl {
+        margin-bottom: 21px;
+    }
+
+    &_content {
+        display: block;
+    }
+
+    &_box {
+        width: 275px;
+        overflow: hidden;
+        margin: 0 auto 30px;
+    }
 
 
     &_imgbox {
-        width: 275px;
+        // width: 275px;
         height: 163px;
         display: block;
+        margin: 0 auto 8px;
 
         &.__left {
             background: url(/img/section-staff/staff1.jpg) no-repeat;
-            background-size: cover;
+            background-size: 167%;
+            background-position: 50% 60%;
         }
+
+        &.__center {
+            background: url(/img/section-staff/staff2.jpg) no-repeat;
+            background-size: 100%;
+            background-position: 50% 26%;
+        }
+
+        &.__right {
+            background: url(/img/section-staff/staff3.jpg) no-repeat;
+            background-size: 134%;
+            background-position: 56% 40%;
+        }
+    }
+
+    &_txt_ja {
+        @include rem(15);
+    }
+
+    &_txt_en {
+        @include rem(12);
+
     }
 }
