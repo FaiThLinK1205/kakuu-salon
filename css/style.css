@@ -906,6 +906,13 @@ concept
   }
 }
 
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .concept {
+    padding-top: 105px;
+    margin-bottom: 105px;
+  }
+}
+
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   .concept {
     padding-top: 150px;
@@ -940,6 +947,15 @@ concept
     font-size: 35px;
     /*IE9以前に対応する*/
     font-size: 2.1875rem;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .concept .section_ttl {
+    margin-left: 75px;
+    font-size: 46px;
+    /*IE9以前に対応する*/
+    font-size: 2.875rem;
   }
 }
 
@@ -992,6 +1008,17 @@ concept
   }
 }
 
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .concept_txt {
+    margin: 52px 75px 0;
+    font-size: 27px;
+    /*IE9以前に対応する*/
+    font-size: 1.6875rem;
+    line-height: 4rem;
+    letter-spacing: 0.35rem;
+  }
+}
+
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   .concept_txt {
     margin: 16px 476px 0 0;
@@ -1036,6 +1063,14 @@ concept
     width: 390px;
     height: 586px;
     margin: 69px 0 0 auto;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .concept_imgBox:nth-child(3) {
+    width: 505px;
+    height: 757px;
+    margin: 85px 0 0 auto;
   }
 }
 
@@ -1103,6 +1138,14 @@ concept
   }
 }
 
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .concept_imgBox:nth-child(4) {
+    width: 812px;
+    height: 450px;
+    margin: 105px 0 35px;
+  }
+}
+
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   .concept_imgBox:nth-child(4) {
     width: 475px;
@@ -1144,6 +1187,13 @@ concept
   .concept_imgBox:nth-child(5) {
     width: 628px;
     height: 366px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .concept_imgBox:nth-child(5) {
+    width: 812px;
+    height: 472px;
   }
 }
 
@@ -1208,6 +1258,13 @@ info
   }
 }
 
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .info {
+    padding-bottom: 147px;
+    margin-left: 130px;
+  }
+}
+
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   .info {
     padding-bottom: 92px;
@@ -1241,6 +1298,15 @@ info
     font-size: 35px;
     /*IE9以前に対応する*/
     font-size: 2.1875rem;
+    letter-spacing: 0.35rem;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .info .section_ttl {
+    font-size: 47.5px;
+    /*IE9以前に対応する*/
+    font-size: 2.96875rem;
     letter-spacing: 0.35rem;
   }
 }
@@ -1286,6 +1352,16 @@ info
   }
 }
 
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .info_txt {
+    font-size: 30px;
+    /*IE9以前に対応する*/
+    font-size: 1.875rem;
+    line-height: 3.3rem;
+    letter-spacing: 0.13rem;
+  }
+}
+
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   .info_txt {
     font-size: 19px;
@@ -1320,6 +1396,12 @@ info
   }
 }
 
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .info_txt:nth-child(2) {
+    margin-top: 58px;
+  }
+}
+
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   .info_txt:nth-child(2) {
     margin-top: 35px;
@@ -1348,6 +1430,12 @@ info
   }
 }
 
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .info_txt:nth-child(3), .info_txt:nth-child(5) {
+    margin-bottom: 50px;
+  }
+}
+
 @media screen and (min-width: 1400px) {
   .info_txt:nth-child(3), .info_txt:nth-child(5) {
     margin-bottom: 48px;
@@ -1367,6 +1455,12 @@ info
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .info_txt:nth-child(6), .info_txt:nth-child(7), .info_txt:nth-child(8) {
     line-height: 2.4rem;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .info_txt:nth-child(6), .info_txt:nth-child(7), .info_txt:nth-child(8) {
+    line-height: 3.3rem;
   }
 }
 
@@ -1399,6 +1493,12 @@ contact
   }
 }
 
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .contact {
+    padding: 100px 0;
+  }
+}
+
 @media screen and (min-width: 1400px) {
   .contact {
     padding: 110px 0;
@@ -1425,6 +1525,15 @@ contact
     /*IE9以前に対応する*/
     font-size: 2.1875rem;
     margin-bottom: 62px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .contact .section_ttl {
+    font-size: 47.5px;
+    /*IE9以前に対応する*/
+    font-size: 2.96875rem;
+    margin-bottom: 75px;
   }
 }
 
@@ -1499,6 +1608,13 @@ contact
   }
 }
 
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .contact_icon {
+    width: 55px;
+    margin: 0 auto 20px;
+  }
+}
+
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   .contact_icon {
     width: 36px;
@@ -1538,6 +1654,16 @@ contact
     font-size: 25px;
     /*IE9以前に対応する*/
     font-size: 1.5625rem;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .contact_icon_txt {
+    margin-bottom: 75px;
+    font-size: 25px;
+    /*IE9以前に対応する*/
+    font-size: 1.5625rem;
+    letter-spacing: 9px;
   }
 }
 
@@ -1588,6 +1714,17 @@ contact
   }
 }
 
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .contact_txt {
+    margin: 0 110px 65px;
+    font-size: 24px;
+    /*IE9以前に対応する*/
+    font-size: 1.5rem;
+    line-height: 2.8rem;
+    letter-spacing: 2px;
+  }
+}
+
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   .contact_txt {
     margin: 0 280px 68px;
@@ -1626,6 +1763,13 @@ contact
   .contact_img {
     width: 768px;
     height: 295px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .contact_img {
+    width: 992px;
+    height: 380px;
   }
 }
 
@@ -2672,6 +2816,12 @@ footer
   }
 }
 
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .footer_flex {
+    padding: 100px 130px;
+  }
+}
+
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   .footer_flex {
     padding: 90px 115px;
@@ -2697,6 +2847,16 @@ footer
     font-size: 55px;
     /*IE9以前に対応する*/
     font-size: 3.4375rem;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .footer_txt {
+    margin-bottom: -3px;
+    font-size: 70px;
+    /*IE9以前に対応する*/
+    font-size: 4.375rem;
+    letter-spacing: 12px;
   }
 }
 
@@ -2734,6 +2894,14 @@ footer
   }
 }
 
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .footer_right {
+    font-size: 20px;
+    /*IE9以前に対応する*/
+    font-size: 1.25rem;
+  }
+}
+
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   .footer_right {
     font-size: 13px;
@@ -2761,6 +2929,14 @@ footer
     width: 39px;
     height: 39px;
     margin-top: 22px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .insta {
+    width: 50px;
+    height: 50px;
+    margin-top: 32px;
   }
 }
 
