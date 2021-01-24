@@ -165,6 +165,12 @@ header
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .header {
+    line-height: 67px;
+  }
+}
+
 .header_ttl {
   margin-left: 20px;
   padding-top: 8px;
@@ -187,12 +193,23 @@ header
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   .header_ttl {
+    margin-left: 55px;
+    padding-top: 23px;
     font-size: 50px;
     /*IE9以前に対応する*/
     font-size: 3.125rem;
-    margin-left: 55px;
-    padding-top: 23px;
     letter-spacing: 8px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .header_ttl {
+    margin-left: 69px;
+    padding-top: 26px;
+    font-size: 55px;
+    /*IE9以前に対応する*/
+    font-size: 3.4375rem;
+    letter-spacing: 11px;
   }
 }
 
@@ -220,6 +237,12 @@ nav (ハンバーガーメニュー含む)
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .ham_nav {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1400px) {
   .ham_nav {
     display: none;
   }
@@ -429,12 +452,24 @@ nav (ハンバーガーメニュー含む)
             flex-wrap: nowrap;
     margin-left: 55px;
   }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) and (min-width: 1400px) {
+  .nav_list {
+    margin-left: 70px;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
   .nav_item {
     font-size: 18px;
     /*IE9以前に対応する*/
     font-size: 1.125rem;
     padding-right: 20px;
     letter-spacing: 4.5px;
+    font-size: 20px;
+    /*IE9以前に対応する*/
+    font-size: 1.25rem;
   }
   .nav_link {
     position: relative;
