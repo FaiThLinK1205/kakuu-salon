@@ -4,89 +4,108 @@ footer
 
 *****************************************:*/
 
-.footer{
-  color: #FFFFFF;
+.footer {
+  color: #ffffff;
   font-weight: bold;
   background-color: $cGray;
 
-  &_flex{
+  &_flex {
     padding: 50px;
     @include flex();
 
-    @include Tab{
+    @include Sm {
+      padding: 75px 79px;
+
+      // TO DO あとで消す
+      // margin-top: 1383px;
+    }
+
+    @include Tab {
       padding: 80px 100px;
     }
 
-    @include Xl{
+    @include Xl {
       padding: 90px 115px;
     }
 
-    @include XXl{
+    @include XXl {
       padding: 105px 140px;
-
-      // TO DO あとで消す
-      // margin-top: 136px;
     }
   }
 
-  &_txt{
+  &_txt {
     margin-bottom: -15px;
     @include rem(32);
     letter-spacing: 4.8px;
 
-    @include Tab{
+    @include Sm {
+      margin-bottom: -10px;
+      @include rem(45);
+      letter-spacing: 11px;
+    }
+
+    @include Tab {
       @include rem(55);
     }
 
-    @include Xl{
+    @include Xl {
       margin-bottom: -6px;
       @include rem(50);
       letter-spacing: 7.8px;
     }
 
-    @include XXl{
+    @include XXl {
       margin-bottom: -6px;
       @include rem(60);
       letter-spacing: 7.8px;
     }
   }
 
-  &_right{
+  &_right {
     @include rem(10);
 
-    @include Tab{
+    @include Sm {
       @include rem(15);
     }
 
-    @include Xl{
+    @include Tab {
+      @include rem(15);
+    }
+
+    @include Xl {
       @include rem(13);
     }
 
-    @include XXl{
+    @include XXl {
       @include rem(15);
     }
   }
 }
 
-
-.insta{
+.insta {
   width: 25px;
   height: 25px;
   margin-top: 12px;
 
-  @include Tab{
-    width: 39px;
-    height: 39px;
-    margin-top: 22px;
-  }
-
-  @include Xl{
+  @include Sm {
     width: 36px;
     height: 36px;
     margin-top: 22px;
   }
 
-  @include XXl{
+  @include Tab {
+    width: 39px;
+    height: 39px;
+    margin-top: 22px;
+  }
+
+  @include Xl {
+    width: 36px;
+    height: 36px;
+    margin-top: 22px;
+  }
+
+  @include XXl {
     width: 36px;
     height: 36px;
     margin-top: 27px;

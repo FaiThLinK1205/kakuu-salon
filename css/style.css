@@ -527,7 +527,7 @@ fv/スライダー
 }
 
 .fv_scroll::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -537,7 +537,7 @@ fv/スライダー
 }
 
 .fv_scroll::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -569,7 +569,7 @@ fv/スライダー
             writing-mode: vertical-lr;
   }
   .fv_scroll::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 117px;
     left: 50%;
@@ -578,7 +578,7 @@ fv/スライダー
     background: rgba(255, 255, 255, 0.4);
   }
   .fv_scroll::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 117px;
     left: 50%;
@@ -611,7 +611,7 @@ fv/スライダー
             writing-mode: vertical-lr;
   }
   .fv_scroll::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 79px;
     left: 50%;
@@ -620,7 +620,7 @@ fv/スライダー
     background: rgba(255, 255, 255, 0.4);
   }
   .fv_scroll::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 79px;
     left: 50%;
@@ -641,6 +641,14 @@ concept
   padding-top: 50px;
   margin-bottom: 50px;
   background-color: #58656e;
+  margin-top: 500px;
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .concept {
+    padding-top: 80px;
+    margin-bottom: 78px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -666,7 +674,16 @@ concept
 .concept .section_ttl {
   text-align: left;
   margin-left: 30px;
-  letter-spacing: .15em;
+  letter-spacing: 0.15em;
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .concept .section_ttl {
+    margin-left: 0;
+    font-size: 34px;
+    /*IE9以前に対応する*/
+    font-size: 2.125rem;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -706,6 +723,16 @@ concept
   line-height: 40px;
 }
 
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .concept_txt {
+    margin: 18px auto 0;
+    font-size: 22px;
+    /*IE9以前に対応する*/
+    font-size: 1.375rem;
+    line-height: 3.8rem;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .concept_txt {
     margin: 48px 60px 0;
@@ -713,7 +740,7 @@ concept
     /*IE9以前に対応する*/
     font-size: 1.5625rem;
     line-height: 3rem;
-    letter-spacing: .01rem;
+    letter-spacing: 0.01rem;
   }
 }
 
@@ -746,6 +773,14 @@ concept
   height: 297px;
   margin: 57px 0 0 auto;
   text-align: center;
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .concept_imgBox:nth-child(3) {
+    width: 295px;
+    height: 456px;
+    margin: 88px -46px 0 auto;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -804,6 +839,14 @@ concept
   margin: 30px 0 15px;
 }
 
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .concept_imgBox:nth-child(4) {
+    width: 445px;
+    height: 295px;
+    margin: 45px 0 23px -45px;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .concept_imgBox:nth-child(4) {
     width: 628px;
@@ -839,6 +882,14 @@ concept
   width: 289px;
   height: 191px;
   margin: 15px 0 0;
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .concept_imgBox:nth-child(5) {
+    width: 445px;
+    height: 295px;
+    margin-left: -45px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -891,8 +942,15 @@ info
 .info {
   padding-bottom: 49px;
   margin-left: 51px;
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: #58656e;
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .info {
+    padding-bottom: 76px;
+    margin-left: 0;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -918,7 +976,16 @@ info
 
 .info .section_ttl {
   text-align: left;
-  letter-spacing: .12em;
+  letter-spacing: 0.12em;
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .info .section_ttl {
+    font-size: 32px;
+    /*IE9以前に対応する*/
+    font-size: 2rem;
+    letter-spacing: 0.35rem;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -926,7 +993,7 @@ info
     font-size: 35px;
     /*IE9以前に対応する*/
     font-size: 2.1875rem;
-    letter-spacing: .35rem;
+    letter-spacing: 0.35rem;
   }
 }
 
@@ -951,6 +1018,15 @@ info
   /*IE9以前に対応する*/
   font-size: 0.875rem;
   line-height: 1.2rem;
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .info_txt {
+    font-size: 22px;
+    /*IE9以前に対応する*/
+    font-size: 1.375rem;
+    line-height: 2.1rem;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -984,6 +1060,12 @@ info
   margin-top: 26px;
 }
 
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .info_txt:nth-child(2) {
+    margin-top: 36px;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .info_txt:nth-child(2) {
     margin-top: 50px;
@@ -1006,6 +1088,12 @@ info
   margin-bottom: 33px;
 }
 
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .info_txt:nth-child(3), .info_txt:nth-child(5) {
+    margin-bottom: 40px;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .info_txt:nth-child(3), .info_txt:nth-child(5) {
     margin-bottom: 50px;
@@ -1020,6 +1108,12 @@ info
 
 .info_txt:nth-child(6), .info_txt:nth-child(7), .info_txt:nth-child(8) {
   line-height: 1.5rem;
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .info_txt:nth-child(6), .info_txt:nth-child(7), .info_txt:nth-child(8) {
+    line-height: 2.4rem;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -1045,6 +1139,12 @@ contact
   background-color: #bac1c7;
 }
 
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .contact {
+    padding: 80px 0;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .contact {
     padding: 78px 0;
@@ -1058,8 +1158,17 @@ contact
 }
 
 .contact .section_ttl {
-  letter-spacing: .12em;
+  letter-spacing: 0.12em;
   margin-bottom: 18px;
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .contact .section_ttl {
+    font-size: 35px;
+    /*IE9以前に対応する*/
+    font-size: 2.1875rem;
+    margin-bottom: 34px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -1128,6 +1237,13 @@ contact
   margin: 0 auto 12px;
 }
 
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .contact_icon {
+    width: 40px;
+    margin: 0 auto 15px;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .contact_icon {
     width: 42px;
@@ -1156,6 +1272,16 @@ contact
   /*IE9以前に対応する*/
   font-size: 0.875rem;
   letter-spacing: 2.8px;
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .contact_icon_txt {
+    margin-bottom: 45px;
+    font-size: 20px;
+    /*IE9以前に対応する*/
+    font-size: 1.25rem;
+    letter-spacing: 4px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -1193,6 +1319,17 @@ contact
   font-size: 0.6875rem;
 }
 
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .contact_txt {
+    margin: 0 0 38px;
+    font-size: 14px;
+    /*IE9以前に対応する*/
+    font-size: 0.875rem;
+    line-height: 1.8rem;
+    letter-spacing: 2.6px;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .contact_txt {
     margin: 0 90px 60px;
@@ -1228,6 +1365,13 @@ contact
   height: 191px;
   margin: 0 auto;
   overflow: hidden;
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .contact_img {
+    width: 576px;
+    height: 292px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -1426,7 +1570,7 @@ menu
   font-size: 20px;
   /*IE9以前に対応する*/
   font-size: 1.25rem;
-  letter-spacing: .001em;
+  letter-spacing: 0.001em;
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -1451,7 +1595,7 @@ menu
 }
 
 .menu_table_headspan {
-  letter-spacing: .00064em;
+  letter-spacing: 0.00064em;
   margin-left: 22px;
   font-size: 16px;
   /*IE9以前に対応する*/
@@ -1618,7 +1762,7 @@ access
 
 .access .section_ttl {
   margin-bottom: 20px;
-  letter-spacing: .19em;
+  letter-spacing: 0.19em;
 }
 
 .access_txtbox {
@@ -1630,7 +1774,7 @@ access
 }
 
 .access_txt {
-  letter-spacing: .27em;
+  letter-spacing: 0.27em;
   line-height: 1.6;
   margin-bottom: 12px;
 }
@@ -1643,13 +1787,13 @@ access
 
 .access_icontxt {
   display: inline-block;
-  letter-spacing: .15em;
+  letter-spacing: 0.15em;
   margin-left: 10px;
 }
 
 .access_icontxt:before {
   display: inline-block;
-  content: '';
+  content: "";
   background: url(/img/svg/map.svg) no-repeat;
   width: 15px;
   height: 21px;
@@ -1728,7 +1872,7 @@ footer
 
 *****************************************:*/
 .footer {
-  color: #FFFFFF;
+  color: #ffffff;
   font-weight: bold;
   background-color: #bac1c7;
 }
@@ -1746,6 +1890,12 @@ footer
   -webkit-flex-wrap: nowrap;
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap;
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .footer_flex {
+    padding: 75px 79px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -1772,6 +1922,16 @@ footer
   /*IE9以前に対応する*/
   font-size: 2rem;
   letter-spacing: 4.8px;
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .footer_txt {
+    margin-bottom: -10px;
+    font-size: 45px;
+    /*IE9以前に対応する*/
+    font-size: 2.8125rem;
+    letter-spacing: 11px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -1808,6 +1968,14 @@ footer
   font-size: 0.625rem;
 }
 
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .footer_right {
+    font-size: 15px;
+    /*IE9以前に対応する*/
+    font-size: 0.9375rem;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .footer_right {
     font-size: 15px;
@@ -1836,6 +2004,14 @@ footer
   width: 25px;
   height: 25px;
   margin-top: 12px;
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .insta {
+    width: 36px;
+    height: 36px;
+    margin-top: 22px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {

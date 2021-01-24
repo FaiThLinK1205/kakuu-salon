@@ -1,26 +1,21 @@
 // サイトコンテンツスタイル用
 // index.html用
 
-
-
 /****************************************:
 
 fv/スライダー
 
 *****************************************:*/
 
-
 .swiper-slide {
   width: 100%;
   overflow: hidden;
   padding-left: 5%;
-
 }
 
 .fv_img {
   height: 578px;
   object-fit: cover;
-
 
   @include Tab {
     height: 910px;
@@ -31,9 +26,7 @@ fv/スライダー
   }
 }
 
-
 .fv {
-
   &_scroll {
     display: inline-block;
     position: absolute;
@@ -50,17 +43,17 @@ fv/スライダー
     writing-mode: vertical-lr;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 0;
       left: 50%;
       width: 2px;
       height: 107px;
-      background: rgba(255, 255, 255, .4);
+      background: rgba(255, 255, 255, 0.4);
     }
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 0;
       left: 50%;
@@ -74,7 +67,6 @@ fv/スライダー
 
 @include Tab {
   .fv {
-
     &_scroll {
       display: inline-block;
       position: absolute;
@@ -91,17 +83,17 @@ fv/スライダー
       writing-mode: vertical-lr;
 
       &::before {
-        content: '';
+        content: "";
         position: absolute;
         top: 117px;
         left: 50%;
         width: 2px;
         height: 215px;
-        background: rgba(255, 255, 255, .4);
+        background: rgba(255, 255, 255, 0.4);
       }
 
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         top: 117px;
         left: 50%;
@@ -116,7 +108,6 @@ fv/スライダー
 
 @include Xl {
   .fv {
-
     &_scroll {
       display: inline-block;
       position: absolute;
@@ -133,17 +124,17 @@ fv/スライダー
       writing-mode: vertical-lr;
 
       &::before {
-        content: '';
+        content: "";
         position: absolute;
         top: 79px;
         left: 50%;
         width: 2px;
         height: 125px;
-        background: rgba(255, 255, 255, .4);
+        background: rgba(255, 255, 255, 0.4);
       }
 
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         top: 79px;
         left: 50%;
@@ -156,16 +147,11 @@ fv/スライダー
   }
 }
 
-
-
-
-
 /****************************************:
 
 concept
 
 *****************************************:*/
-
 
 .concept {
   padding-top: 50px;
@@ -173,8 +159,13 @@ concept
   background-color: $cBlack;
 
   // TO DO あとで消す---
-  // margin-top: 222px;
+  margin-top: 500px;
   // -------
+
+  @include Sm {
+    padding-top: 80px;
+    margin-bottom: 78px;
+  }
 
   @include Tab {
     padding-top: 80px;
@@ -193,14 +184,19 @@ concept
   .section_ttl {
     text-align: left;
     margin-left: 30px;
-    letter-spacing: .15em;
+    letter-spacing: 0.15em;
+
+    @include Sm {
+      margin-left: 0;
+      @include rem(34);
+    }
 
     @include Tab {
       margin-left: 60px;
       @include rem(35);
     }
 
-    @include Xl{
+    @include Xl {
       margin-left: 0;
       @include rem(32);
     }
@@ -218,14 +214,20 @@ concept
     @include rem(14);
     line-height: 40px;
 
+    @include Sm {
+      margin: 18px auto 0;
+      @include rem(22);
+      line-height: 3.8rem;
+    }
+
     @include Tab {
       margin: 48px 60px 0;
       @include rem(25);
       line-height: 3rem;
-      letter-spacing: .01rem;
+      letter-spacing: 0.01rem;
     }
 
-    @include Xl{
+    @include Xl {
       margin: 16px 476px 0 0;
       @include rem(15.5);
       line-height: 3rem;
@@ -247,13 +249,19 @@ concept
       margin: 57px 0 0 auto;
       text-align: center;
 
+      @include Sm {
+        width: 295px;
+        height: 456px;
+        margin: 88px -46px 0 auto;
+      }
+
       @include Tab {
         width: 390px;
         height: 586px;
         margin: 69px 0 0 auto;
       }
 
-      @include Xl{
+      @include Xl {
         width: 417px;
         height: 630px;
         margin: -183px 0 0 auto;
@@ -272,7 +280,7 @@ concept
           transform: translateY(-8%);
         }
 
-        @include Xl{
+        @include Xl {
           transform: translateY(-8%);
         }
 
@@ -287,13 +295,19 @@ concept
       height: 191px;
       margin: 30px 0 15px;
 
+      @include Sm {
+        width: 445px;
+        height: 295px;
+        margin: 45px 0 23px -45px;
+      }
+
       @include Tab {
         width: 628px;
         height: 350px;
         margin: 80px 0 26px;
       }
 
-      @include Xl{
+      @include Xl {
         width: 475px;
         height: 300px;
         margin: -368px 0 33px;
@@ -306,7 +320,6 @@ concept
       }
 
       img {
-
         @include Tab {
           transform: translateY(-4%);
         }
@@ -316,13 +329,19 @@ concept
       width: 289px;
       height: 191px;
       margin: 15px 0 0;
-  
+
+      @include Sm {
+        width: 445px;
+        height: 295px;
+        margin-left: -45px;
+      }
+
       @include Tab {
         width: 628px;
         height: 366px;
       }
-  
-      @include Xl{
+
+      @include Xl {
         width: 475px;
         height: 300px;
       }
@@ -331,13 +350,13 @@ concept
         width: 560px;
         height: 357px;
       }
-  
+
       img {
-        @include Tab{
+        @include Tab {
           transform: translateY(-4%);
         }
-  
-        @include Xl{
+
+        @include Xl {
           transform: translateY(-4%);
         }
 
@@ -349,30 +368,29 @@ concept
   }
 }
 
-
-
-
-
 /****************************************:
 
 info
 
 *****************************************:*/
 
-
-
 .info {
   padding-bottom: 49px;
   margin-left: 51px;
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: $cBlack;
 
-  @include Tab{
+  @include Sm {
+    padding-bottom: 76px;
+    margin-left: 0;
+  }
+
+  @include Tab {
     padding-bottom: 80px;
     margin-left: 100px;
   }
 
-  @include Xl{
+  @include Xl {
     padding-bottom: 92px;
     margin: -267px 0px 0 647px;
   }
@@ -382,16 +400,21 @@ info
     margin: -300px 0px 0 770px;
   }
 
-  .section_ttl{
+  .section_ttl {
     text-align: left;
-    letter-spacing: .12em;
+    letter-spacing: 0.12em;
 
-    @include Tab{
-      @include rem(35);
-      letter-spacing: .35rem;
+    @include Sm {
+      @include rem(32);
+      letter-spacing: 0.35rem;
     }
 
-    @include Xl{
+    @include Tab {
+      @include rem(35);
+      letter-spacing: 0.35rem;
+    }
+
+    @include Xl {
       @include rem(33);
     }
 
@@ -404,12 +427,17 @@ info
     @include rem(14);
     line-height: 1.2rem;
 
-    @include Tab{
+    @include Sm {
+      @include rem(22);
+      line-height: 2.1rem;
+    }
+
+    @include Tab {
       @include rem(25);
       line-height: 2.1rem;
     }
 
-    @include Xl{
+    @include Xl {
       @include rem(19);
       line-height: 2rem;
     }
@@ -419,14 +447,18 @@ info
       line-height: 2rem;
     }
 
-    &:nth-child(2){
+    &:nth-child(2) {
       margin-top: 26px;
-  
-      @include Tab{
+
+      @include Sm {
+        margin-top: 36px;
+      }
+
+      @include Tab {
         margin-top: 50px;
       }
-  
-      @include Xl{
+
+      @include Xl {
         margin-top: 35px;
       }
 
@@ -434,11 +466,16 @@ info
         margin-top: 50px;
       }
     }
-  
-    &:nth-child(3), &:nth-child(5){
+
+    &:nth-child(3),
+    &:nth-child(5) {
       margin-bottom: 33px;
-  
-      @include Tab{
+
+      @include Sm {
+        margin-bottom: 40px;
+      }
+
+      @include Tab {
         margin-bottom: 50px;
       }
 
@@ -446,11 +483,17 @@ info
         margin-bottom: 48px;
       }
     }
-  
-    &:nth-child(6),&:nth-child(7),&:nth-child(8){
+
+    &:nth-child(6),
+    &:nth-child(7),
+    &:nth-child(8) {
       line-height: 1.5rem;
-  
-      @include Tab{
+
+      @include Sm {
+        line-height: 2.4rem;
+      }
+
+      @include Tab {
         line-height: 2.4rem;
       }
 
@@ -461,24 +504,22 @@ info
   }
 }
 
-
-
-
-
 /****************************************:
 
 contact
 
 *****************************************:*/
 
-
-
 .contact {
   padding: 90px 0;
   text-align: center;
   background-color: $cGray;
 
-  @include Tab{
+  @include Sm {
+    padding: 80px 0;
+  }
+
+  @include Tab {
     padding: 78px 0;
   }
 
@@ -486,16 +527,21 @@ contact
     padding: 110px 0;
   }
 
-  .section_ttl{
-    letter-spacing: .12em;
+  .section_ttl {
+    letter-spacing: 0.12em;
     margin-bottom: 18px;
 
-    @include Tab{
+    @include Sm {
+      @include rem(35);
+      margin-bottom: 34px;
+    }
+
+    @include Tab {
       @include rem(35);
       margin-bottom: 62px;
     }
 
-    @include Xl{
+    @include Xl {
       @include rem(33);
       margin-bottom: 30px;
     }
@@ -506,9 +552,8 @@ contact
     }
   }
 
-  &_flex{
-
-    @include Xl{
+  &_flex {
+    @include Xl {
       margin: 0 122px 60px;
       @include flex();
     }
@@ -519,16 +564,21 @@ contact
     }
   }
 
-  &_icon{
+  &_icon {
     width: 26px;
     margin: 0 auto 12px;
 
-    @include Tab{
+    @include Sm {
+      width: 40px;
+      margin: 0 auto 15px;
+    }
+
+    @include Tab {
       width: 42px;
       margin: 0 auto 15px;
     }
 
-    @include Xl{
+    @include Xl {
       width: 36px;
       line-height: 36px;
     }
@@ -538,18 +588,24 @@ contact
       line-height: 36px;
     }
 
-    &_txt{
+    &_txt {
       margin-bottom: 30px;
       font-family: はんなり明朝;
       @include rem(14);
       letter-spacing: 2.8px;
 
-      @include Tab{
+      @include Sm {
+        margin-bottom: 45px;
+        @include rem(20);
+        letter-spacing: 4px;
+      }
+
+      @include Tab {
         margin-bottom: 50px;
         @include rem(25);
       }
 
-      @include Xl{
+      @include Xl {
         margin-bottom: 0;
         @include rem(19);
       }
@@ -562,17 +618,24 @@ contact
     }
   }
 
-  &_txt{
+  &_txt {
     margin: 0 25px 26px;
     @include rem(11);
 
-    @include Tab{
+    @include Sm {
+      margin: 0 0 38px;
+      @include rem(14);
+      line-height: 1.8rem;
+      letter-spacing: 2.6px;
+    }
+
+    @include Tab {
       margin: 0 90px 60px;
       @include rem(20);
       line-height: 2rem;
     }
 
-    @include Xl{
+    @include Xl {
       margin: 0 280px 68px;
       @include rem(15);
       line-height: 2rem;
@@ -591,12 +654,17 @@ contact
     margin: 0 auto;
     overflow: hidden;
 
-    @include Tab{
+    @include Sm {
+      width: 576px;
+      height: 292px;
+    }
+
+    @include Tab {
       width: 768px;
       height: 295px;
     }
 
-    @include Xl{
+    @include Xl {
       // TO DO あとで熟考する
       // width: 1130px;
       // height: 415px;
@@ -612,27 +680,23 @@ contact
       margin-right: 5%;
     }
 
-    img{
+    img {
       transform: translateY(-13%);
 
-      @include Tab{
+      @include Tab {
         transform: translateY(-22%);
       }
 
-      @include Xl{
+      @include Xl {
         transform: translateY(-22%);
       }
 
-      @include XXl{
+      @include XXl {
         transform: translateY(-22%);
       }
     }
   }
 }
-
-
-
-
 
 /****************************************:
 
@@ -644,7 +708,6 @@ menu
 //     width: 100%;
 //     height: 2890px;
 // }
-
 
 .menu {
   padding: 50px 0 22px;
@@ -667,7 +730,6 @@ menu
     padding: 0 30px;
   }
 
-
   &_table {
     width: 276px;
     display: block;
@@ -676,8 +738,6 @@ menu
     @include Tab {
       width: 90%;
     }
-
-
 
     &.__cut {
       margin-bottom: 25px;
@@ -699,7 +759,6 @@ menu
         @include rem(15);
         margin-left: 0;
 
-
         @include Tab {
           @include rem(20);
           margin-bottom: 32px;
@@ -718,7 +777,6 @@ menu
         @include rem(15);
         margin-left: 0;
       }
-
     }
 
     &.__treat {
@@ -734,7 +792,6 @@ menu
         @include rem(15);
         margin-left: 0;
       }
-
     }
 
     &.__other {
@@ -747,25 +804,18 @@ menu
 
       .menu_table_right.__fz {
         @include rem(11px);
-
-
       }
-
 
       @include Tab {
         .menu_table_box.__dire {
           flex-direction: initial;
         }
       }
-
     }
-
-
 
     &_head {
       @include rem(20);
-      letter-spacing: .001em;
-
+      letter-spacing: 0.001em;
 
       @include Tab {
         @include rem(25);
@@ -781,11 +831,10 @@ menu
           margin-bottom: 23px;
         }
       }
-
     }
 
     &_headspan {
-      letter-spacing: .00064em;
+      letter-spacing: 0.00064em;
       margin-left: 22px;
       @include rem(16);
       line-height: 1;
@@ -800,7 +849,6 @@ menu
       justify-content: space-between;
       margin-bottom: 15px;
       line-height: 1;
-
 
       @include Tab {
         margin-bottom: 27px;
@@ -818,10 +866,8 @@ menu
           display: flex;
           justify-content: space-between;
 
-
           @include Tab {
             justify-content: flex-end;
-
 
             span {
               margin-left: 25px;
@@ -835,19 +881,12 @@ menu
           display: flex;
           justify-content: space-between;
 
-
           @include Tab {
             @include rem(20);
             justify-content: flex-end;
           }
         }
-
-
-
-
-
       }
-
     }
 
     &_left {
@@ -865,7 +904,6 @@ menu
         @include rem(20);
       }
 
-
       &.__ml {
         display: block;
       }
@@ -876,7 +914,6 @@ menu
       @include rem(12);
       letter-spacing: 0;
 
-
       @include Tab {
         @include rem(18);
       }
@@ -884,80 +921,69 @@ menu
   }
 }
 
-
-
-
-
-
-
 /****************************************:
 
 access
 
 *****************************************:*/
 
-
 .access {
-    padding: 50px 0 51px;
-    background: $cGray;
+  padding: 50px 0 51px;
+  background: $cGray;
 
-    &_imgbox {
-        background: url(/img/section-access/accecss.jpg) no-repeat;
-        background-size: cover;
-        width: 335px;
-        height: 167px;
-        margin-left: auto;
-        margin-bottom: 30px;
+  &_imgbox {
+    background: url(/img/section-access/accecss.jpg) no-repeat;
+    background-size: cover;
+    width: 335px;
+    height: 167px;
+    margin-left: auto;
+    margin-bottom: 30px;
+  }
+
+  .section_ttl {
+    margin-bottom: 20px;
+    letter-spacing: 0.19em;
+  }
+
+  &_txtbox {
+    @include rem(14);
+    // width: 252px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  &_txt {
+    letter-spacing: 0.27em;
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+
+  &_icon {
+    text-align: center;
+    display: inline-block;
+    margin-left: 9px;
+  }
+
+  &_icontxt {
+    display: inline-block;
+    letter-spacing: 0.15em;
+    margin-left: 10px;
+
+    &:before {
+      display: inline-block;
+      content: "";
+      background: url(/img/svg/map.svg) no-repeat;
+      width: 15px;
+      height: 21px;
+      margin-right: 5px;
+      transform: translateY(6px);
     }
-
-    .section_ttl {
-        margin-bottom: 20px;
-        letter-spacing: .19em
-    }
-
-    &_txtbox {
-        @include rem(14);
-        // width: 252px;
-        text-align: center;
-        margin: 0 auto;
-    }
-
-    &_txt {
-        letter-spacing: .27em;
-        line-height: 1.6;
-        margin-bottom: 12px;
-    }
-
-    &_icon {
-        text-align: center;
-        display: inline-block;
-        margin-left: 9px;
-    }
-
-    &_icontxt {
-        display: inline-block;
-        letter-spacing: .15em;
-        margin-left: 10px;
-
-        &:before {
-            display: inline-block;
-            content: '';
-            background: url(/img/svg/map.svg) no-repeat;
-            width: 15px;
-            height: 21px;
-            margin-right: 5px;
-            transform: translateY(6px);
-        }
-    }
-  
+  }
 
   &_txtspa {
     margin-left: 5px;
   }
 }
-
-
-
 
 /****************************************:
 
@@ -966,56 +992,53 @@ staff
 *****************************************:*/
 
 .staff {
-    padding: 50px 0 18px;
-    background: $cBlack;
+  padding: 50px 0 18px;
+  background: $cBlack;
 
-    .section_ttl {
-        margin-bottom: 21px;
+  .section_ttl {
+    margin-bottom: 21px;
+  }
+
+  &_content {
+    display: block;
+  }
+
+  &_box {
+    width: 275px;
+    overflow: hidden;
+    margin: 0 auto 30px;
+  }
+
+  &_imgbox {
+    // width: 275px;
+    height: 163px;
+    display: block;
+    margin: 0 auto 8px;
+
+    &.__left {
+      background: url(/img/section-staff/staff1.jpg) no-repeat;
+      background-size: 167%;
+      background-position: 50% 60%;
     }
 
-    &_content {
-        display: block;
+    &.__center {
+      background: url(/img/section-staff/staff2.jpg) no-repeat;
+      background-size: 100%;
+      background-position: 50% 26%;
     }
 
-    &_box {
-        width: 275px;
-        overflow: hidden;
-        margin: 0 auto 30px;
+    &.__right {
+      background: url(/img/section-staff/staff3.jpg) no-repeat;
+      background-size: 134%;
+      background-position: 56% 40%;
     }
+  }
 
-
-    &_imgbox {
-        // width: 275px;
-        height: 163px;
-        display: block;
-        margin: 0 auto 8px;
-
-        &.__left {
-            background: url(/img/section-staff/staff1.jpg) no-repeat;
-            background-size: 167%;
-            background-position: 50% 60%;
-        }
-
-        &.__center {
-            background: url(/img/section-staff/staff2.jpg) no-repeat;
-            background-size: 100%;
-            background-position: 50% 26%;
-        }
-
-        &.__right {
-            background: url(/img/section-staff/staff3.jpg) no-repeat;
-            background-size: 134%;
-            background-position: 56% 40%;
-        }
-    }
-
-    &_txt_ja {
-        @include rem(15);
-    }
-
+  &_txt_ja {
+    @include rem(15);
+  }
 
   &_txt_en {
     @include rem(12);
-
   }
 }
