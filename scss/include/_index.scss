@@ -278,13 +278,11 @@ fv/スライダー
 
 
 
-
 /****************************************:
 
 concept
 
 *****************************************:*/
-
 
 .concept {
   padding-top: 50px;
@@ -292,8 +290,13 @@ concept
   background-color: $cBlack;
 
   // TO DO あとで消す---
-  // margin-top: 222px;
+  // margin-top: 500px;
   // -------
+
+  @include Sm {
+    padding-top: 80px;
+    margin-bottom: 78px;
+  }
 
   @include Tab {
     padding-top: 80px;
@@ -312,7 +315,12 @@ concept
   .section_ttl {
     text-align: left;
     margin-left: 30px;
-    letter-spacing: .15em;
+    letter-spacing: 0.15em;
+
+    @include Sm {
+      margin-left: 0;
+      @include rem(34);
+    }
 
     @include Tab {
       margin-left: 60px;
@@ -337,11 +345,17 @@ concept
     @include rem(14);
     line-height: 40px;
 
+    @include Sm {
+      margin: 18px auto 0;
+      @include rem(22);
+      line-height: 3.8rem;
+    }
+
     @include Tab {
       margin: 48px 60px 0;
       @include rem(25);
       line-height: 3rem;
-      letter-spacing: .01rem;
+      letter-spacing: 0.01rem;
     }
 
     @include Xl {
@@ -365,6 +379,12 @@ concept
       height: 297px;
       margin: 57px 0 0 auto;
       text-align: center;
+
+      @include Sm {
+        width: 295px;
+        height: 456px;
+        margin: 88px -46px 0 auto;
+      }
 
       @include Tab {
         width: 390px;
@@ -406,6 +426,12 @@ concept
       height: 191px;
       margin: 30px 0 15px;
 
+      @include Sm {
+        width: 445px;
+        height: 295px;
+        margin: 45px 0 23px -45px;
+      }
+
       @include Tab {
         width: 628px;
         height: 350px;
@@ -425,17 +451,22 @@ concept
       }
 
       img {
-
         @include Tab {
           transform: translateY(-4%);
         }
       }
     }
-
+    
     &:nth-child(5) {
       width: 289px;
       height: 191px;
       margin: 15px 0 0;
+
+      @include Sm {
+        width: 445px;
+        height: 295px;
+        margin-left: -45px;
+      }
 
       @include Tab {
         width: 628px;
@@ -469,23 +500,22 @@ concept
   }
 }
 
-
-
-
-
 /****************************************:
 
 info
 
 *****************************************:*/
 
-
-
 .info {
   padding-bottom: 49px;
   margin-left: 51px;
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: $cBlack;
+
+  @include Sm {
+    padding-bottom: 76px;
+    margin-left: 0;
+  }
 
   @include Tab {
     padding-bottom: 80px;
@@ -504,11 +534,16 @@ info
 
   .section_ttl {
     text-align: left;
-    letter-spacing: .12em;
+    letter-spacing: 0.12em;
+
+    @include Sm {
+      @include rem(32);
+      letter-spacing: 0.35rem;
+    }
 
     @include Tab {
       @include rem(35);
-      letter-spacing: .35rem;
+      letter-spacing: 0.35rem;
     }
 
     @include Xl {
@@ -523,6 +558,11 @@ info
   &_txt {
     @include rem(14);
     line-height: 1.2rem;
+
+    @include Sm {
+      @include rem(22);
+      line-height: 2.1rem;
+    }
 
     @include Tab {
       @include rem(25);
@@ -542,6 +582,10 @@ info
     &:nth-child(2) {
       margin-top: 26px;
 
+      @include Sm {
+        margin-top: 36px;
+      }
+
       @include Tab {
         margin-top: 50px;
       }
@@ -559,6 +603,10 @@ info
     &:nth-child(5) {
       margin-bottom: 33px;
 
+      @include Sm {
+        margin-bottom: 40px;
+      }
+
       @include Tab {
         margin-bottom: 50px;
       }
@@ -573,6 +621,10 @@ info
     &:nth-child(8) {
       line-height: 1.5rem;
 
+      @include Sm {
+        line-height: 2.4rem;
+      }
+
       @include Tab {
         line-height: 2.4rem;
       }
@@ -584,22 +636,20 @@ info
   }
 }
 
-
-
-
-
 /****************************************:
 
 contact
 
 *****************************************:*/
 
-
-
 .contact {
   padding: 90px 0;
   text-align: center;
   background-color: $cGray;
+
+  @include Sm {
+    padding: 80px 0;
+  }
 
   @include Tab {
     padding: 78px 0;
@@ -610,8 +660,13 @@ contact
   }
 
   .section_ttl {
-    letter-spacing: .12em;
+    letter-spacing: 0.12em;
     margin-bottom: 18px;
+
+    @include Sm {
+      @include rem(35);
+      margin-bottom: 34px;
+    }
 
     @include Tab {
       @include rem(35);
@@ -630,7 +685,6 @@ contact
   }
 
   &_flex {
-
     @include Xl {
       margin: 0 122px 60px;
       @include flex();
@@ -645,6 +699,11 @@ contact
   &_icon {
     width: 26px;
     margin: 0 auto 12px;
+
+    @include Sm {
+      width: 40px;
+      margin: 0 auto 15px;
+    }
 
     @include Tab {
       width: 42px;
@@ -667,6 +726,12 @@ contact
       @include rem(14);
       letter-spacing: 2.8px;
 
+      @include Sm {
+        margin-bottom: 45px;
+        @include rem(20);
+        letter-spacing: 4px;
+      }
+
       @include Tab {
         margin-bottom: 50px;
         @include rem(25);
@@ -688,6 +753,13 @@ contact
   &_txt {
     margin: 0 25px 26px;
     @include rem(11);
+
+    @include Sm {
+      margin: 0 0 38px;
+      @include rem(14);
+      line-height: 1.8rem;
+      letter-spacing: 2.6px;
+    }
 
     @include Tab {
       margin: 0 90px 60px;
@@ -713,6 +785,11 @@ contact
     height: 191px;
     margin: 0 auto;
     overflow: hidden;
+
+    @include Sm {
+      width: 576px;
+      height: 292px;
+    }
 
     @include Tab {
       width: 768px;
@@ -756,17 +833,16 @@ contact
 
 
 
-
 /****************************************:
 
 menu
 
 *****************************************:*/
-.concept {
-  background-color: red;
-  width: 100%;
-  height: 1182px;
-}
+// .concept {
+//   background-color: red;
+//   width: 100%;
+//   height: 1182px;
+// }
 
 
 .menu {
