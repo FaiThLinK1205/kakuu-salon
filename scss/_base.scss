@@ -59,6 +59,10 @@ body {
         width: 768px;
     }
 
+    @include Lg {
+        width: 992px;
+    }
+
     @include Xl {
         width: 1200px;
     }
@@ -115,6 +119,11 @@ body {
 
     @include Tab {
         max-width: 688px;
+    }
+
+
+    @include Lg {
+        max-width: 889px;
     }
 
 

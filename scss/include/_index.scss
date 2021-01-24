@@ -272,7 +272,7 @@ concept
   background-color: $cBlack;
 
   // TO DO あとで消す---
-  // margin-top: 500px;
+  // margin-top: 400px;
   // -------
 
   @include Sm {
@@ -283,6 +283,11 @@ concept
   @include Tab {
     padding-top: 80px;
     margin-bottom: 86px;
+  }
+
+  @include Lg {
+    padding-top: 105px;
+    margin-bottom: 105px;
   }
 
   @include Xl {
@@ -307,6 +312,11 @@ concept
     @include Tab {
       margin-left: 60px;
       @include rem(35);
+    }
+
+    @include Lg {
+      margin-left: 75px;
+      @include rem(46);
     }
 
     @include Xl {
@@ -338,6 +348,13 @@ concept
       @include rem(25);
       line-height: 3rem;
       letter-spacing: 0.01rem;
+    }
+
+    @include Lg {
+      margin: 52px 75px 0;
+      @include rem(27);
+      line-height: 4rem;
+      letter-spacing: 0.35rem;
     }
 
     @include Xl {
@@ -372,6 +389,12 @@ concept
         width: 390px;
         height: 586px;
         margin: 69px 0 0 auto;
+      }
+
+      @include Lg {
+        width: 505px;
+        height: 757px;
+        margin: 85px 0 0 auto;
       }
 
       @include Xl {
@@ -420,6 +443,12 @@ concept
         margin: 80px 0 26px;
       }
 
+      @include Lg {
+        width: 812px;
+        height: 450px;
+        margin: 105px 0 35px;
+      }
+
       @include Xl {
         width: 475px;
         height: 300px;
@@ -453,6 +482,11 @@ concept
       @include Tab {
         width: 628px;
         height: 366px;
+      }
+
+      @include Lg {
+        width: 812px;
+        height: 472px;
       }
 
       @include Xl {
@@ -504,6 +538,11 @@ info
     margin-left: 100px;
   }
 
+  @include Lg {
+    padding-bottom: 147px;
+    margin-left: 130px;
+  }
+
   @include Xl {
     padding-bottom: 92px;
     margin: -267px 0px 0 647px;
@@ -525,6 +564,11 @@ info
 
     @include Tab {
       @include rem(35);
+      letter-spacing: 0.35rem;
+    }
+
+    @include Lg {
+      @include rem(47.5);
       letter-spacing: 0.35rem;
     }
 
@@ -551,6 +595,12 @@ info
       line-height: 2.1rem;
     }
 
+    @include Lg {
+      @include rem(30);
+      line-height: 3.3rem;
+      letter-spacing: 0.13rem;
+    }
+
     @include Xl {
       @include rem(19);
       line-height: 2rem;
@@ -570,6 +620,10 @@ info
 
       @include Tab {
         margin-top: 50px;
+      }
+
+      @include Lg {
+        margin-top: 58px;
       }
 
       @include Xl {
@@ -593,6 +647,10 @@ info
         margin-bottom: 50px;
       }
 
+      @include Lg {
+        margin-bottom: 50px;
+      }
+
       @include XXl {
         margin-bottom: 48px;
       }
@@ -609,6 +667,10 @@ info
 
       @include Tab {
         line-height: 2.4rem;
+      }
+
+      @include Lg {
+        line-height: 3.3rem;
       }
 
       @include XXl {
@@ -637,6 +699,10 @@ contact
     padding: 78px 0;
   }
 
+  @include Lg {
+    padding: 100px 0;
+  }
+
   @include XXl {
     padding: 110px 0;
   }
@@ -653,6 +719,11 @@ contact
     @include Tab {
       @include rem(35);
       margin-bottom: 62px;
+    }
+
+    @include Lg {
+      @include rem(47.5);
+      margin-bottom: 75px;
     }
 
     @include Xl {
@@ -692,6 +763,11 @@ contact
       margin: 0 auto 15px;
     }
 
+    @include Lg {
+      width: 55px;
+      margin: 0 auto 20px;
+    }
+
     @include Xl {
       width: 36px;
       line-height: 36px;
@@ -717,6 +793,12 @@ contact
       @include Tab {
         margin-bottom: 50px;
         @include rem(25);
+      }
+
+      @include Lg {
+        margin-bottom: 75px;
+        @include rem(25);
+        letter-spacing: 9px;
       }
 
       @include Xl {
@@ -749,6 +831,13 @@ contact
       line-height: 2rem;
     }
 
+    @include Lg {
+      margin: 0 110px 65px;
+      @include rem(24);
+      line-height: 2.8rem;
+      letter-spacing: 2px;
+    }
+
     @include Xl {
       margin: 0 280px 68px;
       @include rem(15);
@@ -776,6 +865,11 @@ contact
     @include Tab {
       width: 768px;
       height: 295px;
+    }
+
+    @include Lg {
+      width: 992px;
+      height: 380px;
     }
 
     @include Xl {

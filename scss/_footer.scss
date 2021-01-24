@@ -17,15 +17,16 @@ footer
       padding: 80px 100px;
     }
 
+    @include Lg {
+      padding: 100px 130px;
+    }
+
     @include Xl{
       padding: 90px 115px;
     }
 
     @include XXl{
       padding: 105px 140px;
-
-      // TO DO あとで消す
-      // margin-top: 136px;
     }
   }
 
@@ -36,6 +37,12 @@ footer
 
     @include Tab{
       @include rem(55);
+    }
+
+    @include Lg {
+      margin-bottom: -3px;
+      @include rem(70);
+      letter-spacing: 12px;
     }
 
     @include Xl{
@@ -58,6 +65,10 @@ footer
       @include rem(15);
     }
 
+    @include Lg {
+      @include rem(20);
+    }
+
     @include Xl{
       @include rem(13);
     }
@@ -78,6 +89,12 @@ footer
     width: 39px;
     height: 39px;
     margin-top: 22px;
+  }
+
+  @include Lg {
+    width: 50px;
+    height: 50px;
+    margin-top: 32px;
   }
 
   @include Xl{
