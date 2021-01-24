@@ -127,9 +127,9 @@ body {
 
 @media screen and (min-width: 1400px) {
   .section_ttl {
-    font-size: 80px;
+    font-size: 37px;
     /*IE9以前に対応する*/
-    font-size: 5rem;
+    font-size: 2.3125rem;
   }
 }
 
@@ -1310,6 +1310,12 @@ menu
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .menu {
+    padding: 112px 0 82px;
+  }
+}
+
 .menu .section_ttl {
   margin-bottom: 28px;
 }
@@ -1323,6 +1329,12 @@ menu
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   .menu .section_ttl {
     margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .menu .section_ttl {
+    margin-bottom: 52px;
   }
 }
 
@@ -1349,6 +1361,12 @@ menu
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .menu_container {
+    padding: 0 107px;
+  }
+}
+
 .menu_table {
   width: 276px;
   display: block;
@@ -1367,6 +1385,12 @@ menu
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .menu_table {
+    width: 385px;
+  }
+}
+
 .menu_table.__cut {
   margin-bottom: 25px;
 }
@@ -1380,6 +1404,12 @@ menu
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   .menu_table.__cut {
     margin-bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .menu_table.__cut {
+    margin-bottom: 65px;
   }
 }
 
@@ -1422,6 +1452,15 @@ menu
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .menu_table.__perm .menu_table_headspan {
+    margin-left: 14px;
+    font-size: 18px;
+    /*IE9以前に対応する*/
+    font-size: 1.125rem;
+  }
+}
+
 .menu_table.__clr {
   margin-bottom: 20px;
 }
@@ -1443,6 +1482,17 @@ menu
   margin-bottom: 27px;
 }
 
+@media screen and (min-width: 1400px) {
+  .menu_table.__treat .menu_table_head_box {
+    margin-bottom: 37px;
+  }
+  .menu_table.__treat .menu_table_headspan {
+    display: block;
+    margin-left: 0;
+    line-height: 1.2;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .menu_table.__treat {
     margin-bottom: 72px;
@@ -1452,6 +1502,12 @@ menu
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   .menu_table.__treat {
     margin-bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .menu_table.__treat {
+    margin-bottom: 61px;
   }
 }
 
@@ -1482,6 +1538,14 @@ menu
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .menu_table.__other span {
+    font-size: 17px;
+    /*IE9以前に対応する*/
+    font-size: 1.0625rem;
+  }
+}
+
 .menu_table_head {
   font-size: 20px;
   /*IE9以前に対応する*/
@@ -1492,6 +1556,9 @@ menu
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   .menu_table_head {
     letter-spacing: .03em;
+    font-size: 18px;
+    /*IE9以前に対応する*/
+    font-size: 1.125rem;
   }
   .menu_table_head.__row {
     display: -webkit-box;
@@ -1503,9 +1570,9 @@ menu
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   .menu_table_head {
-    font-size: 18px;
+    font-size: 20px;
     /*IE9以前に対応する*/
-    font-size: 1.125rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -1525,6 +1592,12 @@ menu
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   .menu_table_head_box {
     width: 100%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .menu_table_head_box {
+    margin-bottom: 20px;
   }
 }
 
@@ -1604,10 +1677,6 @@ menu
   margin-bottom: 7px;
 }
 
-.menu_table_box.__dire .menu_table_left {
-  margin-bottom: 7px;
-}
-
 .menu_table_box.__dire .menu_table_right.__price_treat {
   margin-left: 62px;
   display: -webkit-box;
@@ -1641,8 +1710,20 @@ menu
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .menu_table_box.__dire .menu_table_right.__price_treat span {
+    margin-left: -9px;
+  }
+}
+
 .menu_table_box.__dire span {
   margin-left: 25px;
+}
+
+@media screen and (min-width: 1400px) {
+  .menu_table_box.__dire span {
+    margin-left: 12px;
+  }
 }
 
 .menu_table .menu_table_right.__price_other {
@@ -1678,6 +1759,14 @@ menu
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .menu_table .menu_table_right.__price_other {
+    font-size: 14px;
+    /*IE9以前に対応する*/
+    font-size: 0.875rem;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .menu_table {
     font-size: 20px;
@@ -1704,6 +1793,14 @@ menu
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .menu_table_left {
+    font-size: 16px;
+    /*IE9以前に対応する*/
+    font-size: 1rem;
+  }
+}
+
 .menu_table_right {
   font-size: 13px;
   /*IE9以前に対応する*/
@@ -1715,6 +1812,14 @@ menu
     font-size: 20px;
     /*IE9以前に対応する*/
     font-size: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .menu_table_right {
+    font-size: 18px;
+    /*IE9以前に対応する*/
+    font-size: 1.125rem;
   }
 }
 
@@ -1735,6 +1840,14 @@ menu
     font-size: 18px;
     /*IE9以前に対応する*/
     font-size: 1.125rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .menu_table_txt {
+    font-size: 14px;
+    /*IE9以前に対応する*/
+    font-size: 0.875rem;
   }
 }
 

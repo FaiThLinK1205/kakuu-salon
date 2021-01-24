@@ -646,7 +646,7 @@ menu
 // .concept {
 //     background-color: red;
 //     width: 100%;
-//     height: 1365px;
+//     height: 1470px;
 // }
 
 
@@ -662,6 +662,10 @@ menu
         padding: 90px 0 82px;
     }
 
+    @include XXl {
+        padding: 112px 0 82px;
+    }
+
     .section_ttl {
         margin-bottom: 28px;
 
@@ -671,6 +675,10 @@ menu
 
         @include Xl {
             margin-bottom: 40px;
+        }
+
+        @include Xl {
+            margin-bottom: 52px;
         }
     }
 
@@ -688,6 +696,10 @@ menu
             display: flex;
             justify-content: space-between;
         }
+
+        @include XXl {
+            padding: 0 107px;
+        }
     }
 
 
@@ -704,6 +716,10 @@ menu
             width: 330px;
         }
 
+        @include XXl {
+            width: 385px;
+        }
+
 
 
         &.__cut {
@@ -715,6 +731,10 @@ menu
 
             @include Xl {
                 margin-bottom: 50px;
+            }
+
+            @include XXl {
+                margin-bottom: 65px;
             }
         }
 
@@ -744,6 +764,11 @@ menu
                 @include Xl {
                     margin-left: 17px;
                 }
+
+                @include XXl {
+                    margin-left: 14px;
+                    @include rem(18);
+                }
             }
         }
 
@@ -766,6 +791,24 @@ menu
         &.__treat {
             margin-bottom: 27px;
 
+
+            @include XXl {
+
+                .menu_table_head_box {
+                    margin-bottom: 37px;
+                }
+
+                .menu_table_headspan {
+                    display: block;
+                    margin-left: 0;
+                    line-height: 1.2;
+                }
+
+
+
+            }
+
+
             @include Tab {
                 margin-bottom: 72px;
             }
@@ -774,6 +817,11 @@ menu
             @include Xl {
                 margin-bottom: 50px;
             }
+
+            @include XXl {
+                margin-bottom: 61px;
+            }
+
 
         }
 
@@ -785,6 +833,9 @@ menu
             .menu_table_headspan {
                 @include rem(15);
                 margin-left: 0;
+
+
+
             }
 
             .menu_table_right.__fz {
@@ -800,6 +851,12 @@ menu
                 }
             }
 
+            @include XXl {
+                span {
+                    @include rem(17);
+                }
+            }
+
         }
 
 
@@ -811,6 +868,7 @@ menu
 
             @include Xl {
                 letter-spacing: .03em;
+                @include rem(18);
 
                 &.__row {
                     display: flex;
@@ -818,8 +876,9 @@ menu
             }
 
             @include Xl {
-                @include rem(18);
+                @include rem(20);
             }
+
 
             &_box {
                 width: 274px;
@@ -833,6 +892,10 @@ menu
 
                 @include Xl {
                     width: 100%;
+                }
+
+                @include XXl {
+                    margin-bottom: 20px;
                 }
             }
 
@@ -855,6 +918,7 @@ menu
             @include Xl {
                 line-height: 2;
             }
+
         }
 
         @include Tab {
@@ -886,9 +950,6 @@ menu
                     margin-bottom: 7px;
                 }
 
-                .menu_table_left {
-                    margin-bottom: 7px;
-                }
 
                 .menu_table_right.__price_treat {
                     margin-left: 62px;
@@ -915,10 +976,21 @@ menu
 
                     }
 
+                    @include XXl {
+                        span {
+                            margin-left: -9px;
+                        }
+                    }
+
                 }
 
                 span {
                     margin-left: 25px;
+
+
+                    @include XXl {
+                        margin-left: 12px;
+                    }
                 }
             }
         }
@@ -938,6 +1010,10 @@ menu
             @include Xl {
                 margin-left: 0;
             }
+
+            @include XXl {
+                @include rem(14);
+            }
         }
 
         @include Tab {
@@ -955,6 +1031,10 @@ menu
             @include Tab {
                 @include rem(20);
             }
+
+            @include XXl {
+                @include rem(16);
+            }
         }
 
         &_right {
@@ -962,6 +1042,10 @@ menu
 
             @include Tab {
                 @include rem(20);
+            }
+
+            @include XXl {
+                @include rem(18);
             }
 
 
@@ -978,6 +1062,10 @@ menu
 
             @include Tab {
                 @include rem(18);
+            }
+
+            @include XXl {
+                @include rem(14);
             }
         }
     }
