@@ -8,7 +8,7 @@ body {
     margin: 0 auto;
     font-family: $fontMain;
     color: $cWhite;
-    text-size-adjust: 100%
+    text-size-adjust: 100%;
 }
 
 
@@ -88,12 +88,12 @@ body {
     @include Tab {
         @include rem(35);
         line-height: 1.34;
-        letter-spacing: .16em
+        letter-spacing: .16em;
     }
 
     @include Xl {
         @include rem(32);
-        letter-spacing: .15em
+        letter-spacing: .15em;
     }
 
 
