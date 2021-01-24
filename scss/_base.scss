@@ -79,6 +79,11 @@ body {
         letter-spacing: .16em
     }
 
+    @include Xl {
+        @include rem(32);
+        letter-spacing: .15em
+    }
+
 
 
     @include XXl {
