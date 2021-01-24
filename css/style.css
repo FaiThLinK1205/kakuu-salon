@@ -1665,13 +1665,25 @@ menu
 
 *****************************************:*/
 .menu {
-  padding: 50px 0 22px;
+  padding: 96px 0 22px;
   background-color: #58656e;
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .menu {
     padding: 110px 0 50px;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .menu {
+    padding: 96px 0 36px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .menu {
+    padding: 112px 0 82px;
   }
 }
 
@@ -1688,12 +1700,6 @@ menu
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   .menu .section_ttl {
     margin-bottom: 40px;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .menu {
-    padding: 112px 0 82px;
   }
 }
 
@@ -1729,6 +1735,13 @@ menu
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .menu_table {
     width: 90%;
+    font-size: 20px;
+    /*IE9以前に対応する*/
+    font-size: 1.25rem;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
 }
 
@@ -1738,13 +1751,19 @@ menu
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .menu_table {
+    width: 385px;
+  }
+}
+
 .menu_table.__cut {
-  margin-bottom: 25px;
+  margin-bottom: 19px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .menu_table.__cut {
-    margin-bottom: 77px;
+    margin-bottom: 65px;
   }
 }
 
@@ -1755,7 +1774,7 @@ menu
 }
 
 .menu_table.__perm {
-  margin-bottom: 24px;
+  margin-bottom: 27px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -1793,14 +1812,14 @@ menu
   }
 }
 
-@media screen and (min-width: 1400px) {
-  .menu_table {
-    width: 385px;
-  }
-}
-
 .menu_table.__clr {
   margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .menu_table.__clr {
+    margin-bottom: 80px;
+  }
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
@@ -1815,36 +1834,20 @@ menu
   }
 }
 
-.menu_table.__perm {
-  margin-bottom: 24px;
-}
-
-@media screen and (min-width: 768px) and (max-width: 992px) {
-  .menu_table.__perm {
-    margin-bottom: 70px;
-  }
-}
-
-.menu_table.__perm .menu_table_headspan {
-  font-size: 15px;
-  /*IE9以前に対応する*/
-  font-size: 0.9375rem;
-  margin-left: 0;
-}
-
 .menu_table.__treat {
-  margin-bottom: 27px;
+  margin-bottom: 19px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .menu_table.__treat {
-    margin-bottom: 72px;
+    margin-bottom: 80px;
   }
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   .menu_table.__treat {
     margin-left: 17px;
+    margin-bottom: 53px;
   }
 }
 
@@ -1857,54 +1860,28 @@ menu
   }
 }
 
-@media screen and (min-width: 1200px) and (max-width: 1400px) {
-  .menu {
-    margin-bottom: 50px;
-  }
+.menu_table.__treat .menu_table_head_box {
+  margin-bottom: 26px;
 }
 
-.menu.__other {
-  margin-bottom: 25px;
-}
-
-.menu.__other .menu_table_headspan {
+.menu_table.__treat .menu_table_headspan {
   font-size: 15px;
   /*IE9以前に対応する*/
   font-size: 0.9375rem;
   margin-left: 0;
+  display: block;
 }
 
-.menu.__other .menu_table_right.__fz {
-  font-size: 11pxpx;
-  /*IE9以前に対応する*/
-  font-size: 0.6875pxrem;
-}
-
-@media screen and (min-width: 1400px) {
-  .menu.__other .menu_table_right.__fz .menu_table_head_box {
-    margin-bottom: 37px;
-  }
-  .menu.__other .menu_table_right.__fz .menu_table_headspan {
-    display: block;
-    margin-left: 0;
-    line-height: 1.2;
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .menu_table.__treat .menu_table_headspan {
+    font-size: 20px;
+    /*IE9以前に対応する*/
+    font-size: 1.25rem;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  .menu.__other .menu_table_right.__fz {
-    margin-bottom: 72px;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .menu.__other {
-    margin-bottom: 61px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 992px) {
-  .menu.__other .menu_table_box.__dire {
+  .menu_table.__treat .menu_table_box.__dire {
     -webkit-box-orient: initial;
     -webkit-box-direction: initial;
     -webkit-flex-direction: initial;
@@ -1913,25 +1890,80 @@ menu
   }
 }
 
-.menu .menu_table_headspan {
+.menu_table.__other {
+  margin-bottom: 25px;
+}
+
+.menu_table.__other .menu_table_headspan {
   font-size: 15px;
   /*IE9以前に対応する*/
   font-size: 0.9375rem;
   margin-left: 0;
 }
 
-.menu_head {
+.menu_table.__other .menu_table_right.__fz {
+  font-size: 11pxpx;
+  /*IE9以前に対応する*/
+  font-size: 0.6875pxrem;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .menu_table.__other .menu_table_right.__fz {
+    margin-bottom: 72px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .menu_table.__other .menu_table_right.__fz .menu_table_head_box {
+    margin-bottom: 37px;
+  }
+  .menu_table.__other .menu_table_right.__fz .menu_table_headspan {
+    display: block;
+    margin-left: 0;
+    line-height: 1.2;
+  }
+}
+
+.menu_table.__other .menu_table_headspan {
+  font-size: 15px;
+  /*IE9以前に対応する*/
+  font-size: 0.9375rem;
+  margin-left: 0;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .menu_table.__other .menu_table_box.__dire {
+    -webkit-box-orient: initial;
+    -webkit-box-direction: initial;
+    -webkit-flex-direction: initial;
+        -ms-flex-direction: initial;
+            flex-direction: initial;
+  }
+}
+
+.menu_table_head {
   font-size: 20px;
   /*IE9以前に対応する*/
   font-size: 1.25rem;
   letter-spacing: 0.001em;
 }
 
-@media screen and (min-width: 1200px) and (max-width: 1400px) {
-  .menu_head {
-    letter-spacing: 0.03em;
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .menu_table_head {
+    font-size: 25px;
+    /*IE9以前に対応する*/
+    font-size: 1.5625rem;
   }
-  .menu_head.__row {
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .menu_table_head {
+    letter-spacing: 0.03em;
+    font-size: 18px;
+    /*IE9以前に対応する*/
+    font-size: 1.125rem;
+  }
+  .menu_table_head.__row {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1939,49 +1971,41 @@ menu
   }
 }
 
-@media screen and (min-width: 1200px) and (max-width: 1400px) {
-  .menu_head {
-    font-size: 18px;
-    /*IE9以前に対応する*/
-    font-size: 1.125rem;
-  }
-}
-
-.menu_head_box {
+.menu_table_head_box {
   width: 274px;
   text-align: left;
   margin-bottom: 17px;
 }
 
-@media screen and (min-width: 1400px) {
-  .menu_head_box span {
-    font-size: 17px;
-    /*IE9以前に対応する*/
-    font-size: 1.0625rem;
-  }
-}
-
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  .menu_head_box {
+  .menu_table_head_box {
     width: 100%;
     margin-bottom: 23px;
   }
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
-  .menu_head_box {
+  .menu_table_head_box {
     width: 100%;
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .menu_table_head_box span {
+    font-size: 17px;
+    /*IE9以前に対応する*/
+    font-size: 1.0625rem;
+  }
+}
+
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
-  .menu {
+  .menu_table {
     letter-spacing: 0.03em;
     font-size: 18px;
     /*IE9以前に対応する*/
     font-size: 1.125rem;
   }
-  .menu_headspan {
+  .menu_table_headspan {
     letter-spacing: 0.00064em;
     margin-left: 22px;
     font-size: 16px;
@@ -1992,7 +2016,7 @@ menu
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) and (min-width: 1200px) and (max-width: 1400px) {
-  .menu_headspan {
+  .menu_table_headspan {
     font-size: 20px;
     /*IE9以前に対応する*/
     font-size: 1.25rem;
@@ -2000,7 +2024,7 @@ menu
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
-  .menu_headspan_box {
+  .menu_table_headspan_box {
     width: 274px;
     text-align: left;
     margin-bottom: 17px;
@@ -2008,7 +2032,7 @@ menu
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) and (min-width: 768px) and (max-width: 992px) {
-  .menu_headspan_box {
+  .menu_table_headspan_box {
     font-size: 20px;
     /*IE9以前に対応する*/
     font-size: 1.25rem;
@@ -2016,64 +2040,63 @@ menu
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) and (min-width: 1200px) and (max-width: 1400px) {
-  .menu_headspan_box {
+  .menu_table_headspan_box {
     line-height: 2;
   }
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) and (min-width: 1200px) and (max-width: 1400px) {
-  .menu_headspan {
+  .menu_table_headspan {
     width: 100%;
   }
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) and (min-width: 1400px) {
-  .menu_headspan {
+  .menu_table_headspan {
     margin-bottom: 20px;
   }
 }
 
-@media screen and (min-width: 1200px) and (max-width: 1400px) and (min-width: 768px) and (max-width: 992px) {
-  .menu {
-    font-size: 20px;
-    /*IE9以前に対応する*/
-    font-size: 1.25rem;
-  }
+.menu_table_box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 7px;
+  line-height: 1;
 }
 
-@media screen and (min-width: 1200px) and (max-width: 1400px) {
-  .menu_box {
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .menu_table_box {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    margin-bottom: 15px;
-    line-height: 1;
-  }
-}
-
-@media screen and (min-width: 1200px) and (max-width: 1400px) and (min-width: 1200px) and (max-width: 1400px) {
-  .menu_box {
-    margin-bottom: 16px;
+    margin-bottom: 20px;
   }
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
-  .menu_box.__dire {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  .menu_table_box {
+    margin-bottom: 10px;
   }
 }
 
-@media screen and (min-width: 1200px) and (max-width: 1400px) and (min-width: 1200px) and (max-width: 1400px) {
-  .menu_box.__dire {
+.menu_table_box.__dire {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 13px;
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .menu_table_box.__dire {
     -webkit-box-orient: initial;
     -webkit-box-direction: initial;
     -webkit-flex-direction: initial;
@@ -2083,56 +2106,55 @@ menu
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-  }
-}
-
-@media screen and (min-width: 1200px) and (max-width: 1400px) and (min-width: 1200px) and (max-width: 1400px) {
-  .menu_box.__dire {
     line-height: 2;
+    margin-bottom: -3px;
   }
 }
 
-@media screen and (min-width: 1200px) and (max-width: 1400px) {
-  .menu_box .menu_table_left {
-    margin-bottom: 7px;
-  }
-  .menu_box .menu_table_right.__price_treat {
-    margin-left: 62px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
+.menu_table_box .menu_table_left {
+  margin-bottom: 7px;
 }
 
-@media screen and (min-width: 1200px) and (max-width: 1400px) and (min-width: 768px) and (max-width: 992px) {
-  .menu_box .menu_table_right.__price_treat {
+.menu_table_box .menu_table_right.__price_treat {
+  margin-left: 62px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .menu_table_box .menu_table_right.__price_treat {
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
-  .menu_box .menu_table_right.__price_treat span {
-    margin-left: 25px;
+  .menu_table_box .menu_table_right.__price_treat span {
+    margin-left: 13px;
   }
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
-  .menu_box .menu_table_right.__price_treat.__dire {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  .menu_table_box .menu_table_right.__price_treat {
+    margin-left: 7px;
   }
 }
 
-@media screen and (min-width: 1200px) and (max-width: 1400px) and (min-width: 1200px) and (max-width: 1400px) {
-  .menu_box .menu_table_right.__price_treat.__dire {
+.menu_table_box .menu_table_right.__price_treat.__dire {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .menu_table_box .menu_table_right.__price_treat.__dire {
     -webkit-box-orient: initial;
     -webkit-box-direction: initial;
     -webkit-flex-direction: initial;
@@ -2145,51 +2167,42 @@ menu
   }
 }
 
-@media screen and (min-width: 1200px) and (max-width: 1400px) {
-  .menu_box .menu_table_right.__price_treat.__dire .menu_table_left {
-    margin-bottom: 7px;
-  }
-  .menu_box .menu_table_right.__price_treat.__dire .menu_table_right.__price_treat {
-    margin-left: 62px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
+.menu_table_box .menu_table_right.__price_treat.__dire .menu_table_left {
+  margin-bottom: 7px;
 }
 
-@media screen and (min-width: 1200px) and (max-width: 1400px) and (min-width: 1200px) and (max-width: 1400px) {
-  .menu_box .menu_table_right.__price_treat.__dire .menu_table_right.__price_treat {
-    margin-left: 0;
-  }
-  .menu_box .menu_table_right.__price_treat.__dire .menu_table_right.__price_treat span {
+.menu_table_box .menu_table_right.__price_treat.__dire span {
+  margin-left: 25px;
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .menu_table_box .menu_table_right.__price_treat.__dire span {
     margin-left: 10px;
   }
 }
 
-@media screen and (min-width: 1200px) and (max-width: 1400px) and (min-width: 1400px) {
-  .menu_box .menu_table_right.__price_treat.__dire .menu_table_right.__price_treat span {
-    margin-left: -9px;
-  }
-}
-
-@media screen and (min-width: 1200px) and (max-width: 1400px) {
-  .menu_box .menu_table_right.__price_treat.__dire span {
-    margin-left: 25px;
-  }
-}
-
-@media screen and (min-width: 1200px) and (max-width: 1400px) and (min-width: 1400px) {
-  .menu_box .menu_table_right.__price_treat.__dire span {
+@media screen and (min-width: 1400px) {
+  .menu_table_box .menu_table_right.__price_treat.__dire span {
     margin-left: 12px;
   }
 }
 
-.menu .menu_table_right.__price_other {
+.menu_table .menu_table_headspan {
+  font-size: 15px;
+  /*IE9以前に対応する*/
+  font-size: 0.9375rem;
+  margin-left: 33px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .menu_table .menu_table_headspan {
+    font-size: 18px;
+    /*IE9以前に対応する*/
+    font-size: 1.125rem;
+  }
+}
+
+.menu_table .menu_table_right.__price_other {
   margin-left: 34px;
   font-size: 11px;
   /*IE9以前に対応する*/
@@ -2205,7 +2218,7 @@ menu
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  .menu .menu_table_right.__price_other {
+  .menu_table .menu_table_right.__price_other {
     font-size: 20px;
     /*IE9以前に対応する*/
     font-size: 1.25rem;
@@ -2217,39 +2230,27 @@ menu
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
-  .menu .menu_table_right.__price_other {
+  .menu_table .menu_table_right.__price_other {
     margin-left: 0;
   }
 }
 
 @media screen and (min-width: 1400px) {
-  .menu .menu_table_right.__price_other {
+  .menu_table .menu_table_right.__price_other {
     font-size: 14px;
     /*IE9以前に対応する*/
     font-size: 0.875rem;
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 992px) {
-  .menu {
-    font-size: 20px;
-    /*IE9以前に対応する*/
-    font-size: 1.25rem;
-    -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-  }
-}
-
-.menu_left {
+.menu_table_left {
   font-size: 13px;
   /*IE9以前に対応する*/
   font-size: 0.8125rem;
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  .menu_left {
+  .menu_table_left {
     font-size: 20px;
     /*IE9以前に対応する*/
     font-size: 1.25rem;
@@ -2257,21 +2258,21 @@ menu
 }
 
 @media screen and (min-width: 1400px) {
-  .menu_left {
+  .menu_table_left {
     font-size: 16px;
     /*IE9以前に対応する*/
     font-size: 1rem;
   }
 }
 
-.menu_right {
+.menu_table_right {
   font-size: 13px;
   /*IE9以前に対応する*/
   font-size: 0.8125rem;
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  .menu_right {
+  .menu_table_right {
     font-size: 20px;
     /*IE9以前に対応する*/
     font-size: 1.25rem;
@@ -2279,18 +2280,18 @@ menu
 }
 
 @media screen and (min-width: 1400px) {
-  .menu_right {
+  .menu_table_right {
     font-size: 18px;
     /*IE9以前に対応する*/
     font-size: 1.125rem;
   }
 }
 
-.menu_right.__ml {
+.menu_table_right.__ml {
   display: block;
 }
 
-.menu_txt {
+.menu_table_txt {
   margin-bottom: 4px;
   font-size: 12px;
   /*IE9以前に対応する*/
@@ -2299,7 +2300,7 @@ menu
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  .menu_txt {
+  .menu_table_txt {
     font-size: 18px;
     /*IE9以前に対応する*/
     font-size: 1.125rem;
@@ -2307,7 +2308,7 @@ menu
 }
 
 @media screen and (min-width: 1400px) {
-  .menu_txt {
+  .menu_table_txt {
     font-size: 14px;
     /*IE9以前に対応する*/
     font-size: 0.875rem;
@@ -2406,7 +2407,7 @@ access
 .access_txt {
   letter-spacing: 0.27em;
   line-height: 1.6;
-  margin-bottom: 12px;
+  margin-bottom: 18px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -2506,7 +2507,7 @@ staff
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .staff {
-    padding: 80px 0 20px;
+    padding: 85px 0 20px;
   }
 }
 
@@ -2579,6 +2580,7 @@ staff
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .staff_imgbox {
     height: 347px;
+    margin: 0 auto 8px;
   }
 }
 
@@ -2613,10 +2615,26 @@ staff
   font-size: 0.9375rem;
 }
 
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .staff_txt_ja {
+    font-size: 23px;
+    /*IE9以前に対応する*/
+    font-size: 1.4375rem;
+  }
+}
+
 .staff_txt_en {
   font-size: 12px;
   /*IE9以前に対応する*/
   font-size: 0.75rem;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .staff_txt_en {
+    font-size: 20px;
+    /*IE9以前に対応する*/
+    font-size: 1.25rem;
+  }
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) {

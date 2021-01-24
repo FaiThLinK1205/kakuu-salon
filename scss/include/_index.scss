@@ -820,20 +820,27 @@ menu
 // .concept {
 //   background-color: red;
 //   width: 100%;
-//   height: 1182px;
+//   height: 1363px;
 // }
 
 .menu {
-  padding: 50px 0 22px;
+  padding: 96px 0 22px;
   background-color: $cBlack;
 
   @include Tab {
     padding: 110px 0 50px;
   }
 
-  // @include Xl {
-  //     padding: 90px 0 82px;
-  // }
+  @include Xl {
+    padding: 96px 0 36px;
+
+  }
+
+
+  @include XXl {
+    padding: 112px 0 82px;
+  }
+
 
   .section_ttl {
     margin-bottom: 28px;
@@ -847,9 +854,6 @@ menu
     }
   }
 
-  @include XXl {
-    padding: 112px 0 82px;
-  }
 
   .section_inner {
     margin: 0 auto;
@@ -873,17 +877,26 @@ menu
 
     @include Tab {
       width: 90%;
+      @include rem(20);
+      justify-content: flex-end;
     }
 
     @include Xl {
       width: 330px;
     }
 
+    @include XXl {
+      width: 385px;
+    }
+
+
+
+
     &.__cut {
-      margin-bottom: 25px;
+      margin-bottom: 19px;
 
       @include Tab {
-        margin-bottom: 77px;
+        margin-bottom: 65px;
       }
 
       @include Xl {
@@ -892,7 +905,7 @@ menu
     }
 
     &.__perm {
-      margin-bottom: 24px;
+      margin-bottom: 27px;
 
       @include Tab {
         margin-bottom: 70px;
@@ -918,12 +931,13 @@ menu
       }
     }
 
-    @include XXl {
-      width: 385px;
-    }
 
     &.__clr {
       margin-bottom: 20px;
+
+      @include Tab {
+        margin-bottom: 80px;
+      }
 
       @include Xl {
         margin-bottom: 50px;
@@ -934,140 +948,117 @@ menu
       }
     }
 
-    &.__perm {
-      margin-bottom: 24px;
-
-      @include Tab {
-        margin-bottom: 70px;
-      }
-
-      .menu_table_headspan {
-        @include rem(15);
-        margin-left: 0;
-      }
-    }
 
     &.__treat {
-      margin-bottom: 27px;
+      margin-bottom: 19px;
 
       @include Tab {
-        margin-bottom: 72px;
+        margin-bottom: 80px;
       }
 
       @include Xl {
         margin-left: 17px;
+        margin-bottom: 53px;
       }
 
       @include XXl {
         margin-left: 14px;
         @include rem(18);
       }
-    }
-  }
 
-  @include Xl {
-    margin-bottom: 50px;
-  }
-
-  &.__other {
-    margin-bottom: 25px;
-
-    .menu_table_headspan {
-      @include rem(15);
-      margin-left: 0;
-    }
-
-    .menu_table_right.__fz {
-      @include rem(11px);
-
-      @include XXl {
-        .menu_table_head_box {
-          margin-bottom: 37px;
-        }
-
-        .menu_table_headspan {
-          display: block;
-          margin-left: 0;
-          line-height: 1.2;
-        }
+      .menu_table_head_box {
+        margin-bottom: 26px;
       }
 
-      @include Tab {
-        margin-bottom: 72px;
+      .menu_table_headspan {
+        @include rem(15);
+        margin-left: 0;
+        display: block;
+
+        @include Tab {
+          @include rem(20);
+        }
+
       }
-    }
 
-    // ////////
-    @include XXl {
-      margin-bottom: 61px;
-    }
-
-    @include Tab {
       .menu_table_box.__dire {
-        flex-direction: initial;
-      }
-    }
-  }
-
-  // /
-
-  .menu_table_headspan {
-    @include rem(15);
-    margin-left: 0;
-  }
-
-  &_head {
-    @include rem(20);
-    letter-spacing: 0.001em;
-
-    @include Xl {
-      letter-spacing: 0.03em;
-
-      &.__row {
-        display: flex;
-      }
-    }
-
-    @include Xl {
-      @include rem(18);
-    }
-
-    &_box {
-      width: 274px;
-      text-align: left;
-      margin-bottom: 17px;
-
-      ///
-      @include XXl {
-        span {
-          @include rem(17);
+        @include Tab {
+          flex-direction: initial;
         }
+
+
       }
+
+    }
+
+    &.__other {
+      margin-bottom: 25px;
+
+      .menu_table_headspan {
+        @include rem(15);
+        margin-left: 0;
+      }
+
+      .menu_table_right.__fz {
+        @include rem(11px);
+
+        @include Tab {
+          margin-bottom: 72px;
+        }
+
+
+        @include XXl {
+          .menu_table_head_box {
+            margin-bottom: 37px;
+          }
+
+          .menu_table_headspan {
+            display: block;
+            margin-left: 0;
+            line-height: 1.2;
+          }
+        }
+
+      }
+
+      .menu_table_headspan {
+        @include rem(15);
+        margin-left: 0;
+      }
+
+      // ////////
+      // @include XXl {
+      //   margin-bottom: 61px;
+      // }
+
+      .menu_table_box.__dire {
+        @include Tab {
+          flex-direction: initial;
+        }
+
+      }
+
+    }
+
+
+
+
+    &_head {
+      @include rem(20);
+      letter-spacing: 0.001em;
 
       @include Tab {
-        width: 100%;
-        margin-bottom: 23px;
+        @include rem(25);
       }
 
       @include Xl {
-        width: 100%;
-      }
-    }
-  }
+        letter-spacing: 0.03em;
+        @include rem(18);
 
-  @include Xl {
-    letter-spacing: 0.03em;
-    @include rem(18);
 
-    &_headspan {
-      letter-spacing: 0.00064em;
-      margin-left: 22px;
-      @include rem(16);
-      line-height: 1;
-
-      //   /
-      @include Xl {
-        @include rem(20);
+        &.__row {
+          display: flex;
+        }
       }
 
       &_box {
@@ -1075,50 +1066,99 @@ menu
         text-align: left;
         margin-bottom: 17px;
 
+
         @include Tab {
-          @include rem(20);
+          width: 100%;
+          margin-bottom: 23px;
         }
 
         @include Xl {
-          line-height: 2;
+          width: 100%;
         }
-      }
 
-      //
-      @include Xl {
-        width: 100%;
-      }
+        ///
+        @include XXl {
+          span {
+            @include rem(17);
+          }
+        }
 
-      @include XXl {
-        margin-bottom: 20px;
       }
     }
 
-    @include Tab {
-      @include rem(20);
+    @include Xl {
+      letter-spacing: 0.03em;
+      @include rem(18);
+
+      &_headspan {
+        letter-spacing: 0.00064em;
+        margin-left: 22px;
+        @include rem(16);
+        line-height: 1;
+
+        //   /
+        @include Xl {
+          @include rem(20);
+        }
+
+        &_box {
+          width: 274px;
+          text-align: left;
+          margin-bottom: 17px;
+
+          @include Tab {
+            @include rem(20);
+          }
+
+          @include Xl {
+            line-height: 2;
+          }
+        }
+
+        //
+        @include Xl {
+          width: 100%;
+        }
+
+        @include XXl {
+          margin-bottom: 20px;
+        }
+      }
+
+      // @include Tab {
+      //   @include rem(20);
+      // }
+
     }
 
     &_box {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 15px;
+      margin-bottom: 7px;
       line-height: 1;
 
+      @include Tab {
+        display: flex;
+        margin-bottom: 20px;
+      }
+
+
       @include Xl {
-        margin-bottom: 16px;
+        margin-bottom: 10px;
       }
 
       &.__dire {
         flex-direction: column;
+        margin-bottom: 13px;
 
         @include Xl {
           flex-direction: initial;
           display: flex;
+          line-height: 2;
+
+          margin-bottom: -3px;
         }
 
-        @include Xl {
-          line-height: 2;
-        }
       }
 
       .menu_table_left {
@@ -1134,12 +1174,19 @@ menu
           justify-content: flex-end;
 
           span {
-            margin-left: 25px;
+            margin-left: 13px;
           }
+
         }
+
+        @include Xl {
+          margin-left: 7px;
+        }
+
 
         &.__dire {
           flex-direction: column;
+
 
           @include Xl {
             flex-direction: initial;
@@ -1150,28 +1197,32 @@ menu
             margin-bottom: 7px;
           }
 
-          .menu_table_right.__price_treat {
-            margin-left: 62px;
-            display: flex;
-            justify-content: space-between;
+          // .menu_table_right.__price_treat {
+          //   margin-left: 62px;
+          //   display: flex;
+          //   justify-content: space-between;
 
-            @include Xl {
-              margin-left: 0;
+          //   @include Xl {
+          //     margin-left: 0;
 
-              span {
-                margin-left: 10px;
-              }
-            }
+          //     span {
+          //       margin-left: 10px;
+          //     }
+          //   }
 
-            @include XXl {
-              span {
-                margin-left: -9px;
-              }
-            }
-          }
+          //   @include XXl {
+          //     span {
+          //       margin-left: -9px;
+          //     }
+          //   }
+          // }
 
           span {
             margin-left: 25px;
+
+            @include Xl {
+              margin-left: 10px;
+            }
 
             @include XXl {
               margin-left: 12px;
@@ -1180,72 +1231,79 @@ menu
         }
       }
     }
-  }
 
-  .menu_table_right.__price_other {
-    margin-left: 34px;
-    @include rem(11);
-    display: flex;
-    justify-content: space-between;
+    .menu_table_headspan {
+      @include rem(15);
+      margin-left: 33px;
 
-    @include Tab {
-      @include rem(20);
-      justify-content: flex-end;
+      @include Tab {
+        @include rem(18);
+      }
     }
 
-    @include Xl {
-      margin-left: 0;
+
+    .menu_table_right.__price_other {
+      margin-left: 34px;
+      @include rem(11);
+      display: flex;
+      justify-content: space-between;
+
+      @include Tab {
+        @include rem(20);
+        justify-content: flex-end;
+      }
+
+      @include Xl {
+        margin-left: 0;
+      }
+
+      @include XXl {
+        @include rem(14);
+      }
     }
 
-    @include XXl {
-      @include rem(14);
-    }
-  }
 
-  @include Tab {
-    @include rem(20);
-    justify-content: flex-end;
-  }
 
-  &_left {
-    @include rem(13);
+    &_left {
+      @include rem(13);
 
-    @include Tab {
-      @include rem(20);
+      @include Tab {
+        @include rem(20);
+      }
+
+      @include XXl {
+        @include rem(16);
+      }
     }
 
-    @include XXl {
-      @include rem(16);
-    }
-  }
+    &_right {
+      @include rem(13);
 
-  &_right {
-    @include rem(13);
+      @include Tab {
+        @include rem(20);
+      }
 
-    @include Tab {
-      @include rem(20);
-    }
+      @include XXl {
+        @include rem(18);
+      }
 
-    @include XXl {
-      @include rem(18);
-    }
-
-    &.__ml {
-      display: block;
-    }
-  }
-
-  &_txt {
-    margin-bottom: 4px;
-    @include rem(12);
-    letter-spacing: 0;
-
-    @include Tab {
-      @include rem(18);
+      &.__ml {
+        display: block;
+      }
     }
 
-    @include XXl {
-      @include rem(14);
+    &_txt {
+      margin-bottom: 4px;
+      @include rem(12);
+      letter-spacing: 0;
+
+      @include Tab {
+        @include rem(18);
+      }
+
+      @include XXl {
+        @include rem(14);
+      }
     }
   }
 }
@@ -1322,7 +1380,7 @@ access
   &_txt {
     letter-spacing: 0.27em;
     line-height: 1.6;
-    margin-bottom: 12px;
+    margin-bottom: 18px;
 
     @include Tab {
       margin-bottom: 40px;
@@ -1407,7 +1465,8 @@ staff
   background: $cBlack;
 
   @include Tab {
-    padding: 80px 0 20px;
+    // padding: 80px 0 20px;
+    padding: 85px 0 20px;
   }
 
   @include Xl {
@@ -1460,6 +1519,7 @@ staff
 
     @include Tab {
       height: 347px;
+      margin: 0 auto 8px;
     }
 
     @include Xl {
@@ -1488,10 +1548,18 @@ staff
 
   &_txt_ja {
     @include rem(15);
+
+    @include Tab {
+      @include rem(23);
+    }
   }
 
   &_txt_en {
     @include rem(12);
+
+    @include Tab {
+      @include rem(20);
+    }
 
     @include Xl {
       @include rem(11);
