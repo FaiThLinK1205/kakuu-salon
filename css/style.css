@@ -71,6 +71,12 @@ body {
   z-index: 999;
 }
 
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .mock {
+    width: 576px;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .mock {
     width: 768px;
@@ -122,6 +128,12 @@ body {
   width: 100%;
   max-width: 335px;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .section_inner {
+    max-width: 425px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
