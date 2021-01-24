@@ -263,16 +263,20 @@ nav (ハンバーガーメニュー含む)
       margin-left: 55px;
 
       @include XXl {
-        margin-left: 70px;
+        margin-left: 68px;
       }
     }
 
     &_item {
-      @include rem(18);
       padding-right: 20px;
+      @include rem(18);
       letter-spacing: 4.5px;
 
-      @include r
+      @include XXl {
+        padding-right: 28px;
+        @include rem(20);
+        letter-spacing: 5px;
+      }
     }
       
       &_link {

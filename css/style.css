@@ -468,21 +468,31 @@ nav (ハンバーガーメニュー含む)
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) and (min-width: 1400px) {
   .nav_list {
-    margin-left: 70px;
+    margin-left: 68px;
   }
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   .nav_item {
+    padding-right: 20px;
     font-size: 18px;
     /*IE9以前に対応する*/
     font-size: 1.125rem;
-    padding-right: 20px;
     letter-spacing: 4.5px;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) and (min-width: 1400px) {
+  .nav_item {
+    padding-right: 28px;
     font-size: 20px;
     /*IE9以前に対応する*/
     font-size: 1.25rem;
+    letter-spacing: 5px;
   }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
   .nav_link {
     position: relative;
     display: inline-block;
@@ -541,6 +551,12 @@ fv/スライダー
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .fv_img {
+    height: 625px;
+  }
+}
+
 .fv_scroll {
   display: inline-block;
   position: absolute;
@@ -549,7 +565,7 @@ fv/スライダー
   z-index: 2;
   padding: 10px 10px 110px;
   overflow: hidden;
-  color: white;
+  color: #ffffff;
   font-size: 15px;
   /*IE9以前に対応する*/
   font-size: 0.9375rem;
@@ -578,7 +594,7 @@ fv/スライダー
   left: 50%;
   width: 2px;
   height: 107px;
-  background: #fff;
+  background: #ffffff;
   -webkit-animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
           animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
 }
@@ -592,7 +608,7 @@ fv/スライダー
     z-index: 2;
     padding: 10px 10px 280px;
     overflow: hidden;
-    color: white;
+    color: #ffffff;
     font-size: 22px;
     /*IE9以前に対応する*/
     font-size: 1.375rem;
@@ -619,7 +635,7 @@ fv/スライダー
     left: 50%;
     width: 2px;
     height: 215px;
-    background: #fff;
+    background: #ffffff;
     -webkit-animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
             animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
   }
@@ -664,6 +680,102 @@ fv/スライダー
     background: #fff;
     -webkit-animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
             animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .fv_scroll {
+    display: inline-block;
+    position: absolute;
+    left: 79px;
+    bottom: 10px;
+    z-index: 2;
+    padding: 10px 10px 160px;
+    overflow: hidden;
+    color: #ffffff;
+    font-size: 16px;
+    /*IE9以前に対応する*/
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    -webkit-writing-mode: vertical-lr;
+        -ms-writing-mode: tb-lr;
+            writing-mode: vertical-lr;
+  }
+  .fv_scroll::before {
+    content: '';
+    position: absolute;
+    top: 85px;
+    left: 50%;
+    width: 2px;
+    height: 148px;
+    background: rgba(255, 255, 255, 0.4);
+  }
+  .fv_scroll::after {
+    content: '';
+    position: absolute;
+    top: 85px;
+    left: 50%;
+    width: 2px;
+    height: 148px;
+    background: #ffffff;
+    -webkit-animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+            animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+  }
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+  }
+  50% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+  }
+  50.1% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+  }
+  100% {
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+    -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+  }
+  50% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+  }
+  50.1% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+  }
+  100% {
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+    -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
   }
 }
 
