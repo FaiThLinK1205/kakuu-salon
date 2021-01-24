@@ -59,7 +59,7 @@ header
     }
   }
 
-  
+
 }
 
 
@@ -299,26 +299,43 @@ nav (ハンバーガーメニュー含む)
         letter-spacing: 5px;
       }
     }
-      
-      &_link {
-        position: relative;
-        display: inline-block;
-        text-decoration: none;
+  }
+}
 
-        &::after {
-          content: '';
-          position: absolute;
-          bottom: -4px;
-          left: 0;
-          width: 100%;
-          height: 2px;
-          background:$cWhite;
-          transform: scale(0,1);
-          transform-origin: center top;
-          transition: transform 0.3s;
+@include XXl {
+    .global_nav {
+      visibility: visible;
+      opacity: 1;
+      background-color: transparent;
+      color: $cWhite;
+      transition: none;
+      position: static;
+      padding: 0;
 
+    }
+
+    .nav {
+
+      &_list {
+        @include flex($justify:start);
+        margin-left: 55px;
+
+        @include XXl {
+          margin-left: 68px;
         }
       }
 
-  }
+      &_item {
+        padding-right: 20px;
+        @include rem(18);
+        letter-spacing: 4.5px;
+
+        @include XXl {
+          padding-right: 28px;
+          @include rem(20);
+          letter-spacing: 5px;
+        }
+      }
+    }
+
 }

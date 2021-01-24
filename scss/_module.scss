@@ -1,0 +1,65 @@
+#page_top {
+
+  position: fixed;
+  right: 10px;
+  bottom: 250px;
+  z-index: 10000;
+  opacity: 0;
+  transform: translateY(100px);
+
+  a {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $cOrange;
+    border-radius: 5px;
+    width: 60px;
+    height: 60px;
+    color: $cWhite;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    @include rem(16);
+    transition: all .3s;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+}
+
+
+#page_top.UpMove {
+  animation: UpAnime 0.5s forwards;
+}
+
+#page_top.DownMove {
+  animation: DownAnime 0.5s forwards;
+}
+
+
+@keyframes UpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes DownAnime {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(100px);
+  }
+}
