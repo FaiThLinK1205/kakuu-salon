@@ -20,6 +20,13 @@ footer
     @include Xl{
       padding: 90px 115px;
     }
+
+    @include XXl{
+      padding: 105px 140px;
+
+      // TO DO あとで消す
+      // margin-top: 136px;
+    }
   }
 
   &_txt{
@@ -36,6 +43,12 @@ footer
       @include rem(50);
       letter-spacing: 7.8px;
     }
+
+    @include XXl{
+      margin-bottom: -6px;
+      @include rem(60);
+      letter-spacing: 7.8px;
+    }
   }
 
   &_right{
@@ -47,6 +60,10 @@ footer
 
     @include Xl{
       @include rem(13);
+    }
+
+    @include XXl{
+      @include rem(15);
     }
   }
 }
@@ -63,10 +80,15 @@ footer
     margin-top: 22px;
   }
 
-  
   @include Xl{
     width: 36px;
     height: 36px;
     margin-top: 22px;
+  }
+
+  @include XXl{
+    width: 36px;
+    height: 36px;
+    margin-top: 27px;
   }
 }

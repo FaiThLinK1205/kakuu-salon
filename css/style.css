@@ -71,6 +71,12 @@ body {
   z-index: 999;
 }
 
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .mock {
+    width: 576px;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .mock {
     width: 768px;
@@ -122,6 +128,12 @@ body {
   width: 100%;
   max-width: 335px;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .section_inner {
+    max-width: 425px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -664,7 +676,6 @@ concept
   padding-top: 50px;
   margin-bottom: 50px;
   background-color: #58656e;
-  margin-top: 81px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -678,6 +689,12 @@ concept
   .concept {
     padding-top: 150px;
     margin-bottom: 86px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .concept {
+    padding-top: 114px;
   }
 }
 
@@ -702,6 +719,15 @@ concept
     font-size: 32px;
     /*IE9以前に対応する*/
     font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .concept .section_ttl {
+    margin-left: 0;
+    font-size: 37px;
+    /*IE9以前に対応する*/
+    font-size: 2.3125rem;
   }
 }
 
@@ -736,6 +762,16 @@ concept
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .concept_txt {
+    margin: 20px 565px 0 0;
+    font-size: 18.5px;
+    /*IE9以前に対応する*/
+    font-size: 1.15625rem;
+    line-height: 3.5rem;
+  }
+}
+
 .concept_imgBox {
   overflow: hidden;
 }
@@ -763,6 +799,14 @@ concept
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .concept_imgBox:nth-child(3) {
+    width: 490px;
+    height: 745px;
+    margin: -215px 0 0 auto;
+  }
+}
+
 .concept_imgBox:nth-child(3) img {
   -webkit-transform: translateY(-6%);
           transform: translateY(-6%);
@@ -779,6 +823,13 @@ concept
   .concept_imgBox:nth-child(3) img {
     -webkit-transform: translateY(-8%);
             transform: translateY(-8%);
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .concept_imgBox:nth-child(3) img {
+    -webkit-transform: translateY(-7%);
+            transform: translateY(-7%);
   }
 }
 
@@ -801,6 +852,14 @@ concept
     width: 475px;
     height: 300px;
     margin: -368px 0 33px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .concept_imgBox:nth-child(4) {
+    width: 560px;
+    height: 357px;
+    margin: -436px 0 37px;
   }
 }
 
@@ -831,10 +890,31 @@ concept
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .concept_imgBox:nth-child(5) {
+    width: 560px;
+    height: 357px;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .concept_imgBox:nth-child(5) img {
     -webkit-transform: translateY(-4%);
             transform: translateY(-4%);
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .concept_imgBox:nth-child(5) img {
+    -webkit-transform: translateY(-4%);
+            transform: translateY(-4%);
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .concept_imgBox:nth-child(5) img {
+    -webkit-transform: translateY(-2%);
+            transform: translateY(-2%);
   }
 }
 
@@ -864,6 +944,13 @@ info
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .info {
+    padding-bottom: 114px;
+    margin: -300px 0px 0 770px;
+  }
+}
+
 .info .section_ttl {
   text-align: left;
   letter-spacing: .12em;
@@ -883,6 +970,14 @@ info
     font-size: 33px;
     /*IE9以前に対応する*/
     font-size: 2.0625rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .info .section_ttl {
+    font-size: 37.9px;
+    /*IE9以前に対応する*/
+    font-size: 2.36875rem;
   }
 }
 
@@ -911,6 +1006,15 @@ info
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .info_txt {
+    font-size: 21px;
+    /*IE9以前に対応する*/
+    font-size: 1.3125rem;
+    line-height: 2rem;
+  }
+}
+
 .info_txt:nth-child(2) {
   margin-top: 26px;
 }
@@ -927,6 +1031,12 @@ info
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .info_txt:nth-child(2) {
+    margin-top: 50px;
+  }
+}
+
 .info_txt:nth-child(3), .info_txt:nth-child(5) {
   margin-bottom: 33px;
 }
@@ -937,6 +1047,12 @@ info
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .info_txt:nth-child(3), .info_txt:nth-child(5) {
+    margin-bottom: 48px;
+  }
+}
+
 .info_txt:nth-child(6), .info_txt:nth-child(7), .info_txt:nth-child(8) {
   line-height: 1.5rem;
 }
@@ -944,6 +1060,12 @@ info
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .info_txt:nth-child(6), .info_txt:nth-child(7), .info_txt:nth-child(8) {
     line-height: 2.4rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .info_txt:nth-child(6), .info_txt:nth-child(7), .info_txt:nth-child(8) {
+    line-height: 1.7rem;
   }
 }
 
@@ -961,6 +1083,12 @@ contact
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .contact {
     padding: 78px 0;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .contact {
+    padding: 110px 0;
   }
 }
 
@@ -987,9 +1115,35 @@ contact
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .contact .section_ttl {
+    font-size: 37px;
+    /*IE9以前に対応する*/
+    font-size: 2.3125rem;
+    margin-bottom: 35px;
+  }
+}
+
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   .contact_flex {
     margin: 0 122px 60px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .contact_flex {
+    margin: 0 136px 80px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1023,6 +1177,13 @@ contact
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .contact_icon {
+    width: 40px;
+    line-height: 36px;
+  }
+}
+
 .contact_icon_txt {
   margin-bottom: 30px;
   font-family: はんなり明朝;
@@ -1043,10 +1204,20 @@ contact
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   .contact_icon_txt {
+    margin-bottom: 0;
     font-size: 19px;
     /*IE9以前に対応する*/
     font-size: 1.1875rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .contact_icon_txt {
     margin-bottom: 0;
+    font-size: 20px;
+    /*IE9以前に対応する*/
+    font-size: 1.25rem;
+    letter-spacing: 6px;
   }
 }
 
@@ -1077,6 +1248,16 @@ contact
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .contact_txt {
+    margin: 0 330px 91px;
+    font-size: 18px;
+    /*IE9以前に対応する*/
+    font-size: 1.125rem;
+    line-height: 2rem;
+  }
+}
+
 .contact_img {
   width: 375px;
   height: 191px;
@@ -1093,9 +1274,17 @@ contact
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   .contact_img {
-    width: 1130px;
-    height: 415px;
-    margin-right: 100px;
+    width: 95.5%;
+    height: 35vw;
+    margin-right: 5%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .contact_img {
+    width: 95.5%;
+    height: 35vw;
+    margin-right: 5%;
   }
 }
 
@@ -1112,6 +1301,13 @@ contact
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .contact_img img {
+    -webkit-transform: translateY(-22%);
+            transform: translateY(-22%);
+  }
+}
+
+@media screen and (min-width: 1400px) {
   .contact_img img {
     -webkit-transform: translateY(-22%);
             transform: translateY(-22%);
@@ -1599,6 +1795,12 @@ footer
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .footer_flex {
+    padding: 105px 140px;
+  }
+}
+
 .footer_txt {
   margin-bottom: -15px;
   font-size: 32px;
@@ -1625,6 +1827,16 @@ footer
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .footer_txt {
+    margin-bottom: -6px;
+    font-size: 60px;
+    /*IE9以前に対応する*/
+    font-size: 3.75rem;
+    letter-spacing: 7.8px;
+  }
+}
+
 .footer_right {
   font-size: 10px;
   /*IE9以前に対応する*/
@@ -1647,6 +1859,14 @@ footer
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .footer_right {
+    font-size: 15px;
+    /*IE9以前に対応する*/
+    font-size: 0.9375rem;
+  }
+}
+
 .insta {
   width: 25px;
   height: 25px;
@@ -1666,5 +1886,13 @@ footer
     width: 36px;
     height: 36px;
     margin-top: 22px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .insta {
+    width: 36px;
+    height: 36px;
+    margin-top: 27px;
   }
 }

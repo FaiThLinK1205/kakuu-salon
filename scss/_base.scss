@@ -51,6 +51,10 @@ body {
     z-index: 999;
 
 
+    @include Sm {
+        width: 576px;
+    }
+
     @include Tab {
         width: 768px;
     }
@@ -97,6 +101,11 @@ body {
     max-width: 335px;
     margin: 0 auto;
 
+
+
+    @include Sm {
+        max-width: 425px;
+    }
 
 
     @include Tab {

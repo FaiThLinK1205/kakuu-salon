@@ -173,7 +173,7 @@ concept
   background-color: $cBlack;
 
   // TO DO あとで消す---
-  margin-top: 81px;
+  // margin-top: 222px;
   // -------
 
   @include Tab {
@@ -184,6 +184,10 @@ concept
   @include Xl {
     padding-top: 150px;
     margin-bottom: 86px;
+  }
+
+  @include XXl {
+    padding-top: 114px;
   }
 
   .section_ttl {
@@ -199,6 +203,11 @@ concept
     @include Xl{
       margin-left: 0;
       @include rem(32);
+    }
+
+    @include XXl {
+      margin-left: 0;
+      @include rem(37);
     }
   }
 
@@ -220,6 +229,12 @@ concept
       margin: 16px 476px 0 0;
       @include rem(15.5);
       line-height: 3rem;
+    }
+
+    @include XXl {
+      margin: 20px 565px 0 0;
+      @include rem(18.5);
+      line-height: 3.5rem;
     }
   }
 
@@ -244,6 +259,12 @@ concept
         margin: -183px 0 0 auto;
       }
 
+      @include XXl {
+        width: 490px;
+        height: 745px;
+        margin: -215px 0 0 auto;
+      }
+
       img {
         transform: translateY(-6%);
 
@@ -253,6 +274,10 @@ concept
 
         @include Xl{
           transform: translateY(-8%);
+        }
+
+        @include XXl {
+          transform: translateY(-7%);
         }
       }
     }
@@ -272,6 +297,12 @@ concept
         width: 475px;
         height: 300px;
         margin: -368px 0 33px;
+      }
+
+      @include XXl {
+        width: 560px;
+        height: 357px;
+        margin: -436px 0 37px;
       }
 
       img {
@@ -295,6 +326,11 @@ concept
         width: 475px;
         height: 300px;
       }
+
+      @include XXl {
+        width: 560px;
+        height: 357px;
+      }
   
       img {
         @include Tab{
@@ -302,6 +338,11 @@ concept
         }
   
         @include Xl{
+          transform: translateY(-4%);
+        }
+
+        @include XXl {
+          transform: translateY(-2%);
         }
       }
     }
@@ -336,6 +377,11 @@ info
     margin: -267px 0px 0 647px;
   }
 
+  @include XXl {
+    padding-bottom: 114px;
+    margin: -300px 0px 0 770px;
+  }
+
   .section_ttl{
     text-align: left;
     letter-spacing: .12em;
@@ -347,6 +393,10 @@ info
 
     @include Xl{
       @include rem(33);
+    }
+
+    @include XXl {
+      @include rem(37.9);
     }
   }
 
@@ -363,6 +413,12 @@ info
       @include rem(19);
       line-height: 2rem;
     }
+
+    @include XXl {
+      @include rem(21);
+      line-height: 2rem;
+    }
+
     &:nth-child(2){
       margin-top: 26px;
   
@@ -373,6 +429,10 @@ info
       @include Xl{
         margin-top: 35px;
       }
+
+      @include XXl {
+        margin-top: 50px;
+      }
     }
   
     &:nth-child(3), &:nth-child(5){
@@ -381,6 +441,10 @@ info
       @include Tab{
         margin-bottom: 50px;
       }
+
+      @include XXl {
+        margin-bottom: 48px;
+      }
     }
   
     &:nth-child(6),&:nth-child(7),&:nth-child(8){
@@ -388,6 +452,10 @@ info
   
       @include Tab{
         line-height: 2.4rem;
+      }
+
+      @include XXl {
+        line-height: 1.7rem;
       }
     }
   }
@@ -414,6 +482,10 @@ contact
     padding: 78px 0;
   }
 
+  @include XXl {
+    padding: 110px 0;
+  }
+
   .section_ttl{
     letter-spacing: .12em;
     margin-bottom: 18px;
@@ -427,12 +499,22 @@ contact
       @include rem(33);
       margin-bottom: 30px;
     }
+
+    @include XXl {
+      @include rem(37);
+      margin-bottom: 35px;
+    }
   }
 
   &_flex{
 
     @include Xl{
       margin: 0 122px 60px;
+      @include flex();
+    }
+
+    @include XXl {
+      margin: 0 136px 80px;
       @include flex();
     }
   }
@@ -451,6 +533,11 @@ contact
       line-height: 36px;
     }
 
+    @include XXl {
+      width: 40px;
+      line-height: 36px;
+    }
+
     &_txt{
       margin-bottom: 30px;
       font-family: はんなり明朝;
@@ -463,8 +550,14 @@ contact
       }
 
       @include Xl{
-        @include rem(19);
         margin-bottom: 0;
+        @include rem(19);
+      }
+
+      @include XXl {
+        margin-bottom: 0;
+        @include rem(20);
+        letter-spacing: 6px;
       }
     }
   }
@@ -484,36 +577,56 @@ contact
       @include rem(15);
       line-height: 2rem;
     }
+
+    @include XXl {
+      margin: 0 330px 91px;
+      @include rem(18);
+      line-height: 2rem;
+    }
   }
 
-    &_img {
-      width: 375px;
-      height: 191px;
-      margin: 0 auto;
-      overflow: hidden;
+  &_img {
+    width: 375px;
+    height: 191px;
+    margin: 0 auto;
+    overflow: hidden;
+
+    @include Tab{
+      width: 768px;
+      height: 295px;
+    }
+
+    @include Xl{
+      // TO DO あとで熟考する
+      // width: 1130px;
+      // height: 415px;
+      // margin-right: 1005px;
+      width: 95.5%;
+      height: 35vw;
+      margin-right: 5%;
+    }
+
+    @include XXl {
+      width: 95.5%;
+      height: 35vw;
+      margin-right: 5%;
+    }
+
+    img{
+      transform: translateY(-13%);
 
       @include Tab{
-        width: 768px;
-        height: 295px;
+        transform: translateY(-22%);
       }
 
       @include Xl{
-        width: 1130px;
-        height: 415px;
-        margin-right: 100px;
+        transform: translateY(-22%);
       }
 
-      img{
-        transform: translateY(-13%);
-
-        @include Tab{
-          transform: translateY(-22%);
-        }
-
-        @include Xl{
-          transform: translateY(-22%);
-        }
+      @include XXl{
+        transform: translateY(-22%);
       }
+    }
   }
 }
 
