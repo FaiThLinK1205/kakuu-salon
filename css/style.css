@@ -579,6 +579,14 @@ fv/スライダー
      object-fit: cover;
 }
 
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .fv_img {
+    height: 885px;
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .fv_img {
     height: 910px;
@@ -637,6 +645,48 @@ fv/スライダー
   background: #ffffff;
   -webkit-animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
           animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .fv_scroll {
+    display: inline-block;
+    position: absolute;
+    left: 30px;
+    bottom: 18px;
+    z-index: 2;
+    padding: 10px 10px 200px;
+    overflow: hidden;
+    color: #ffffff;
+    font-size: 19px;
+    /*IE9以前に対応する*/
+    font-size: 1.1875rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    -webkit-writing-mode: vertical-lr;
+        -ms-writing-mode: tb-lr;
+            writing-mode: vertical-lr;
+  }
+  .fv_scroll::before {
+    content: '';
+    position: absolute;
+    top: 108px;
+    left: 50%;
+    width: 2px;
+    height: 160px;
+    background: rgba(255, 255, 255, 0.4);
+  }
+  .fv_scroll::after {
+    content: '';
+    position: absolute;
+    top: 108px;
+    left: 50%;
+    width: 2px;
+    height: 160px;
+    background: #ffffff;
+    -webkit-animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+            animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {

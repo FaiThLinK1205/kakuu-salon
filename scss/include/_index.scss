@@ -21,6 +21,11 @@ fv/スライダー
   height: 578px;
   object-fit: cover;
 
+  @include Sm {
+    height: 885px;
+    transform: translateX(10px);
+  }
+
 
   @include Tab {
     height: 910px;
@@ -74,6 +79,49 @@ fv/スライダー
       animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
     }
   }
+}
+
+@include Sm {
+    .fv {
+
+      &_scroll {
+        display: inline-block;
+        position: absolute;
+        left: 30px;
+        bottom: 18px;
+        z-index: 2;
+        padding: 10px 10px 200px;
+        overflow: hidden;
+        color: $cWhite;
+        @include rem(19);
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none;
+        writing-mode: vertical-lr;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 108px;
+          left: 50%;
+          width: 2px;
+          height: 160px;
+          background: rgba(255, 255, 255, .4);
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 108px;
+          left: 50%;
+          width: 2px;
+          height: 160px;
+          background: $cWhite;
+          animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+        }
+      }
+    }
+
 }
 
 @include Tab {
