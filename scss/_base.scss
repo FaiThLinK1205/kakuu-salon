@@ -8,7 +8,7 @@ body {
     margin: 0 auto;
     font-family: $fontMain;
     color: $cWhite;
-
+    text-size-adjust: 100%
 }
 
 
@@ -39,7 +39,7 @@ body {
     left: 0;
     right: 0;
     margin: 0 auto;
-    width: 375px;
+    width: 768px;
     opacity: 0.3;
 
     /* 反転 */
@@ -51,12 +51,20 @@ body {
     z-index: 999;
 
 
+    @include Sm {
+        width: 576px;
+    }
+
     @include Tab {
         width: 768px;
     }
 
     @include Xl {
         width: 1200px;
+    }
+
+    @include XXl {
+        width: 1400px;
     }
 
 }
@@ -100,6 +108,11 @@ body {
 
 
 
+    @include Sm {
+        max-width: 425px;
+    }
+
+
     @include Tab {
         max-width: 688px;
     }
@@ -111,7 +124,7 @@ body {
 
 
     @include XXl {
-        max-width: 1740px;
+        max-width: 1120px;
     }
 
 }

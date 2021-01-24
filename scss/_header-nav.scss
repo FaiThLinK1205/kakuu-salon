@@ -5,14 +5,38 @@ header
 *****************************************:*/
 .header {
   width: 100%;
-  line-height: 43px;
-  background: #000;
+  line-height: 80px;
+  color: $cWhite;
+
+  @include Tab {
+    line-height: 109px;
+  }
+
+  @include Xl {
+    line-height: 56px;
+  }
 
   &_ttl {
+    margin-left: 20px;
+    padding-top: 8px;
     @include rem(32);
+    letter-spacing: 4.8px;
+
+    @include Tab {
+      margin-left: 40px;
+      padding-top: 5px;
+      @include rem(55);
+      letter-spacing: 9px;
+    }
+
+    @include Xl {
+      @include rem(50);
+      margin-left: 55px;
+      padding-top: 23px;
+      letter-spacing: 8px;
+    }
   }
 }
-
 
 
 
@@ -23,5 +47,230 @@ nav (ハンバーガーメニュー含む)
 
 *****************************************:*/
 
+.ham_nav {
+  position: fixed;
+  top: 38px;
+  right: 20px;
+  width: 25px;
+  height: 35px;
+  cursor: pointer;
+  z-index: 1000;
+
+  @include Tab {
+    width: 35px;
+    top: 45px;
+    right: 40px;
+  }
 
 
+  @include Xl {
+    display: none;
+  }
+
+  span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: $cOrange;
+
+    &:nth-child(1) {
+      top: 0;
+    }
+
+    &:nth-child(2) {
+      top: 11px;
+
+      @include Tab {
+        top: 18px;
+      }
+    }
+  }
+}
+
+
+.global_nav {
+  padding-top: 87px;
+  color: $cBlack;
+  background: $cGray;
+  @include rem(25);
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 3.75px;
+  display: flex;
+  // align-items: center;
+  flex-direction: column;
+  visibility: hidden;
+  z-index: 990;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: all 0.5s ease;
+
+  @include Tab {
+    padding: 0;
+    color: white;
+    background: $cBlack;
+    @include rem(40);
+    letter-spacing: 6px;
+
+  }
+
+  &_circle {
+    @include Tab {
+      background: url(../img/top/maru.png) no-repeat;
+      background-position: -25% 50%;
+
+    }
+
+  }
+}
+
+
+/* open */
+.open {
+  overflow: hidden;
+
+  .global_nav {
+    visibility: visible;
+    opacity: 1;
+
+    ul {
+      @include Tab {
+        padding-top: 150px;
+        padding-bottom: 150px;
+      }
+    }
+
+
+
+    li {
+      opacity: 0;
+      transform: translateX(0);
+
+      @include Tab {
+        height: calc(100vh/7);
+
+      }
+
+
+      &:nth-child(1) {
+        animation: fade 0.3s ease 0.3s 1 forwards;
+
+        @include Tab {
+          margin-right: 95px;
+        }
+
+      }
+
+      &:nth-child(2) {
+        animation: fade 0.4s ease 0.4s 1 forwards;
+
+        @include Tab {
+          margin-right: 100px;
+        }
+
+      }
+
+      &:nth-child(3) {
+        animation: fade 0.5s ease 0.5s 1 forwards;
+
+        @include Tab {
+          padding-right: 280px;
+        }
+
+      }
+
+      &:nth-child(4) {
+        animation: fade 0.6s ease 0.6s 1 forwards;
+
+        @include Tab {
+          padding-right: 400px;
+
+        }
+
+      }
+
+      &:nth-child(5) {
+        animation: fade 0.7s ease 0.7s 1 forwards;
+
+        @include Tab {
+          padding-right: 280px;
+
+        }
+
+      }
+
+      &:nth-child(6) {
+        animation: fade 0.8s ease 0.8s 1 forwards;
+
+        @include Tab {
+
+          padding-right: 180px;
+        }
+
+
+      }
+
+    }
+  }
+}
+
+@keyframes fade {
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@include Xl {
+
+  .global_nav {
+    visibility: visible;
+    opacity: 1;
+    background-color: transparent;
+    color: $cWhite;
+    transition: none;
+    position: static;
+    padding: 0;
+
+  }
+
+  .nav {
+
+    &_list {
+      @include flex($justify:start);
+      margin-left: 55px;
+    }
+
+    &_item {
+      @include rem(18);
+      padding-right: 20px;
+      letter-spacing: 4.5px;
+    }
+      
+      &_link {
+        position: relative;
+        display: inline-block;
+        text-decoration: none;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -4px;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background:$cWhite;
+          transform: scale(0,1);
+          transform-origin: center top;
+          transition: transform 0.3s;
+
+        }
+      }
+
+  }
+}

@@ -20,6 +20,7 @@
   <meta name='keywords' content=''>
   <link rel="icon" type="image/x-icon" href="">
   <link rel="apple-touch-icon" sizes="180×180" href="">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/aos.css">
@@ -33,60 +34,84 @@
 
 <body>
   <!-- モック -->
-  <!-- <img src="mock/mock.sp.png" alt="" class="mock" /> -->
+  <img src="mock/mock.sp.png" alt="" class="mock" />
   <!-- <img src="mock/iPad@2x.png" alt="" class="mock" /> -->
-  <img src="mock/PC.png" alt="" class="mock" />
+  <!-- <img src="mock/PC.png" alt="" class="mock" /> -->
 
   <div class="container">
     <!-- ヘッダー -->
     <header class="header">
       <h1 class="header_ttl">
         <a href="index.html">
-          <img src="" alt="">
           SALON
         </a>
       </h1><!-- /.header_ttl -->
 
       <!-- ハンバーガーメニュー部分 -->
-      <div class="nav_ham">
-
+      <div class="ham_nav" id="js-nav_toggle">
+        <span></span>
+        <span></span>
       </div><!-- ハンバーガーメニューここまで -->
 
 
       <!-- ナビ -->
-      <nav class="nav" id="nav">
-        <ul class="nav_list">
-          <li class="nav_item">
-            <a href="#" class="nav_link"></a>
-          </li>
-          <!-- /.nav_item -->
-          <li class="nav_item">
-            <a href="#" class="nav_link"></a>
-          </li>
-          <!-- /.nav_item -->
-          <li class="nav_item">
-            <a href="#" class="nav_link"></a>
-          </li>
-          <!-- /.nav_item -->
-          <li class="nav_item">
-            <a href="#" class="nav_link"></a>
-          </li>
-          <!-- /.nav_item -->
-          <li class="nav_item">
-            <a href="#" class="nav_link"></a>
-          </li>
-          <!-- /.nav_item -->
-          <li class="nav_item">
-            <a href="#" class="nav_link"></a>
-          </li>
-          <!-- /.nav_item -->
-        </ul>
-      </nav>
+      <div id="js-global_nav" class="global_nav">
+        <div class="global_nav_circle">
+          <nav class="nav" id="nav">
+            <ul class="nav_list">
+              <li class="nav_item">
+                <a href="#" class="nav_link">CONCEPT</a>
+              </li>
+              <!-- /.nav_item -->
+              <li class="nav_item">
+                <a href="#" class="nav_link">INFORMATION</a>
+              </li>
+              <!-- /.nav_item -->
+              <li class="nav_item">
+                <a href="#" class="nav_link">CONTACT</a>
+              </li>
+              <!-- /.nav_item -->
+              <li class="nav_item">
+                <a href="#" class="nav_link">MENU</a>
+              </li>
+              <!-- /.nav_item -->
+              <li class="nav_item">
+                <a href="#" class="nav_link">ACCESS</a>
+              </li>
+              <!-- /.nav_item -->
+              <li class="nav_item">
+                <a href="#" class="nav_link">STAFF</a>
+              </li>
+              <!-- /.nav_item -->
+            </ul>
+          </nav>
+        </div>
+      </div>
       <!-- /.nav -->
     </header>
 
-    <div class="fv">
-
+    <div class="swiper-container fv">
+      <div class="swiper-wrapper fv_box">
+        <div class="swiper-slide">
+          <img src="img/top/fv-1_sp.jpg" alt="fv画像" class="fv_img">
+        </div>
+        <div class="swiper-slide">
+          <img src="img/top/fv-2_sp.jpg" alt="fv画像" class="fv_img">
+        </div>
+        <div class="swiper-slide">
+          <img src="img/top/fv-3_sp.jpg" alt="fv画像" class="fv_img">
+        </div>
+        <div class="swiper-slide">
+          <img src="img/top/fv-1_pc.jpg" alt="fv画像" class="fv_img">
+        </div>
+        <div class="swiper-slide">
+          <img src="img/top/fv-2_pc.jpg" alt="fv画像" class="fv_img">
+        </div>
+        <div class="swiper-slide">
+          <img src="img/top/fv-3_pc.jpg" alt="fv画像" class="fv_img">
+        </div>
+      </div>
+      <a href="#" class="fv_scroll">Scroll</a>
     </div><!-- /.fv -->
 
 
@@ -128,23 +153,29 @@
       <section class="contact">
         <h2 class="section_ttl">CONTACT</h2>
         <div class="section_inner">
-          <div class="contact_icon">
-            <img src="img/svg/email.svg" alt="email">
-          </div>
-          <div class="contact_icon_txt">
-            <a href="mailto:info@test.jp">info@test.jp</a>
-          </div>
-          <div class="contact_icon">
-            <img src="img/svg/phone.svg" alt="phone">
-          </div>
-          <div class="contact_icon_txt">
-            <a href="tel:000-000-0000">000-000-0000</a>
+          <div class="contact_flex">
+            <div class="contact_box">
+              <div class="contact_icon">
+                <img src="img/svg/email.svg" alt="email">
+              </div>
+              <div class="contact_icon_txt">
+                <a href="mailto:info@test.jp">info@test.jp</a>
+              </div>
+            </div>
+            <div class="contact_box">
+              <div class="contact_icon">
+                <img src="img/svg/phone.svg" alt="phone">
+              </div>
+              <div class="contact_icon_txt">
+                <a href="tel:000-000-0000">000-000-0000</a>
+              </div>
+            </div>
           </div>
           <p class="contact_txt">※日曜のみ、最終受付を1時間繰り上げさせて頂きます。 ご予約いただけると助かります(予約優先制)</p>
         </div>
 
         <div class="contact_img">
-          <img src="img/section-contact/contact.jpg" alt="">
+          <img src="img/section-contact/contact.jpg" alt="contact_pic">
         </div>
 
       </section>
@@ -449,7 +480,9 @@
           <small class="footer_right">@2021. SALON inc.</small>
         </div>
         <div class="insta">
-          <img src="img/svg/insta.svg" alt="">
+          <a href="">
+            <img src="img/svg/insta.svg" alt="insta_pic">
+          </a>
         </div>
       </div>
     </footer>
@@ -457,6 +490,7 @@
   </div><!-- /.container -->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/aos.js"></script>
   <script src="js/main.js"></script>
 </body>

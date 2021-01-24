@@ -5,11 +5,156 @@
 
 /****************************************:
 
-fv
+fv/スライダー
 
 *****************************************:*/
 
 
+.swiper-slide {
+    width: 100%;
+    overflow: hidden;
+    padding-left: 5%;
+
+}
+
+.fv_img {
+    height: 578px;
+    object-fit: cover;
+
+
+    @include Tab {
+        height: 910px;
+    }
+
+    @include Xl {
+        height: 538px;
+    }
+}
+
+
+.fv {
+
+    &_scroll {
+        display: inline-block;
+        position: absolute;
+        left: 14px;
+        bottom: 24px;
+        z-index: 2;
+        padding: 10px 10px 110px;
+        overflow: hidden;
+        color: white;
+        @include rem(15);
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none;
+        writing-mode: vertical-lr;
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            height: 107px;
+            background: rgba(255, 255, 255, .4);
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            height: 107px;
+            background: #fff;
+            animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+        }
+    }
+}
+
+@include Tab {
+    .fv {
+
+        &_scroll {
+            display: inline-block;
+            position: absolute;
+            left: 42px;
+            bottom: -18px;
+            z-index: 2;
+            padding: 10px 10px 280px;
+            overflow: hidden;
+            color: white;
+            @include rem(22);
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            writing-mode: vertical-lr;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 117px;
+                left: 50%;
+                width: 2px;
+                height: 215px;
+                background: rgba(255, 255, 255, .4);
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 117px;
+                left: 50%;
+                width: 2px;
+                height: 215px;
+                background: #fff;
+                animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+            }
+        }
+    }
+}
+
+@include Xl {
+    .fv {
+
+        &_scroll {
+            display: inline-block;
+            position: absolute;
+            left: 65px;
+            bottom: 0px;
+            z-index: 2;
+            padding: 10px 10px 150px;
+            overflow: hidden;
+            color: white;
+            @include rem(14);
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            writing-mode: vertical-lr;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 79px;
+                left: 50%;
+                width: 2px;
+                height: 125px;
+                background: rgba(255, 255, 255, .4);
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 79px;
+                left: 50%;
+                width: 2px;
+                height: 125px;
+                background: #fff;
+                animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+            }
+        }
+    }
+}
 
 
 
@@ -28,7 +173,7 @@ concept
     background-color: $cBlack;
 
     // TO DO あとで消す---
-    margin-top: 661px;
+    // margin-top: 222px;
     // -------
 
     @include Tab {
@@ -41,6 +186,10 @@ concept
         margin-bottom: 86px;
     }
 
+    @include XXl {
+        padding-top: 114px;
+    }
+
     .section_ttl {
         text-align: left;
         margin-left: 30px;
@@ -49,6 +198,16 @@ concept
         @include Tab {
             margin-left: 60px;
             @include rem(35);
+        }
+
+        @include Xl {
+            margin-left: 0;
+            @include rem(32);
+        }
+
+        @include XXl {
+            margin-left: 0;
+            @include rem(37);
         }
     }
 
@@ -67,103 +226,133 @@ concept
         }
 
         @include Xl {
-            padding-top: 150px;
-            margin-bottom: 86px;
+            margin: 16px 476px 0 0;
+            @include rem(15.5);
+            line-height: 3rem;
         }
 
-        .section_ttl {
-            text-align: left;
-            margin-left: 30px;
-            letter-spacing: .15em;
+        @include XXl {
+            margin: 20px 565px 0 0;
+            @include rem(18.5);
+            line-height: 3.5rem;
+        }
+    }
+
+    &_imgBox {
+        overflow: hidden;
+
+        &:nth-child(3) {
+            width: 191px;
+            height: 297px;
+            margin: 57px 0 0 auto;
+            text-align: center;
 
             @include Tab {
-                margin-left: 60px;
-                @include rem(35);
+                width: 390px;
+                height: 586px;
+                margin: 69px 0 0 auto;
+            }
+
+            @include Xl {
+                width: 417px;
+                height: 630px;
+                margin: -183px 0 0 auto;
+            }
+
+            @include XXl {
+                width: 490px;
+                height: 745px;
+                margin: -215px 0 0 auto;
+            }
+
+            img {
+                transform: translateY(-6%);
+
+                @include Tab {
+                    transform: translateY(-8%);
+                }
+
+                @include Xl {
+                    transform: translateY(-8%);
+                }
+
+                @include XXl {
+                    transform: translateY(-7%);
+                }
             }
         }
 
-        &_txt {
-            margin: 10px 30px 0;
-            color: $cWhite_2;
-            font-family: はんなり明朝, serif;
-            @include rem(14);
-            line-height: 40px;
+        &:nth-child(4) {
+            width: 289px;
+            height: 191px;
+            margin: 30px 0 15px;
 
             @include Tab {
-                margin: 48px 60px 0;
-                @include rem(25);
-                line-height: 3rem;
-                letter-spacing: .01rem;
+                width: 628px;
+                height: 350px;
+                margin: 80px 0 26px;
+            }
+
+            @include Xl {
+                width: 475px;
+                height: 300px;
+                margin: -368px 0 33px;
+            }
+
+            @include XXl {
+                width: 560px;
+                height: 357px;
+                margin: -436px 0 37px;
+            }
+
+            img {
+
+                @include Tab {
+                    transform: translateY(-4%);
+                }
             }
         }
 
-        &_imgBox {
-            overflow: hidden;
+        &:nth-child(5) {
+            width: 289px;
+            height: 191px;
+            margin: 15px 0 0;
 
-            &:nth-child(3) {
-                width: 191px;
-                height: 297px;
-                margin: 57px 0 0 auto;
-                text-align: center;
-
-                @include Tab {
-                    width: 390px;
-                    height: 586px;
-                    margin: 69px 0 0 auto;
-                }
-
-                img {
-                    transform: translateY(-6%);
-
-                    @include Tab {
-                        transform: translateY(-8%);
-                    }
-                }
+            @include Tab {
+                width: 628px;
+                height: 366px;
             }
 
-            &:nth-child(4) {
-                width: 289px;
-                height: 191px;
-                margin: 30px 0 15px;
-
-                @include Tab {
-                    width: 628px;
-                    height: 350px;
-                    margin: 80px 0 26px;
-                }
-
-                img {
-
-                    @include Tab {
-                        transform: translateY(-4%);
-                    }
-                }
+            @include Xl {
+                width: 475px;
+                height: 300px;
             }
 
-            &:nth-child(5) {
-                width: 289px;
-                height: 191px;
-                margin: 15px 0 0;
+            @include XXl {
+                width: 560px;
+                height: 357px;
+            }
 
+            img {
                 @include Tab {
-                    width: 628px;
-                    height: 366px;
+                    transform: translateY(-4%);
                 }
 
-                img {
+                @include Xl {
+                    transform: translateY(-4%);
+                }
 
-                    @include Tab {
-                        transform: translateY(-4%);
-                    }
+                @include XXl {
+                    transform: translateY(-2%);
                 }
             }
         }
     }
-
-
-
-
 }
+
+
+
+
 
 /****************************************:
 
@@ -184,6 +373,16 @@ info
         margin-left: 100px;
     }
 
+    @include Xl {
+        padding-bottom: 92px;
+        margin: -267px 0px 0 647px;
+    }
+
+    @include XXl {
+        padding-bottom: 114px;
+        margin: -300px 0px 0 770px;
+    }
+
     .section_ttl {
         text-align: left;
         letter-spacing: .12em;
@@ -191,6 +390,14 @@ info
         @include Tab {
             @include rem(35);
             letter-spacing: .35rem;
+        }
+
+        @include Xl {
+            @include rem(33);
+        }
+
+        @include XXl {
+            @include rem(37.9);
         }
     }
 
@@ -203,10 +410,28 @@ info
             line-height: 2.1rem;
         }
 
+        @include Xl {
+            @include rem(19);
+            line-height: 2rem;
+        }
+
+        @include XXl {
+            @include rem(21);
+            line-height: 2rem;
+        }
+
         &:nth-child(2) {
             margin-top: 26px;
 
             @include Tab {
+                margin-top: 50px;
+            }
+
+            @include Xl {
+                margin-top: 35px;
+            }
+
+            @include XXl {
                 margin-top: 50px;
             }
         }
@@ -218,6 +443,10 @@ info
             @include Tab {
                 margin-bottom: 50px;
             }
+
+            @include XXl {
+                margin-bottom: 48px;
+            }
         }
 
         &:nth-child(6),
@@ -227,6 +456,10 @@ info
 
             @include Tab {
                 line-height: 2.4rem;
+            }
+
+            @include XXl {
+                line-height: 1.7rem;
             }
         }
     }
@@ -245,15 +478,16 @@ contact
 
 
 .contact {
-    padding: 50px 0;
+    padding: 90px 0;
     text-align: center;
     background-color: $cGray;
 
     @include Tab {
         padding: 78px 0;
+    }
 
-        // TO DO あとで消す
-        margin-top: 42px;
+    @include XXl {
+        padding: 110px 0;
     }
 
     .section_ttl {
@@ -263,6 +497,29 @@ contact
         @include Tab {
             @include rem(35);
             margin-bottom: 62px;
+        }
+
+        @include Xl {
+            @include rem(33);
+            margin-bottom: 30px;
+        }
+
+        @include XXl {
+            @include rem(37);
+            margin-bottom: 35px;
+        }
+    }
+
+    &_flex {
+
+        @include Xl {
+            margin: 0 122px 60px;
+            @include flex();
+        }
+
+        @include XXl {
+            margin: 0 136px 80px;
+            @include flex();
         }
     }
 
@@ -275,6 +532,16 @@ contact
             margin: 0 auto 15px;
         }
 
+        @include Xl {
+            width: 36px;
+            line-height: 36px;
+        }
+
+        @include XXl {
+            width: 40px;
+            line-height: 36px;
+        }
+
         &_txt {
             margin-bottom: 30px;
             font-family: はんなり明朝;
@@ -284,6 +551,17 @@ contact
             @include Tab {
                 margin-bottom: 50px;
                 @include rem(25);
+            }
+
+            @include Xl {
+                margin-bottom: 0;
+                @include rem(19);
+            }
+
+            @include XXl {
+                margin-bottom: 0;
+                @include rem(20);
+                letter-spacing: 6px;
             }
         }
     }
@@ -295,6 +573,18 @@ contact
         @include Tab {
             margin: 0 90px 60px;
             @include rem(20);
+            line-height: 2rem;
+        }
+
+        @include Xl {
+            margin: 0 280px 68px;
+            @include rem(15);
+            line-height: 2rem;
+        }
+
+        @include XXl {
+            margin: 0 330px 91px;
+            @include rem(18);
             line-height: 2rem;
         }
     }
@@ -310,10 +600,34 @@ contact
             height: 295px;
         }
 
+        @include Xl {
+            // TO DO あとで熟考する
+            // width: 1130px;
+            // height: 415px;
+            // margin-right: 1005px;
+            width: 95.5%;
+            height: 35vw;
+            margin-right: 5%;
+        }
+
+        @include XXl {
+            width: 95.5%;
+            height: 35vw;
+            margin-right: 5%;
+        }
+
         img {
             transform: translateY(-13%);
 
             @include Tab {
+                transform: translateY(-22%);
+            }
+
+            @include Xl {
+                transform: translateY(-22%);
+            }
+
+            @include XXl {
                 transform: translateY(-22%);
             }
         }
@@ -359,6 +673,7 @@ menu
             margin-bottom: 40px;
         }
     }
+
 
     .section_inner {
         margin: 0 auto;
@@ -432,6 +747,8 @@ menu
             }
         }
 
+
+
         &.__clr {
             margin-bottom: 20px;
 
@@ -453,19 +770,14 @@ menu
                 margin-bottom: 72px;
             }
 
-            .menu_table_headspan {
-                text-align: left;
-                display: block;
-                @include rem(15);
-                margin-left: 0;
-            }
-
 
             @include Xl {
                 margin-bottom: 50px;
             }
 
         }
+
+
 
         &.__other {
             margin-bottom: 25px;
@@ -488,7 +800,6 @@ menu
                 }
             }
 
-
         }
 
 
@@ -497,10 +808,6 @@ menu
             @include rem(20);
             letter-spacing: .001em;
 
-
-            @include Tab {
-                @include rem(25);
-            }
 
             @include Xl {
                 letter-spacing: .03em;
@@ -533,6 +840,7 @@ menu
         }
 
 
+
         &_headspan {
             letter-spacing: .00064em;
             margin-left: 22px;
@@ -549,16 +857,17 @@ menu
             }
         }
 
+        @include Tab {
+            @include rem(20);
+        }
+
+
         &_box {
             display: flex;
             justify-content: space-between;
             margin-bottom: 15px;
             line-height: 1;
 
-
-            @include Tab {
-                margin-bottom: 27px;
-            }
 
             @include Xl {
                 margin-bottom: 16px;
@@ -577,6 +886,10 @@ menu
                     margin-bottom: 7px;
                 }
 
+                .menu_table_left {
+                    margin-bottom: 7px;
+                }
+
                 .menu_table_right.__price_treat {
                     margin-left: 62px;
                     display: flex;
@@ -585,7 +898,6 @@ menu
 
                     @include Tab {
                         justify-content: flex-end;
-
 
                         span {
                             margin-left: 25px;
@@ -605,31 +917,37 @@ menu
 
                 }
 
-                .menu_table_right.__price_other {
-                    margin-left: 34px;
-                    @include rem(11);
-                    display: flex;
-                    justify-content: space-between;
-
-
-                    @include Tab {
-                        @include rem(20);
-                        justify-content: flex-end;
-                    }
-
-
-                    @include Xl {
-                        margin-left: 0;
-                    }
+                span {
+                    margin-left: 25px;
                 }
+            }
+        }
 
+        .menu_table_right.__price_other {
+            margin-left: 34px;
+            @include rem(11);
+            display: flex;
+            justify-content: space-between;
 
-
-
-
+            @include Tab {
+                @include rem(20);
+                justify-content: flex-end;
             }
 
+
+            @include Xl {
+                margin-left: 0;
+            }
         }
+
+        @include Tab {
+            @include rem(20);
+            justify-content: flex-end;
+        }
+
+
+
+
 
         &_left {
             @include rem(13);
@@ -664,8 +982,6 @@ menu
         }
     }
 }
-
-
 
 
 
@@ -816,6 +1132,7 @@ access
         }
     }
 
+
     &_txtspa {
         margin-left: 5px;
     }
@@ -914,24 +1231,15 @@ staff
             background-size: 134%;
             background-position: 56% 40%;
         }
-
-
     }
 
     &_txt_ja {
         @include rem(15);
-
-        @include Tab {
-            @include rem(25);
-        }
     }
+
 
     &_txt_en {
         @include rem(12);
-
-        @include Tab {
-            @include rem(20);
-        }
 
         @include Xl {
             @include rem(11);
