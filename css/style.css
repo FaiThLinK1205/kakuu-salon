@@ -174,6 +174,12 @@ header
   color: #ffffff;
 }
 
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .header {
+    line-height: 132px;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .header {
     line-height: 109px;
@@ -186,6 +192,12 @@ header
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .header {
+    line-height: 67px;
+  }
+}
+
 .header_ttl {
   margin-left: 20px;
   padding-top: 8px;
@@ -193,6 +205,17 @@ header
   /*IE9以前に対応する*/
   font-size: 2rem;
   letter-spacing: 4.8px;
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .header_ttl {
+    margin-left: 32px;
+    padding-top: 5px;
+    font-size: 48px;
+    /*IE9以前に対応する*/
+    font-size: 3rem;
+    letter-spacing: 9px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -208,12 +231,23 @@ header
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   .header_ttl {
+    margin-left: 55px;
+    padding-top: 23px;
     font-size: 50px;
     /*IE9以前に対応する*/
     font-size: 3.125rem;
-    margin-left: 55px;
-    padding-top: 23px;
     letter-spacing: 8px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .header_ttl {
+    margin-left: 69px;
+    padding-top: 26px;
+    font-size: 55px;
+    /*IE9以前に対応する*/
+    font-size: 3.4375rem;
+    letter-spacing: 11px;
   }
 }
 
@@ -232,6 +266,14 @@ nav (ハンバーガーメニュー含む)
   z-index: 1000;
 }
 
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .ham_nav {
+    width: 40px;
+    top: 58px;
+    right: 30px;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .ham_nav {
     width: 35px;
@@ -241,6 +283,12 @@ nav (ハンバーガーメニュー含む)
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .ham_nav {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1400px) {
   .ham_nav {
     display: none;
   }
@@ -260,6 +308,12 @@ nav (ハンバーガーメニュー含む)
 
 .ham_nav span:nth-child(2) {
   top: 11px;
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .ham_nav span:nth-child(2) {
+    top: 18px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -450,13 +504,35 @@ nav (ハンバーガーメニュー含む)
             flex-wrap: nowrap;
     margin-left: 55px;
   }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) and (min-width: 1400px) {
+  .nav_list {
+    margin-left: 68px;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
   .nav_item {
+    padding-right: 20px;
     font-size: 18px;
     /*IE9以前に対応する*/
     font-size: 1.125rem;
-    padding-right: 20px;
     letter-spacing: 4.5px;
   }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) and (min-width: 1400px) {
+  .nav_item {
+    padding-right: 28px;
+    font-size: 20px;
+    /*IE9以前に対応する*/
+    font-size: 1.25rem;
+    letter-spacing: 5px;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
   .nav_link {
     position: relative;
     display: inline-block;
@@ -503,6 +579,14 @@ fv/スライダー
      object-fit: cover;
 }
 
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .fv_img {
+    height: 885px;
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .fv_img {
     height: 910px;
@@ -515,6 +599,12 @@ fv/スライダー
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .fv_img {
+    height: 625px;
+  }
+}
+
 .fv_scroll {
   display: inline-block;
   position: absolute;
@@ -523,7 +613,7 @@ fv/スライダー
   z-index: 2;
   padding: 10px 10px 110px;
   overflow: hidden;
-  color: white;
+  color: #ffffff;
   font-size: 15px;
   /*IE9以前に対応する*/
   font-size: 0.9375rem;
@@ -552,9 +642,51 @@ fv/スライダー
   left: 50%;
   width: 2px;
   height: 107px;
-  background: #fff;
+  background: #ffffff;
   -webkit-animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
           animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .fv_scroll {
+    display: inline-block;
+    position: absolute;
+    left: 30px;
+    bottom: 18px;
+    z-index: 2;
+    padding: 10px 10px 200px;
+    overflow: hidden;
+    color: #ffffff;
+    font-size: 19px;
+    /*IE9以前に対応する*/
+    font-size: 1.1875rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    -webkit-writing-mode: vertical-lr;
+        -ms-writing-mode: tb-lr;
+            writing-mode: vertical-lr;
+  }
+  .fv_scroll::before {
+    content: '';
+    position: absolute;
+    top: 108px;
+    left: 50%;
+    width: 2px;
+    height: 160px;
+    background: rgba(255, 255, 255, 0.4);
+  }
+  .fv_scroll::after {
+    content: '';
+    position: absolute;
+    top: 108px;
+    left: 50%;
+    width: 2px;
+    height: 160px;
+    background: #ffffff;
+    -webkit-animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+            animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -566,7 +698,7 @@ fv/スライダー
     z-index: 2;
     padding: 10px 10px 280px;
     overflow: hidden;
-    color: white;
+    color: #ffffff;
     font-size: 22px;
     /*IE9以前に対応する*/
     font-size: 1.375rem;
@@ -593,7 +725,7 @@ fv/スライダー
     left: 50%;
     width: 2px;
     height: 215px;
-    background: #fff;
+    background: #ffffff;
     -webkit-animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
             animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
   }
@@ -638,6 +770,102 @@ fv/スライダー
     background: #fff;
     -webkit-animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
             animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .fv_scroll {
+    display: inline-block;
+    position: absolute;
+    left: 79px;
+    bottom: 10px;
+    z-index: 2;
+    padding: 10px 10px 160px;
+    overflow: hidden;
+    color: #ffffff;
+    font-size: 16px;
+    /*IE9以前に対応する*/
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    -webkit-writing-mode: vertical-lr;
+        -ms-writing-mode: tb-lr;
+            writing-mode: vertical-lr;
+  }
+  .fv_scroll::before {
+    content: '';
+    position: absolute;
+    top: 85px;
+    left: 50%;
+    width: 2px;
+    height: 148px;
+    background: rgba(255, 255, 255, 0.4);
+  }
+  .fv_scroll::after {
+    content: '';
+    position: absolute;
+    top: 85px;
+    left: 50%;
+    width: 2px;
+    height: 148px;
+    background: #ffffff;
+    -webkit-animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+            animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+  }
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+  }
+  50% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+  }
+  50.1% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+  }
+  100% {
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+    -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+  }
+  50% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+  }
+  50.1% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+  }
+  100% {
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+    -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
   }
 }
 
@@ -1310,12 +1538,6 @@ menu
   }
 }
 
-@media screen and (min-width: 1400px) {
-  .menu {
-    padding: 112px 0 82px;
-  }
-}
-
 .menu .section_ttl {
   margin-bottom: 28px;
 }
@@ -1332,23 +1554,27 @@ menu
   }
 }
 
-@media screen and (min-width: 1200px) and (max-width: 1400px) {
-  .menu .section_ttl {
-    margin-bottom: 52px;
+@media screen and (min-width: 1400px) {
+  .menu {
+    padding: 112px 0 82px;
   }
 }
 
-.menu .section_inner {
+.menu .section_ttl {
+  margin-bottom: 28px;
+}
+
+.menu .section_ttl .section_inner {
   margin: 0 auto;
   padding: 0 30px;
 }
 
-.menu_container {
+.menu .section_ttl_container {
   display: block;
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
-  .menu_container {
+  .menu .section_ttl_container {
     padding: 0 80px;
     display: -webkit-box;
     display: -webkit-flex;
@@ -1361,75 +1587,57 @@ menu
   }
 }
 
-@media screen and (min-width: 1400px) {
-  .menu_container {
-    padding: 0 107px;
-  }
-}
-
-.menu_table {
+.menu .section_ttl_table {
   width: 276px;
   display: block;
   margin: 0 auto;
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  .menu_table {
+  .menu .section_ttl_table {
     width: 90%;
   }
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
-  .menu_table {
+  .menu .section_ttl_table {
     width: 330px;
   }
 }
 
-@media screen and (min-width: 1400px) {
-  .menu_table {
-    width: 385px;
-  }
-}
-
-.menu_table.__cut {
+.menu .section_ttl_table.__cut {
   margin-bottom: 25px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  .menu_table.__cut {
+  .menu .section_ttl_table.__cut {
     margin-bottom: 77px;
   }
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
-  .menu_table.__cut {
+  .menu .section_ttl_table.__cut {
     margin-bottom: 50px;
   }
 }
 
-@media screen and (min-width: 1400px) {
-  .menu_table.__cut {
-    margin-bottom: 65px;
-  }
-}
-
-.menu_table.__perm {
+.menu .section_ttl_table.__perm {
   margin-bottom: 24px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  .menu_table.__perm {
+  .menu .section_ttl_table.__perm {
     margin-bottom: 70px;
   }
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
-  .menu_table.__perm {
+  .menu .section_ttl_table.__perm {
     margin-bottom: 47px;
   }
 }
 
-.menu_table.__perm .menu_table_headspan {
+.menu .section_ttl_table.__perm .menu_table_headspan {
   display: block;
   font-size: 15px;
   /*IE9以前に対応する*/
@@ -1438,7 +1646,7 @@ menu
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  .menu_table.__perm .menu_table_headspan {
+  .menu .section_ttl_table.__perm .menu_table_headspan {
     font-size: 20px;
     /*IE9以前に対応する*/
     font-size: 1.25rem;
@@ -1447,13 +1655,68 @@ menu
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
-  .menu_table.__perm .menu_table_headspan {
+  .menu .section_ttl_table.__perm .menu_table_headspan {
     margin-left: 17px;
   }
 }
 
 @media screen and (min-width: 1400px) {
-  .menu_table.__perm .menu_table_headspan {
+  .menu .section_ttl_table {
+    width: 385px;
+  }
+}
+
+.menu .section_ttl_table.__clr {
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .menu .section_ttl_table.__clr {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .menu .section_ttl_table.__clr {
+    margin-bottom: 65px;
+  }
+}
+
+.menu .section_ttl_table.__perm {
+  margin-bottom: 24px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .menu .section_ttl_table.__perm {
+    margin-bottom: 70px;
+  }
+}
+
+.menu .section_ttl_table.__perm .menu_table_headspan {
+  font-size: 15px;
+  /*IE9以前に対応する*/
+  font-size: 0.9375rem;
+  margin-left: 0;
+}
+
+.menu .section_ttl_table.__treat {
+  margin-bottom: 27px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .menu .section_ttl_table.__treat {
+    margin-bottom: 72px;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .menu .section_ttl_table.__treat {
+    margin-left: 17px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .menu .section_ttl_table.__treat {
     margin-left: 14px;
     font-size: 18px;
     /*IE9以前に対応する*/
@@ -1461,32 +1724,34 @@ menu
   }
 }
 
-.menu_table.__clr {
-  margin-bottom: 20px;
-}
-
-@media screen and (min-width: 768px) and (max-width: 992px) {
-  .menu_table.__clr {
-    margin-bottom: 85px;
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .menu .section_ttl {
+    margin-bottom: 50px;
   }
 }
 
-.menu_table.__clr .menu_table_headspan {
+.menu.__other {
+  margin-bottom: 25px;
+}
+
+.menu.__other .menu_table_headspan {
   font-size: 15px;
   /*IE9以前に対応する*/
   font-size: 0.9375rem;
   margin-left: 0;
 }
 
-.menu_table.__treat {
-  margin-bottom: 27px;
+.menu.__other .menu_table_right.__fz {
+  font-size: 11pxpx;
+  /*IE9以前に対応する*/
+  font-size: 0.6875pxrem;
 }
 
 @media screen and (min-width: 1400px) {
-  .menu_table.__treat .menu_table_head_box {
+  .menu.__other .menu_table_right.__fz .menu_table_head_box {
     margin-bottom: 37px;
   }
-  .menu_table.__treat .menu_table_headspan {
+  .menu.__other .menu_table_right.__fz .menu_table_headspan {
     display: block;
     margin-left: 0;
     line-height: 1.2;
@@ -1494,42 +1759,19 @@ menu
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  .menu_table.__treat {
+  .menu.__other .menu_table_right.__fz {
     margin-bottom: 72px;
   }
 }
 
-@media screen and (min-width: 1200px) and (max-width: 1400px) {
-  .menu_table.__treat {
-    margin-bottom: 50px;
-  }
-}
-
 @media screen and (min-width: 1400px) {
-  .menu_table.__treat {
+  .menu.__other {
     margin-bottom: 61px;
   }
 }
 
-.menu_table.__other {
-  margin-bottom: 25px;
-}
-
-.menu_table.__other .menu_table_headspan {
-  font-size: 15px;
-  /*IE9以前に対応する*/
-  font-size: 0.9375rem;
-  margin-left: 0;
-}
-
-.menu_table.__other .menu_table_right.__fz {
-  font-size: 11pxpx;
-  /*IE9以前に対応する*/
-  font-size: 0.6875pxrem;
-}
-
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  .menu_table.__other .menu_table_box.__dire {
+  .menu.__other .menu_table_box.__dire {
     -webkit-box-orient: initial;
     -webkit-box-direction: initial;
     -webkit-flex-direction: initial;
@@ -1538,15 +1780,14 @@ menu
   }
 }
 
-@media screen and (min-width: 1400px) {
-  .menu_table.__other span {
-    font-size: 17px;
-    /*IE9以前に対応する*/
-    font-size: 1.0625rem;
-  }
+.menu .menu_table_headspan {
+  font-size: 15px;
+  /*IE9以前に対応する*/
+  font-size: 0.9375rem;
+  margin-left: 0;
 }
 
-.menu_table_head {
+.menu_head {
   font-size: 20px;
   /*IE9以前に対応する*/
   font-size: 1.25rem;
@@ -1554,13 +1795,10 @@ menu
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
-  .menu_table_head {
+  .menu_head {
     letter-spacing: .03em;
-    font-size: 18px;
-    /*IE9以前に対応する*/
-    font-size: 1.125rem;
   }
-  .menu_table_head.__row {
+  .menu_head.__row {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1569,49 +1807,59 @@ menu
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
-  .menu_table_head {
-    font-size: 20px;
+  .menu_head {
+    font-size: 18px;
     /*IE9以前に対応する*/
-    font-size: 1.25rem;
+    font-size: 1.125rem;
   }
 }
 
-.menu_table_head_box {
+.menu_head_box {
   width: 274px;
   text-align: left;
   margin-bottom: 17px;
 }
 
+@media screen and (min-width: 1400px) {
+  .menu_head_box span {
+    font-size: 17px;
+    /*IE9以前に対応する*/
+    font-size: 1.0625rem;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  .menu_table_head_box {
+  .menu_head_box {
     width: 100%;
     margin-bottom: 23px;
   }
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
-  .menu_table_head_box {
+  .menu_head_box {
     width: 100%;
   }
 }
 
-@media screen and (min-width: 1400px) {
-  .menu_table_head_box {
-    margin-bottom: 20px;
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .menu {
+    letter-spacing: .03em;
+    font-size: 18px;
+    /*IE9以前に対応する*/
+    font-size: 1.125rem;
+  }
+  .menu_headspan {
+    letter-spacing: .00064em;
+    margin-left: 22px;
+    font-size: 16px;
+    /*IE9以前に対応する*/
+    font-size: 1rem;
+    line-height: 1;
   }
 }
 
-.menu_table_headspan {
-  letter-spacing: .00064em;
-  margin-left: 22px;
-  font-size: 16px;
-  /*IE9以前に対応する*/
-  font-size: 1rem;
-  line-height: 1;
-}
-
-@media screen and (min-width: 768px) and (max-width: 992px) {
-  .menu_table_headspan {
+@media screen and (min-width: 1200px) and (max-width: 1400px) and (min-width: 1200px) and (max-width: 1400px) {
+  .menu_headspan {
     font-size: 20px;
     /*IE9以前に対応する*/
     font-size: 1.25rem;
@@ -1619,48 +1867,80 @@ menu
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
-  .menu_table_headspan {
+  .menu_headspan_box {
+    width: 274px;
+    text-align: left;
+    margin-bottom: 17px;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) and (min-width: 768px) and (max-width: 992px) {
+  .menu_headspan_box {
+    font-size: 20px;
+    /*IE9以前に対応する*/
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) and (min-width: 1200px) and (max-width: 1400px) {
+  .menu_headspan_box {
     line-height: 2;
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 992px) {
-  .menu_table {
+@media screen and (min-width: 1200px) and (max-width: 1400px) and (min-width: 1200px) and (max-width: 1400px) {
+  .menu_headspan {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) and (min-width: 1400px) {
+  .menu_headspan {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) and (min-width: 768px) and (max-width: 992px) {
+  .menu {
     font-size: 20px;
     /*IE9以前に対応する*/
     font-size: 1.25rem;
   }
 }
 
-.menu_table_box {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-bottom: 15px;
-  line-height: 1;
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .menu_box {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 15px;
+    line-height: 1;
+  }
 }
 
-@media screen and (min-width: 1200px) and (max-width: 1400px) {
-  .menu_table_box {
+@media screen and (min-width: 1200px) and (max-width: 1400px) and (min-width: 1200px) and (max-width: 1400px) {
+  .menu_box {
     margin-bottom: 16px;
   }
 }
 
-.menu_table_box.__dire {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .menu_box.__dire {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
-@media screen and (min-width: 1200px) and (max-width: 1400px) {
-  .menu_table_box.__dire {
+@media screen and (min-width: 1200px) and (max-width: 1400px) and (min-width: 1200px) and (max-width: 1400px) {
+  .menu_box.__dire {
     -webkit-box-orient: initial;
     -webkit-box-direction: initial;
     -webkit-flex-direction: initial;
@@ -1673,60 +1953,110 @@ menu
   }
 }
 
-.menu_table_box.__dire .menu_table_left {
-  margin-bottom: 7px;
+@media screen and (min-width: 1200px) and (max-width: 1400px) and (min-width: 1200px) and (max-width: 1400px) {
+  .menu_box.__dire {
+    line-height: 2;
+  }
 }
 
-.menu_table_box.__dire .menu_table_right.__price_treat {
-  margin-left: 62px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .menu_box .menu_table_left {
+    margin-bottom: 7px;
+  }
+  .menu_box .menu_table_right.__price_treat {
+    margin-left: 62px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
-@media screen and (min-width: 768px) and (max-width: 992px) {
-  .menu_table_box.__dire .menu_table_right.__price_treat {
+@media screen and (min-width: 1200px) and (max-width: 1400px) and (min-width: 768px) and (max-width: 992px) {
+  .menu_box .menu_table_right.__price_treat {
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
-  .menu_table_box.__dire .menu_table_right.__price_treat span {
+  .menu_box .menu_table_right.__price_treat span {
     margin-left: 25px;
   }
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
-  .menu_table_box.__dire .menu_table_right.__price_treat {
+  .menu_box .menu_table_right.__price_treat.__dire {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) and (min-width: 1200px) and (max-width: 1400px) {
+  .menu_box .menu_table_right.__price_treat.__dire {
+    -webkit-box-orient: initial;
+    -webkit-box-direction: initial;
+    -webkit-flex-direction: initial;
+        -ms-flex-direction: initial;
+            flex-direction: initial;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .menu_box .menu_table_right.__price_treat.__dire .menu_table_left {
+    margin-bottom: 7px;
+  }
+  .menu_box .menu_table_right.__price_treat.__dire .menu_table_right.__price_treat {
+    margin-left: 62px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) and (min-width: 1200px) and (max-width: 1400px) {
+  .menu_box .menu_table_right.__price_treat.__dire .menu_table_right.__price_treat {
     margin-left: 0;
   }
-  .menu_table_box.__dire .menu_table_right.__price_treat span {
+  .menu_box .menu_table_right.__price_treat.__dire .menu_table_right.__price_treat span {
     margin-left: 10px;
   }
 }
 
-@media screen and (min-width: 1400px) {
-  .menu_table_box.__dire .menu_table_right.__price_treat span {
+@media screen and (min-width: 1200px) and (max-width: 1400px) and (min-width: 1400px) {
+  .menu_box .menu_table_right.__price_treat.__dire .menu_table_right.__price_treat span {
     margin-left: -9px;
   }
 }
 
-.menu_table_box.__dire span {
-  margin-left: 25px;
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .menu_box .menu_table_right.__price_treat.__dire span {
+    margin-left: 25px;
+  }
 }
 
-@media screen and (min-width: 1400px) {
-  .menu_table_box.__dire span {
+@media screen and (min-width: 1200px) and (max-width: 1400px) and (min-width: 1400px) {
+  .menu_box .menu_table_right.__price_treat.__dire span {
     margin-left: 12px;
   }
 }
 
-.menu_table .menu_table_right.__price_other {
+.menu .menu_table_right.__price_other {
   margin-left: 34px;
   font-size: 11px;
   /*IE9以前に対応する*/
@@ -1742,7 +2072,7 @@ menu
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  .menu_table .menu_table_right.__price_other {
+  .menu .menu_table_right.__price_other {
     font-size: 20px;
     /*IE9以前に対応する*/
     font-size: 1.25rem;
@@ -1754,13 +2084,13 @@ menu
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
-  .menu_table .menu_table_right.__price_other {
+  .menu .menu_table_right.__price_other {
     margin-left: 0;
   }
 }
 
 @media screen and (min-width: 1400px) {
-  .menu_table .menu_table_right.__price_other {
+  .menu .menu_table_right.__price_other {
     font-size: 14px;
     /*IE9以前に対応する*/
     font-size: 0.875rem;
@@ -1768,7 +2098,7 @@ menu
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  .menu_table {
+  .menu {
     font-size: 20px;
     /*IE9以前に対応する*/
     font-size: 1.25rem;
@@ -1779,14 +2109,14 @@ menu
   }
 }
 
-.menu_table_left {
+.menu_left {
   font-size: 13px;
   /*IE9以前に対応する*/
   font-size: 0.8125rem;
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  .menu_table_left {
+  .menu_left {
     font-size: 20px;
     /*IE9以前に対応する*/
     font-size: 1.25rem;
@@ -1794,21 +2124,21 @@ menu
 }
 
 @media screen and (min-width: 1400px) {
-  .menu_table_left {
+  .menu_left {
     font-size: 16px;
     /*IE9以前に対応する*/
     font-size: 1rem;
   }
 }
 
-.menu_table_right {
+.menu_right {
   font-size: 13px;
   /*IE9以前に対応する*/
   font-size: 0.8125rem;
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  .menu_table_right {
+  .menu_right {
     font-size: 20px;
     /*IE9以前に対応する*/
     font-size: 1.25rem;
@@ -1816,18 +2146,18 @@ menu
 }
 
 @media screen and (min-width: 1400px) {
-  .menu_table_right {
+  .menu_right {
     font-size: 18px;
     /*IE9以前に対応する*/
     font-size: 1.125rem;
   }
 }
 
-.menu_table_right.__ml {
+.menu_right.__ml {
   display: block;
 }
 
-.menu_table_txt {
+.menu_txt {
   margin-bottom: 4px;
   font-size: 12px;
   /*IE9以前に対応する*/
@@ -1836,7 +2166,7 @@ menu
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  .menu_table_txt {
+  .menu_txt {
     font-size: 18px;
     /*IE9以前に対応する*/
     font-size: 1.125rem;
@@ -1844,7 +2174,7 @@ menu
 }
 
 @media screen and (min-width: 1400px) {
-  .menu_table_txt {
+  .menu_txt {
     font-size: 14px;
     /*IE9以前に対応する*/
     font-size: 0.875rem;

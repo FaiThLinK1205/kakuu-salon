@@ -21,6 +21,11 @@ fv/スライダー
     height: 578px;
     object-fit: cover;
 
+    @include Sm {
+        height: 885px;
+        transform: translateX(10px);
+    }
+
 
     @include Tab {
         height: 910px;
@@ -28,6 +33,10 @@ fv/スライダー
 
     @include Xl {
         height: 538px;
+    }
+
+    @include XXl {
+        height: 625px;
     }
 }
 
@@ -42,7 +51,7 @@ fv/スライダー
         z-index: 2;
         padding: 10px 10px 110px;
         overflow: hidden;
-        color: white;
+        color: $cWhite;
         @include rem(15);
         font-weight: bold;
         text-transform: uppercase;
@@ -66,10 +75,53 @@ fv/スライダー
             left: 50%;
             width: 2px;
             height: 107px;
-            background: #fff;
+            background: $cWhite;
             animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
         }
     }
+}
+
+@include Sm {
+    .fv {
+
+        &_scroll {
+            display: inline-block;
+            position: absolute;
+            left: 30px;
+            bottom: 18px;
+            z-index: 2;
+            padding: 10px 10px 200px;
+            overflow: hidden;
+            color: $cWhite;
+            @include rem(19);
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            writing-mode: vertical-lr;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 108px;
+                left: 50%;
+                width: 2px;
+                height: 160px;
+                background: rgba(255, 255, 255, .4);
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 108px;
+                left: 50%;
+                width: 2px;
+                height: 160px;
+                background: $cWhite;
+                animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+            }
+        }
+    }
+
 }
 
 @include Tab {
@@ -83,7 +135,7 @@ fv/スライダー
             z-index: 2;
             padding: 10px 10px 280px;
             overflow: hidden;
-            color: white;
+            color: $cWhite;
             @include rem(22);
             font-weight: bold;
             text-transform: uppercase;
@@ -107,7 +159,7 @@ fv/スライダー
                 left: 50%;
                 width: 2px;
                 height: 215px;
-                background: #fff;
+                background: $cWhite;
                 animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
             }
         }
@@ -155,6 +207,73 @@ fv/スライダー
         }
     }
 }
+
+@include XXl {
+    .fv {
+
+        &_scroll {
+            display: inline-block;
+            position: absolute;
+            left: 79px;
+            bottom: 10px;
+            z-index: 2;
+            padding: 10px 10px 160px;
+            overflow: hidden;
+            color: $cWhite;
+            @include rem(16);
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            writing-mode: vertical-lr;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 85px;
+                left: 50%;
+                width: 2px;
+                height: 148px;
+                background: rgba(255, 255, 255, .4);
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 85px;
+                left: 50%;
+                width: 2px;
+                height: 148px;
+                background: $cWhite;
+                animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+            }
+        }
+    }
+
+}
+
+
+@keyframes scroll {
+    0% {
+        transform: scale(1, 0);
+        transform-origin: 0 0;
+    }
+
+    50% {
+        transform: scale(1, 1);
+        transform-origin: 0 0;
+    }
+
+    50.1% {
+        transform: scale(1, 1);
+        transform-origin: 0 100%;
+    }
+
+    100% {
+        transform: scale(1, 0);
+        transform-origin: 0 100%;
+    }
+}
+
 
 
 
@@ -662,10 +781,6 @@ menu
         padding: 90px 0 82px;
     }
 
-    @include XXl {
-        padding: 112px 0 82px;
-    }
-
     .section_ttl {
         margin-bottom: 28px;
 
@@ -676,90 +791,125 @@ menu
         @include Xl {
             margin-bottom: 40px;
         }
-
-        @include Xl {
-            margin-bottom: 52px;
-        }
     }
 
-
-    .section_inner {
-        margin: 0 auto;
-        padding: 0 30px;
+    @include XXl {
+        padding: 112px 0 82px;
     }
 
-    &_container {
-        display: block;
+    .section_ttl {
+        margin-bottom: 28px;
 
-        @include Xl {
-            padding: 0 80px;
-            display: flex;
-            justify-content: space-between;
+        .section_inner {
+            margin: 0 auto;
+            padding: 0 30px;
         }
 
-        @include XXl {
-            padding: 0 107px;
-        }
-    }
+        &_container {
+            display: block;
 
-
-    &_table {
-        width: 276px;
-        display: block;
-        margin: 0 auto;
-
-        @include Tab {
-            width: 90%;
-        }
-
-        @include Xl {
-            width: 330px;
-        }
-
-        @include XXl {
-            width: 385px;
+            @include Xl {
+                padding: 0 80px;
+                display: flex;
+                justify-content: space-between;
+            }
         }
 
 
-
-        &.__cut {
-            margin-bottom: 25px;
+        &_table {
+            width: 276px;
+            display: block;
+            margin: 0 auto;
 
             @include Tab {
-                margin-bottom: 77px;
+                width: 90%;
             }
 
             @include Xl {
-                margin-bottom: 50px;
+                width: 330px;
+            }
+
+
+
+            &.__cut {
+                margin-bottom: 25px;
+
+                @include Tab {
+                    margin-bottom: 77px;
+                }
+
+                @include Xl {
+                    margin-bottom: 50px;
+                }
+            }
+
+            &.__perm {
+                margin-bottom: 24px;
+
+                @include Tab {
+                    margin-bottom: 70px;
+                }
+
+                @include Xl {
+                    margin-bottom: 47px;
+                }
+
+                .menu_table_headspan {
+                    display: block;
+                    @include rem(15);
+                    margin-left: 0;
+
+
+                    @include Tab {
+                        @include rem(20);
+                        margin-bottom: 32px;
+                    }
+
+
+                    @include Xl {
+                        margin-left: 17px;
+                    }
+                }
             }
 
             @include XXl {
-                margin-bottom: 65px;
-            }
-        }
-
-        &.__perm {
-            margin-bottom: 24px;
-
-            @include Tab {
-                margin-bottom: 70px;
+                width: 385px;
             }
 
-            @include Xl {
-                margin-bottom: 47px;
-            }
-
-            .menu_table_headspan {
-                display: block;
-                @include rem(15);
-                margin-left: 0;
 
 
-                @include Tab {
-                    @include rem(20);
-                    margin-bottom: 32px;
+            &.__clr {
+                margin-bottom: 20px;
+
+                @include Xl {
+                    margin-bottom: 50px;
                 }
 
+                @include XXl {
+                    margin-bottom: 65px;
+                }
+            }
+
+            &.__perm {
+                margin-bottom: 24px;
+
+                @include Tab {
+                    margin-bottom: 70px;
+                }
+
+                .menu_table_headspan {
+                    @include rem(15);
+                    margin-left: 0;
+                }
+
+            }
+
+            &.__treat {
+                margin-bottom: 27px;
+
+                @include Tab {
+                    margin-bottom: 72px;
+                }
 
                 @include Xl {
                     margin-left: 17px;
@@ -772,24 +922,24 @@ menu
             }
         }
 
-
-
-        &.__clr {
-            margin-bottom: 20px;
-
-            @include Tab {
-                margin-bottom: 85px;
-            }
-
-            .menu_table_headspan {
-                @include rem(15);
-                margin-left: 0;
-            }
-
+        @include Xl {
+            margin-bottom: 50px;
         }
 
-        &.__treat {
-            margin-bottom: 27px;
+    }
+
+
+
+    &.__other {
+        margin-bottom: 25px;
+
+        .menu_table_headspan {
+            @include rem(15);
+            margin-left: 0;
+        }
+
+        .menu_table_right.__fz {
+            @include rem(11px);
 
 
             @include XXl {
@@ -813,68 +963,89 @@ menu
                 margin-bottom: 72px;
             }
 
+        }
 
-            @include Xl {
-                margin-bottom: 50px;
-            }
-
-            @include XXl {
-                margin-bottom: 61px;
-            }
-
-
+        // ////////
+        @include XXl {
+            margin-bottom: 61px;
         }
 
 
-
-        &.__other {
-            margin-bottom: 25px;
-
-            .menu_table_headspan {
-                @include rem(15);
-                margin-left: 0;
-
-
-
+        @include Tab {
+            .menu_table_box.__dire {
+                flex-direction: initial;
             }
+        }
 
-            .menu_table_right.__fz {
-                @include rem(11px);
+    }
+
+    // /
+
+    .menu_table_headspan {
+        @include rem(15);
+        margin-left: 0;
 
 
+
+    }
+
+    &_head {
+        @include rem(20);
+        letter-spacing: .001em;
+
+
+        @include Xl {
+            letter-spacing: .03em;
+
+            &.__row {
+                display: flex;
             }
+        }
 
+        @include Xl {
+            @include rem(18);
+        }
 
-            @include Tab {
-                .menu_table_box.__dire {
-                    flex-direction: initial;
-                }
-            }
+        &_box {
+            width: 274px;
+            text-align: left;
+            margin-bottom: 17px;
 
+            ///
             @include XXl {
                 span {
                     @include rem(17);
                 }
             }
 
+            @include Tab {
+                width: 100%;
+                margin-bottom: 23px;
+            }
+
+            @include Xl {
+                width: 100%;
+            }
         }
 
 
-
-        &_head {
-            @include rem(20);
-            letter-spacing: .001em;
+    }
 
 
-            @include Xl {
-                letter-spacing: .03em;
-                @include rem(18);
+    @include Xl {
+        letter-spacing: .03em;
+        @include rem(18);
 
-                &.__row {
-                    display: flex;
-                }
-            }
+        &_headspan {
+            letter-spacing: .00064em;
+            margin-left: 22px;
+            @include rem(16);
+            line-height: 1;
 
+
+
+
+            //   /
             @include Xl {
                 @include rem(20);
             }
@@ -886,39 +1057,27 @@ menu
                 margin-bottom: 17px;
 
                 @include Tab {
-                    width: 100%;
-                    margin-bottom: 23px;
+                    @include rem(20);
                 }
+
 
                 @include Xl {
-                    width: 100%;
-                }
-
-                @include XXl {
-                    margin-bottom: 20px;
+                    line-height: 2;
                 }
             }
 
 
-        }
 
 
 
-        &_headspan {
-            letter-spacing: .00064em;
-            margin-left: 22px;
-            @include rem(16);
-            line-height: 1;
-
-            @include Tab {
-                @include rem(20);
-            }
-
-
+            // 
             @include Xl {
-                line-height: 2;
+                width: 100%;
             }
 
+            @include XXl {
+                margin-bottom: 20px;
+            }
         }
 
         @include Tab {
@@ -946,75 +1105,85 @@ menu
                     display: flex;
                 }
 
-                .menu_table_left {
-                    margin-bottom: 7px;
+                @include Xl {
+                    line-height: 2;
                 }
 
+            }
 
-                .menu_table_right.__price_treat {
-                    margin-left: 62px;
-                    display: flex;
-                    justify-content: space-between;
+            .menu_table_left {
+                margin-bottom: 7px;
+            }
+
+            .menu_table_right.__price_treat {
+                margin-left: 62px;
+                display: flex;
+                justify-content: space-between;
 
 
-                    @include Tab {
-                        justify-content: flex-end;
+                @include Tab {
+                    justify-content: flex-end;
 
-                        span {
-                            margin-left: 25px;
-                        }
+                    span {
+                        margin-left: 25px;
                     }
+                }
+
+                &.__dire {
+                    flex-direction: column;
 
 
                     @include Xl {
+                        flex-direction: initial;
+                        display: flex;
+                    }
 
-                        margin-left: 0;
+                    .menu_table_left {
+                        margin-bottom: 7px;
+                    }
 
-                        span {
-                            margin-left: 10px;
+
+                    .menu_table_right.__price_treat {
+                        margin-left: 62px;
+                        display: flex;
+                        justify-content: space-between;
+
+                        @include Xl {
+
+                            margin-left: 0;
+
+                            span {
+                                margin-left: 10px;
+                            }
+
+                        }
+
+                        @include XXl {
+                            span {
+                                margin-left: -9px;
+                            }
                         }
 
                     }
 
-                    @include XXl {
-                        span {
-                            margin-left: -9px;
+                    span {
+                        margin-left: 25px;
+
+
+                        @include XXl {
+                            margin-left: 12px;
                         }
                     }
-
-                }
-
-                span {
-                    margin-left: 25px;
-
-
-                    @include XXl {
-                        margin-left: 12px;
-                    }
                 }
             }
         }
+    }
 
-        .menu_table_right.__price_other {
-            margin-left: 34px;
-            @include rem(11);
-            display: flex;
-            justify-content: space-between;
-
-            @include Tab {
-                @include rem(20);
-                justify-content: flex-end;
-            }
-
-
-            @include Xl {
-                margin-left: 0;
-            }
-
-            @include XXl {
-                @include rem(14);
-            }
-        }
+    .menu_table_right.__price_other {
+        margin-left: 34px;
+        @include rem(11);
+        display: flex;
+        justify-content: space-between;
 
         @include Tab {
             @include rem(20);
@@ -1022,54 +1191,70 @@ menu
         }
 
 
-
-
-
-        &_left {
-            @include rem(13);
-
-            @include Tab {
-                @include rem(20);
-            }
-
-            @include XXl {
-                @include rem(16);
-            }
+        @include Xl {
+            margin-left: 0;
         }
 
-        &_right {
-            @include rem(13);
+        @include XXl {
+            @include rem(14);
+        }
+    }
 
-            @include Tab {
-                @include rem(20);
-            }
-
-            @include XXl {
-                @include rem(18);
-            }
+    @include Tab {
+        @include rem(20);
+        justify-content: flex-end;
+    }
 
 
-            &.__ml {
-                display: block;
-            }
+
+
+
+    &_left {
+        @include rem(13);
+
+        @include Tab {
+            @include rem(20);
         }
 
-        &_txt {
-            margin-bottom: 4px;
-            @include rem(12);
-            letter-spacing: 0;
+        @include XXl {
+            @include rem(16);
+        }
+    }
+
+    &_right {
+        @include rem(13);
+
+        @include Tab {
+            @include rem(20);
+        }
+
+        @include XXl {
+            @include rem(18);
+        }
 
 
-            @include Tab {
-                @include rem(18);
-            }
+        &.__ml {
+            display: block;
+        }
+    }
 
-            @include XXl {
-                @include rem(14);
-            }
+    &_txt {
+        margin-bottom: 4px;
+        @include rem(12);
+        letter-spacing: 0;
+
+
+        @include Tab {
+            @include rem(18);
+        }
+
+        @include XXl {
+            @include rem(14);
         }
     }
 }
+
+
 
 
 

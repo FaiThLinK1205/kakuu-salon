@@ -8,6 +8,10 @@ header
   line-height: 80px;
   color: $cWhite;
 
+  @include Sm {
+    line-height: 132px;
+  }
+
   @include Tab {
     line-height: 109px;
   }
@@ -16,11 +20,22 @@ header
     line-height: 56px;
   }
 
+  @include XXl {
+    line-height: 67px;
+  }
+
   &_ttl {
     margin-left: 20px;
     padding-top: 8px;
     @include rem(32);
     letter-spacing: 4.8px;
+
+    @include Sm {
+      margin-left: 32px;
+      padding-top: 5px;
+      @include rem(48);
+      letter-spacing: 9px;
+    }
 
     @include Tab {
       margin-left: 40px;
@@ -30,12 +45,21 @@ header
     }
 
     @include Xl {
-      @include rem(50);
       margin-left: 55px;
       padding-top: 23px;
+      @include rem(50);
       letter-spacing: 8px;
     }
+
+    @include XXl {
+      margin-left: 69px;
+      padding-top: 26px;
+      @include rem(55);
+      letter-spacing: 11px;
+    }
   }
+
+  
 }
 
 
@@ -56,6 +80,12 @@ nav (ハンバーガーメニュー含む)
   cursor: pointer;
   z-index: 1000;
 
+  @include Sm {
+    width: 40px;
+    top: 58px;
+    right: 30px;
+  }
+
   @include Tab {
     width: 35px;
     top: 45px;
@@ -64,6 +94,10 @@ nav (ハンバーガーメニュー含む)
 
 
   @include Xl {
+    display: none;
+  }
+
+  @include XXl {
     display: none;
   }
 
@@ -80,6 +114,10 @@ nav (ハンバーガーメニュー含む)
 
     &:nth-child(2) {
       top: 11px;
+
+      @include Sm {
+        top: 18px;
+      }
 
       @include Tab {
         top: 18px;
@@ -244,12 +282,22 @@ nav (ハンバーガーメニュー含む)
     &_list {
       @include flex($justify:start);
       margin-left: 55px;
+
+      @include XXl {
+        margin-left: 68px;
+      }
     }
 
     &_item {
-      @include rem(18);
       padding-right: 20px;
+      @include rem(18);
       letter-spacing: 4.5px;
+
+      @include XXl {
+        padding-right: 28px;
+        @include rem(20);
+        letter-spacing: 5px;
+      }
     }
       
       &_link {
