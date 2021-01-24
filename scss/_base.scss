@@ -59,6 +59,10 @@ body {
         width: 1200px;
     }
 
+    @include XXl {
+        width: 1400px;
+    }
+
 }
 
 
@@ -106,7 +110,7 @@ body {
 
 
     @include XXl {
-        max-width: 1740px;
+        max-width: 1120px;
     }
 
 }
