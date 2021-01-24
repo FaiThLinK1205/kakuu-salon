@@ -60,6 +60,15 @@ $(() => {
     // speed: 2000,
   });
 
+  // スムーズスクロール
+
+  $('a[href*="#"]').click(function () {  //ページリンクの適用範囲を指定
+    let elmHash = $(this).attr('href');  //ページ内のHTMLタグhrefからリンクのidを取得
+    let pos = $(elmHash).offset().top;   //idの上部の距離を取得
+    $('body,html').animate({ scrollTop: pos }, 500);  //取得した位置にスクロール
+    return false;
+  });
+
 
 
 
