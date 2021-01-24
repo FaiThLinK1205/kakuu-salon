@@ -16,6 +16,10 @@ header
     line-height: 56px;
   }
 
+  @include XXl {
+    line-height: 67px;
+  }
+
   &_ttl {
     margin-left: 20px;
     padding-top: 8px;
@@ -30,12 +34,21 @@ header
     }
 
     @include Xl {
-      @include rem(50);
       margin-left: 55px;
       padding-top: 23px;
+      @include rem(50);
       letter-spacing: 8px;
     }
+
+    @include XXl {
+      margin-left: 69px;
+      padding-top: 26px;
+      @include rem(55);
+      letter-spacing: 11px;
+    }
   }
+
+  
 }
 
 
@@ -64,6 +77,10 @@ nav (ハンバーガーメニュー含む)
 
 
   @include Xl {
+    display: none;
+  }
+
+  @include XXl {
     display: none;
   }
 
@@ -244,12 +261,22 @@ nav (ハンバーガーメニュー含む)
     &_list {
       @include flex($justify:start);
       margin-left: 55px;
+
+      @include XXl {
+        margin-left: 68px;
+      }
     }
 
     &_item {
-      @include rem(18);
       padding-right: 20px;
+      @include rem(18);
       letter-spacing: 4.5px;
+
+      @include XXl {
+        padding-right: 28px;
+        @include rem(20);
+        letter-spacing: 5px;
+      }
     }
       
       &_link {
