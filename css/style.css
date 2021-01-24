@@ -83,6 +83,12 @@ body {
   }
 }
 
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .mock {
+    width: 992px;
+  }
+}
+
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   .mock {
     width: 1200px;
@@ -148,6 +154,12 @@ body {
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .section_inner {
     max-width: 688px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .section_inner {
+    max-width: 889px;
   }
 }
 
