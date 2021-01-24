@@ -17,6 +17,11 @@ fv/スライダー
   height: 578px;
   object-fit: cover;
 
+  @include Sm {
+    height: 885px;
+    transform: translateX(10px);
+  }
+
   @include Tab {
     height: 910px;
   }
@@ -61,6 +66,47 @@ fv/スライダー
       height: 107px;
       background: #fff;
       animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+    }
+  }
+}
+
+@include Sm {
+  .fv {
+    &_scroll {
+      display: inline-block;
+      position: absolute;
+      left: 30px;
+      bottom: 18px;
+      z-index: 2;
+      padding: 10px 10px 200px;
+      overflow: hidden;
+      color: $cWhite;
+      @include rem(19);
+      font-weight: bold;
+      text-transform: uppercase;
+      text-decoration: none;
+      writing-mode: vertical-lr;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 108px;
+        left: 50%;
+        width: 2px;
+        height: 160px;
+        background: rgba(255, 255, 255, 0.4);
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 108px;
+        left: 50%;
+        width: 2px;
+        height: 160px;
+        background: $cWhite;
+        animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+      }
     }
   }
 }
@@ -141,6 +187,47 @@ fv/スライダー
         width: 2px;
         height: 125px;
         background: #fff;
+        animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+      }
+    }
+  }
+}
+
+@include XXl {
+  .fv {
+    &_scroll {
+      display: inline-block;
+      position: absolute;
+      left: 79px;
+      bottom: 10px;
+      z-index: 2;
+      padding: 10px 10px 160px;
+      overflow: hidden;
+      color: $cWhite;
+      @include rem(16);
+      font-weight: bold;
+      text-transform: uppercase;
+      text-decoration: none;
+      writing-mode: vertical-lr;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 85px;
+        left: 50%;
+        width: 2px;
+        height: 148px;
+        background: rgba(255, 255, 255, 0.4);
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 85px;
+        left: 50%;
+        width: 2px;
+        height: 148px;
+        background: $cWhite;
         animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
       }
     }
@@ -717,11 +804,19 @@ menu
     padding: 110px 0 50px;
   }
 
+  @include Xl {
+    padding: 90px 0 82px;
+  }
+
   .section_ttl {
     margin-bottom: 28px;
 
     @include Tab {
       margin-bottom: 60px;
+    }
+
+    @include Xl {
+      margin-bottom: 40px;
     }
   }
 
@@ -730,135 +825,204 @@ menu
     padding: 0 30px;
   }
 
-  &_table {
-    width: 276px;
+  &_container {
     display: block;
-    margin: 0 auto;
 
-    @include Tab {
-      width: 90%;
+    @include Xl {
+      padding: 0 80px;
+      display: flex;
+      justify-content: space-between;
     }
+  }
 
-    &.__cut {
-      margin-bottom: 25px;
+  &.__cut {
+    margin-bottom: 25px;
+
+    &_table {
+      width: 276px;
+      display: block;
+      margin: 0 auto;
 
       @include Tab {
-        margin-bottom: 77px;
-      }
-    }
-
-    &.__perm {
-      margin-bottom: 24px;
-
-      @include Tab {
-        margin-bottom: 70px;
+        width: 90%;
       }
 
-      .menu_table_headspan {
-        display: block;
-        @include rem(15);
-        margin-left: 0;
+      @include Xl {
+        width: 330px;
+      }
+
+      &.__cut {
+        margin-bottom: 25px;
 
         @include Tab {
-          @include rem(20);
-          margin-bottom: 32px;
+          margin-bottom: 77px;
+        }
+
+        @include Xl {
+          margin-bottom: 50px;
         }
       }
-    }
 
-    &.__clr {
-      margin-bottom: 20px;
+      &.__perm {
+        margin-bottom: 24px;
+
+        @include Tab {
+          margin-bottom: 70px;
+        }
+
+        @include Xl {
+          margin-bottom: 47px;
+        }
+
+        .menu_table_headspan {
+          display: block;
+          @include rem(15);
+          margin-left: 0;
+
+          @include Tab {
+            @include rem(20);
+            margin-bottom: 32px;
+          }
+
+          @include Xl {
+            margin-left: 17px;
+          }
+        }
+      }
+
+      &.__clr {
+        margin-bottom: 20px;
+
+        @include Tab {
+          margin-bottom: 85px;
+        }
+
+        .menu_table_headspan {
+          @include rem(15);
+          margin-left: 0;
+        }
+      }
+
+      &.__treat {
+        margin-bottom: 27px;
+
+        @include Tab {
+          margin-bottom: 72px;
+        }
+
+        @include Xl {
+          margin-bottom: 50px;
+        }
+      }
+
+      &.__other {
+        margin-bottom: 25px;
+
+        .menu_table_headspan {
+          @include rem(15);
+          margin-left: 0;
+        }
+
+        .menu_table_right.__fz {
+          @include rem(11px);
+        }
+
+        @include Tab {
+          .menu_table_box.__dire {
+            flex-direction: initial;
+          }
+        }
+      }
+
+      &_head {
+        @include rem(20);
+        letter-spacing: 0.001em;
+
+        @include Xl {
+          letter-spacing: 0.03em;
+
+          &.__row {
+            display: flex;
+          }
+        }
+
+        @include Xl {
+          @include rem(18);
+        }
+
+        &_box {
+          width: 274px;
+          text-align: left;
+          margin-bottom: 17px;
+
+          @include Tab {
+            width: 100%;
+            margin-bottom: 23px;
+          }
+
+          @include Xl {
+            width: 100%;
+          }
+        }
+      }
 
       @include Tab {
         margin-bottom: 85px;
       }
 
-      .menu_table_headspan {
-        @include rem(15);
-        margin-left: 0;
-      }
-    }
+      &_headspan {
+        letter-spacing: 0.00064em;
+        margin-left: 22px;
+        @include rem(16);
+        line-height: 1;
 
-    &.__treat {
-      margin-bottom: 27px;
+        @include Tab {
+          @include rem(20);
+        }
+
+        @include Xl {
+          line-height: 2;
+        }
+      }
 
       @include Tab {
-        margin-bottom: 72px;
-      }
-
-      .menu_table_headspan {
-        text-align: left;
-        display: block;
-        @include rem(15);
-        margin-left: 0;
-      }
-    }
-
-    &.__other {
-      margin-bottom: 25px;
-
-      .menu_table_headspan {
-        @include rem(15);
-        margin-left: 0;
+        @include rem(20);
       }
 
       .menu_table_right.__fz {
         @include rem(11px);
       }
 
-      @include Tab {
-        .menu_table_box.__dire {
-          flex-direction: initial;
-        }
-      }
-    }
-
-    &_head {
-      @include rem(20);
-      letter-spacing: 0.001em;
-
-      @include Tab {
-        @include rem(25);
-      }
-
       &_box {
-        width: 274px;
-        text-align: left;
-        margin-bottom: 17px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        line-height: 1;
 
-        @include Tab {
-          width: 100%;
-          margin-bottom: 23px;
-        }
-      }
-    }
+        &_head {
+          @include rem(20);
+          letter-spacing: 0.001em;
 
-    &_headspan {
-      letter-spacing: 0.00064em;
-      margin-left: 22px;
-      @include rem(16);
-      line-height: 1;
+          @include Xl {
+            margin-bottom: 16px;
+          }
 
-      @include Tab {
-        @include rem(20);
-      }
-    }
+          &.__dire {
+            flex-direction: column;
 
-    &_box {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 15px;
-      line-height: 1;
+            @include Xl {
+              flex-direction: initial;
+              display: flex;
+            }
 
-      @include Tab {
-        margin-bottom: 27px;
-      }
+            .menu_table_left {
+              margin-bottom: 7px;
+            }
 
-      &.__dire {
-        flex-direction: column;
-
-        .menu_table_left {
-          margin-bottom: 7px;
+            .menu_table_left {
+              margin-bottom: 7px;
+            }
+          }
         }
 
         .menu_table_right.__price_treat {
@@ -873,20 +1037,41 @@ menu
               margin-left: 25px;
             }
           }
-        }
 
-        .menu_table_right.__price_other {
-          margin-left: 34px;
-          @include rem(11);
-          display: flex;
-          justify-content: space-between;
+          @include Xl {
+            margin-left: 0;
 
-          @include Tab {
-            @include rem(20);
-            justify-content: flex-end;
+            span {
+              margin-left: 10px;
+            }
           }
         }
+
+        span {
+          margin-left: 25px;
+        }
       }
+    }
+
+    .menu_table_right.__price_other {
+      margin-left: 34px;
+      @include rem(11);
+      display: flex;
+      justify-content: space-between;
+
+      @include Tab {
+        @include rem(20);
+        justify-content: flex-end;
+      }
+
+      @include Xl {
+        margin-left: 0;
+      }
+    }
+
+    @include Tab {
+      @include rem(20);
+      justify-content: flex-end;
     }
 
     &_left {
@@ -931,6 +1116,14 @@ access
   padding: 50px 0 51px;
   background: $cGray;
 
+  @include Tab {
+    padding: 80px 0 90px;
+  }
+
+  @include Xl {
+    padding: 70px 0 92px;
+  }
+
   &_imgbox {
     background: url(/img/section-access/accecss.jpg) no-repeat;
     background-size: cover;
@@ -938,11 +1131,33 @@ access
     height: 167px;
     margin-left: auto;
     margin-bottom: 30px;
+
+    @include Tab {
+      width: 728px;
+      height: 345px;
+
+      margin-bottom: 82px;
+    }
+
+    @include Xl {
+      width: 100%;
+      height: 440px;
+      margin-bottom: 70px;
+      background-position-y: -97px;
+    }
   }
 
   .section_ttl {
     margin-bottom: 20px;
     letter-spacing: 0.19em;
+
+    @include Tab {
+      margin-bottom: 60px;
+    }
+
+    @include Xl {
+      margin-bottom: 54px;
+    }
   }
 
   &_txtbox {
@@ -950,24 +1165,63 @@ access
     // width: 252px;
     text-align: center;
     margin: 0 auto;
+
+    @include Tab {
+      @include rem(25);
+    }
+
+    @include Xl {
+      @include rem(20);
+    }
   }
 
   &_txt {
     letter-spacing: 0.27em;
     line-height: 1.6;
     margin-bottom: 12px;
+
+    @include Tab {
+      margin-bottom: 40px;
+      letter-spacing: 0.22em;
+      line-height: 1.78;
+    }
+
+    @include Xl {
+      margin-bottom: 45px;
+      letter-spacing: 0.34em;
+      line-height: 1.8;
+
+      span {
+        margin-right: 26%;
+      }
+    }
   }
 
   &_icon {
     text-align: center;
     display: inline-block;
     margin-left: 9px;
+
+    @include Tab {
+      margin-left: 0;
+      margin-right: 35px;
+    }
+
+    @include Xl {
+      margin-left: 0;
+      margin-right: 10px;
+      letter-spacing: 0.2em;
+    }
   }
 
   &_icontxt {
     display: inline-block;
     letter-spacing: 0.15em;
     margin-left: 10px;
+
+    @include Xl {
+      margin-left: 10px;
+    }
 
     &:before {
       display: inline-block;
@@ -977,6 +1231,19 @@ access
       height: 21px;
       margin-right: 5px;
       transform: translateY(6px);
+
+      @include Tab {
+        width: 22px;
+        height: 33px;
+        background-size: contain;
+      }
+
+      @include Xl {
+        width: 30px;
+        height: 39px;
+        background-size: contain;
+        transform: translate(-8px, 13px);
+      }
     }
   }
 
@@ -995,18 +1262,50 @@ staff
   padding: 50px 0 18px;
   background: $cBlack;
 
+  @include Tab {
+    padding: 80px 0 20px;
+  }
+
+  @include Xl {
+    padding: 100px 0 73px;
+  }
+
   .section_ttl {
     margin-bottom: 21px;
+
+    @include Tab {
+      margin-bottom: 63px;
+    }
+
+    @include Xl {
+      margin-bottom: 53px;
+    }
   }
 
   &_content {
     display: block;
+
+    @include Xl {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px 0;
+    }
   }
 
   &_box {
     width: 275px;
     overflow: hidden;
     margin: 0 auto 30px;
+
+    @include Tab {
+      width: 568px;
+      margin: 0 auto 60px;
+    }
+
+    @include Xl {
+      width: 305px;
+      margin: 0;
+    }
   }
 
   &_imgbox {
@@ -1014,6 +1313,15 @@ staff
     height: 163px;
     display: block;
     margin: 0 auto 8px;
+
+    @include Tab {
+      height: 347px;
+    }
+
+    @include Xl {
+      height: 204px;
+      margin: 0 auto 7px;
+    }
 
     &.__left {
       background: url(/img/section-staff/staff1.jpg) no-repeat;
@@ -1040,5 +1348,10 @@ staff
 
   &_txt_en {
     @include rem(12);
+
+    @include Xl {
+      @include rem(11);
+      letter-spacing: 0.09em;
+    }
   }
 }
