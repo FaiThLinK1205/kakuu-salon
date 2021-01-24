@@ -8,6 +8,10 @@ header
   line-height: 80px;
   color: $cWhite;
 
+  @include Sm {
+    line-height: 132px;
+  }
+
   @include Tab {
     line-height: 109px;
   }
@@ -25,6 +29,13 @@ header
     padding-top: 8px;
     @include rem(32);
     letter-spacing: 4.8px;
+
+    @include Sm {
+      margin-left: 32px;
+      padding-top: 5px;
+      @include rem(48);
+      letter-spacing: 9px;
+    }
 
     @include Tab {
       margin-left: 40px;
@@ -69,6 +80,12 @@ nav (ハンバーガーメニュー含む)
   cursor: pointer;
   z-index: 1000;
 
+  @include Sm {
+    width: 40px;
+    top: 58px;
+    right: 30px;
+  }
+
   @include Tab {
     width: 35px;
     top: 45px;
@@ -97,6 +114,10 @@ nav (ハンバーガーメニュー含む)
 
     &:nth-child(2) {
       top: 11px;
+
+      @include Sm {
+        top: 18px;
+      }
 
       @include Tab {
         top: 18px;

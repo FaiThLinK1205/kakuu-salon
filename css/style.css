@@ -174,6 +174,12 @@ header
   color: #ffffff;
 }
 
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .header {
+    line-height: 132px;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .header {
     line-height: 109px;
@@ -199,6 +205,17 @@ header
   /*IE9以前に対応する*/
   font-size: 2rem;
   letter-spacing: 4.8px;
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .header_ttl {
+    margin-left: 32px;
+    padding-top: 5px;
+    font-size: 48px;
+    /*IE9以前に対応する*/
+    font-size: 3rem;
+    letter-spacing: 9px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -249,6 +266,14 @@ nav (ハンバーガーメニュー含む)
   z-index: 1000;
 }
 
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .ham_nav {
+    width: 40px;
+    top: 58px;
+    right: 30px;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .ham_nav {
     width: 35px;
@@ -283,6 +308,12 @@ nav (ハンバーガーメニュー含む)
 
 .ham_nav span:nth-child(2) {
   top: 11px;
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .ham_nav span:nth-child(2) {
+    top: 18px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
