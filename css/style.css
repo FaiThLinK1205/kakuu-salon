@@ -279,6 +279,129 @@ body {
   }
 }
 
+.fadeIn {
+  -webkit-animation-name: fadeInAnime;
+          animation-name: fadeInAnime;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@-webkit-keyframes fadeInAnime {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInAnime {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeLeft {
+  -webkit-animation-name: fadeLeftAnime;
+          animation-name: fadeLeftAnime;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@-webkit-keyframes fadeLeftAnime {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes fadeLeftAnime {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.fadeRight {
+  -webkit-animation-name: fadeRightAnime;
+          animation-name: fadeRightAnime;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@-webkit-keyframes fadeRightAnime {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes fadeRightAnime {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.fadeInTrigger,
+.fadeUpTrigger,
+.fadeDownTrigger,
+.fadeLeftTrigger,
+.fadeRightTrigger {
+  opacity: 0;
+}
+
+.delay-time03 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.delay-time04 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.delay-time1 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
 /****************************************:
 
 header
@@ -652,6 +775,11 @@ nav (ハンバーガーメニュー含む)
     /*IE9以前に対応する*/
     font-size: 1rem;
     letter-spacing: 4.5px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .nav_item:hover {
+    opacity: 0.5;
   }
 }
 
@@ -686,6 +814,11 @@ nav (ハンバーガーメニュー含む)
     /*IE9以前に対応する*/
     font-size: 1.125rem;
     letter-spacing: 4.5px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .nav_item:hover {
+    opacity: 0.5;
   }
 }
 
@@ -720,6 +853,11 @@ nav (ハンバーガーメニュー含む)
     /*IE9以前に対応する*/
     font-size: 1.25rem;
     letter-spacing: 5px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .nav_item:hover {
+    opacity: 0.5;
   }
 }
 

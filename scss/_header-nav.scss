@@ -287,13 +287,13 @@ nav (ハンバーガーメニュー含む)
     transition: none;
     position: static;
     padding: 0;
-    
+
   }
-  
+
   .nav {
-    
-    background-color:$cBlack;
-    
+
+    background-color: $cBlack;
+
     &_list {
       @include flex($justify:start);
       margin-left: 45px;
@@ -305,6 +305,12 @@ nav (ハンバーガーメニュー含む)
       padding-right: 10px;
       @include rem(16);
       letter-spacing: 4.5px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        opacity: 0.5;
+      }
+
 
     }
   }
@@ -336,6 +342,12 @@ nav (ハンバーガーメニュー含む)
       padding-right: 20px;
       @include rem(18);
       letter-spacing: 4.5px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        opacity: 0.5;
+      }
+
 
     }
   }
@@ -365,6 +377,11 @@ nav (ハンバーガーメニュー含む)
       padding-right: 28px;
       @include rem(20);
       letter-spacing: 5px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        opacity: 0.5;
+      }
     }
   }
 }
