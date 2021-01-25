@@ -22,8 +22,13 @@ fv/スライダー
     transform: translateX(10px);
   }
 
+
   @include Tab {
     height: 910px;
+  }
+
+  @include Lg {
+    height: 448px;
   }
 
   @include Xl {
@@ -50,6 +55,7 @@ fv/スライダー
     text-transform: uppercase;
     text-decoration: none;
     writing-mode: vertical-lr;
+
 
     &::before {
       content: "";
@@ -154,6 +160,48 @@ fv/スライダー
       }
     }
   }
+}
+
+@include Lg {
+    .fv {
+      &_scroll {
+        display: inline-block;
+        position: absolute;
+        left: 52px;
+        bottom: -5px;
+        z-index: 2;
+        padding: 10px 10px 130px;
+        overflow: hidden;
+        color: white;
+        @include rem(12);
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none;
+        writing-mode: vertical-lr;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 65px;
+          left: 50%;
+          width: 2px;
+          height: 103px;
+          background: rgba(255, 255, 255, 0.4);
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 65px;
+          left: 50%;
+          width: 2px;
+          height: 103px;
+          background: #fff;
+          animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+        }
+      }
+    }
+
 }
 
 @include Xl {

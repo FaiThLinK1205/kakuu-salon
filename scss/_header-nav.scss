@@ -12,8 +12,13 @@ header
     line-height: 132px;
   }
 
+
   @include Tab {
     line-height: 109px;
+  }
+
+  @include Lg {
+    line-height: 48px;
   }
 
   @include Xl {
@@ -42,6 +47,13 @@ header
       padding-top: 5px;
       @include rem(55);
       letter-spacing: 9px;
+    }
+
+    @include Lg {
+      margin-left: 48px;
+      padding-top: 18px;
+      @include rem(40);
+      letter-spacing: 8px;
     }
 
     @include Xl {
@@ -92,6 +104,9 @@ nav (ハンバーガーメニュー含む)
     right: 40px;
   }
 
+  @include Lg {
+    display: none;
+  }
 
   @include Xl {
     display: none;
@@ -264,6 +279,38 @@ nav (ハンバーガーメニュー含む)
   }
 }
 
+@include Lg {
+  .global_nav {
+    visibility: visible;
+    opacity: 1;
+    color: $cWhite;
+    transition: none;
+    position: static;
+    padding: 0;
+    
+  }
+  
+  .nav {
+    
+    background-color:$cBlack;
+    
+    &_list {
+      @include flex($justify:start);
+      margin-left: 45px;
+      background: transparent;
+
+    }
+
+    &_item {
+      padding-right: 10px;
+      @include rem(16);
+      letter-spacing: 4.5px;
+
+    }
+  }
+
+}
+
 @include Xl {
 
   .global_nav {
@@ -283,9 +330,6 @@ nav (ハンバーガーメニュー含む)
       @include flex($justify:start);
       margin-left: 55px;
 
-      @include XXl {
-        margin-left: 68px;
-      }
     }
 
     &_item {
@@ -293,49 +337,34 @@ nav (ハンバーガーメニュー含む)
       @include rem(18);
       letter-spacing: 4.5px;
 
-      @include XXl {
-        padding-right: 28px;
-        @include rem(20);
-        letter-spacing: 5px;
-      }
     }
   }
 }
 
 @include XXl {
-    .global_nav {
-      visibility: visible;
-      opacity: 1;
-      background-color: transparent;
-      color: $cWhite;
-      transition: none;
-      position: static;
-      padding: 0;
+  .global_nav {
+    visibility: visible;
+    opacity: 1;
+    background-color: transparent;
+    color: $cWhite;
+    transition: none;
+    position: static;
+    padding: 0;
+
+  }
+
+  .nav {
+
+    &_list {
+      @include flex($justify:start);
+      margin-left: 68px;
 
     }
 
-    .nav {
-
-      &_list {
-        @include flex($justify:start);
-        margin-left: 55px;
-
-        @include XXl {
-          margin-left: 68px;
-        }
-      }
-
-      &_item {
-        padding-right: 20px;
-        @include rem(18);
-        letter-spacing: 4.5px;
-
-        @include XXl {
-          padding-right: 28px;
-          @include rem(20);
-          letter-spacing: 5px;
-        }
-      }
+    &_item {
+      padding-right: 28px;
+      @include rem(20);
+      letter-spacing: 5px;
     }
-
+  }
 }
