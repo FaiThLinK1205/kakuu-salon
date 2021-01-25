@@ -53,12 +53,12 @@ $(() => {
 
   // スライドショー
   let mySwiper = new Swiper('.swiper-container', {
-    // loop: true,
-    // effect: 'fade',
-    // autoplay: {
-    //   delay: 3000,
-    // },
-    // speed: 2000,
+    loop: true,
+    effect: 'fade',
+    autoplay: {
+      delay: 3000,
+    },
+    speed: 2000,
   });
 
   // スムーズスクロール
