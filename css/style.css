@@ -296,6 +296,129 @@ body {
   }
 }
 
+.fadeIn {
+  -webkit-animation-name: fadeInAnime;
+          animation-name: fadeInAnime;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@-webkit-keyframes fadeInAnime {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInAnime {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeLeft {
+  -webkit-animation-name: fadeLeftAnime;
+          animation-name: fadeLeftAnime;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@-webkit-keyframes fadeLeftAnime {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes fadeLeftAnime {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.fadeRight {
+  -webkit-animation-name: fadeRightAnime;
+          animation-name: fadeRightAnime;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@-webkit-keyframes fadeRightAnime {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes fadeRightAnime {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.fadeInTrigger,
+.fadeUpTrigger,
+.fadeDownTrigger,
+.fadeLeftTrigger,
+.fadeRightTrigger {
+  opacity: 0;
+}
+
+.delay-time03 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.delay-time04 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.delay-time1 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
 /****************************************:
 
 header
@@ -316,6 +439,12 @@ header
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .header {
     line-height: 109px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .header {
+    line-height: 48px;
   }
 }
 
@@ -359,6 +488,17 @@ header
     /*IE9以前に対応する*/
     font-size: 3.4375rem;
     letter-spacing: 9px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .header_ttl {
+    margin-left: 48px;
+    padding-top: 18px;
+    font-size: 40px;
+    /*IE9以前に対応する*/
+    font-size: 2.5rem;
+    letter-spacing: 8px;
   }
 }
 
@@ -412,6 +552,12 @@ nav (ハンバーガーメニュー含む)
     width: 35px;
     top: 45px;
     right: 40px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .ham_nav {
+    display: none;
   }
 }
 
@@ -612,6 +758,48 @@ nav (ハンバーガーメニュー含む)
   }
 }
 
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .global_nav {
+    visibility: visible;
+    opacity: 1;
+    color: #ffffff;
+    -webkit-transition: none;
+    transition: none;
+    position: static;
+    padding: 0;
+  }
+  .nav {
+    background-color: #58656e;
+  }
+  .nav_list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -webkit-justify-content: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+    margin-left: 45px;
+    background: transparent;
+  }
+  .nav_item {
+    padding-right: 10px;
+    font-size: 16px;
+    /*IE9以前に対応する*/
+    font-size: 1rem;
+    letter-spacing: 4.5px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .nav_item:hover {
+    opacity: 0.5;
+  }
+}
+
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   .global_nav {
     visibility: visible;
@@ -637,31 +825,17 @@ nav (ハンバーガーメニュー含む)
             flex-wrap: nowrap;
     margin-left: 55px;
   }
-}
-
-@media screen and (min-width: 1200px) and (max-width: 1400px) and (min-width: 1400px) {
-  .nav_list {
-    margin-left: 68px;
-  }
-}
-
-@media screen and (min-width: 1200px) and (max-width: 1400px) {
   .nav_item {
     padding-right: 20px;
     font-size: 18px;
     /*IE9以前に対応する*/
     font-size: 1.125rem;
     letter-spacing: 4.5px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
   }
-}
-
-@media screen and (min-width: 1200px) and (max-width: 1400px) and (min-width: 1400px) {
-  .nav_item {
-    padding-right: 28px;
-    font-size: 20px;
-    /*IE9以前に対応する*/
-    font-size: 1.25rem;
-    letter-spacing: 5px;
+  .nav_item:hover {
+    opacity: 0.5;
   }
 }
 
@@ -688,33 +862,19 @@ nav (ハンバーガーメニュー含む)
     -webkit-flex-wrap: nowrap;
         -ms-flex-wrap: nowrap;
             flex-wrap: nowrap;
-    margin-left: 55px;
-  }
-}
-
-@media screen and (min-width: 1400px) and (min-width: 1400px) {
-  .nav_list {
     margin-left: 68px;
   }
-}
-
-@media screen and (min-width: 1400px) {
-  .nav_item {
-    padding-right: 20px;
-    font-size: 18px;
-    /*IE9以前に対応する*/
-    font-size: 1.125rem;
-    letter-spacing: 4.5px;
-  }
-}
-
-@media screen and (min-width: 1400px) and (min-width: 1400px) {
   .nav_item {
     padding-right: 28px;
     font-size: 20px;
     /*IE9以前に対応する*/
     font-size: 1.25rem;
     letter-spacing: 5px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .nav_item:hover {
+    opacity: 0.5;
   }
 }
 
@@ -751,6 +911,12 @@ fv/スライダー
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .fv_img {
     height: 910px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .fv_img {
+    height: 448px;
   }
 }
 
@@ -887,6 +1053,48 @@ fv/スライダー
     width: 2px;
     height: 215px;
     background: #ffffff;
+    -webkit-animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+            animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .fv_scroll {
+    display: inline-block;
+    position: absolute;
+    left: 52px;
+    bottom: -5px;
+    z-index: 2;
+    padding: 10px 10px 130px;
+    overflow: hidden;
+    color: white;
+    font-size: 12px;
+    /*IE9以前に対応する*/
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    -webkit-writing-mode: vertical-lr;
+        -ms-writing-mode: tb-lr;
+            writing-mode: vertical-lr;
+  }
+  .fv_scroll::before {
+    content: "";
+    position: absolute;
+    top: 65px;
+    left: 50%;
+    width: 2px;
+    height: 103px;
+    background: rgba(255, 255, 255, 0.4);
+  }
+  .fv_scroll::after {
+    content: "";
+    position: absolute;
+    top: 65px;
+    left: 50%;
+    width: 2px;
+    height: 103px;
+    background: #fff;
     -webkit-animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
             animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
   }
