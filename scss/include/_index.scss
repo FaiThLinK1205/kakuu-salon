@@ -319,9 +319,6 @@ concept
   margin-bottom: 50px;
   background-color: $cBlack;
 
-  // TO DO あとで消す---
-  // margin-top: 400px;
-  // -------
 
   @include Sm {
     padding-top: 80px;
@@ -594,12 +591,12 @@ info
 
   @include Xl {
     padding-bottom: 92px;
-    margin: -267px 0px 0 647px;
+    margin: -267px 0 0 647px;
   }
 
   @include XXl {
     padding-bottom: 114px;
-    margin: -300px 0px 0 770px;
+    margin: -300px 0 0 55%;
   }
 
   .section_ttl {
