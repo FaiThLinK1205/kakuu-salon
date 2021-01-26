@@ -112,6 +112,15 @@ body {
   text-align: center;
 }
 
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .section_ttl {
+    font-size: 34px;
+    /*IE9以前に対応する*/
+    font-size: 2.125rem;
+    letter-spacing: .16em;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .section_ttl {
     font-size: 35px;
@@ -119,6 +128,14 @@ body {
     font-size: 2.1875rem;
     line-height: 1.34;
     letter-spacing: .16em;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .section_ttl {
+    font-size: 28px;
+    /*IE9以前に対応する*/
+    font-size: 1.75rem;
   }
 }
 
@@ -2165,9 +2182,21 @@ menu
   background-color: #58656e;
 }
 
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .menu {
+    padding: 80px 0 49px;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .menu {
     padding: 110px 0 50px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .menu {
+    padding: 77px 0 50px;
   }
 }
 
@@ -2187,9 +2216,21 @@ menu
   margin-bottom: 28px;
 }
 
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .menu .section_ttl {
+    margin-bottom: 40px;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .menu .section_ttl {
     margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .menu .section_ttl {
+    margin-bottom: 32px;
   }
 }
 
@@ -2199,13 +2240,39 @@ menu
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .menu .section_ttl {
+    margin-bottom: 51px;
+  }
+}
+
 .menu .section_inner {
   margin: 0 auto;
   padding: 0 30px;
 }
 
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .menu .section_inner {
+    padding: 0;
+  }
+}
+
 .menu_container {
   display: block;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .menu_container {
+    padding: 0 100px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
@@ -2222,10 +2289,36 @@ menu
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .menu_container {
+    padding: 0 106px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .menu_content {
+    width: 48%;
+  }
+}
+
 .menu_table {
   width: 276px;
   display: block;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .menu_table {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -2257,9 +2350,21 @@ menu
   margin-bottom: 19px;
 }
 
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .menu_table.__cut {
+    margin-bottom: 40px;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .menu_table.__cut {
     margin-bottom: 65px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .menu_table.__cut {
+    margin-bottom: 39px;
   }
 }
 
@@ -2269,8 +2374,20 @@ menu
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .menu_table.__cut {
+    margin-bottom: 50px;
+  }
+}
+
 .menu_table.__perm {
   margin-bottom: 27px;
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .menu_table.__perm {
+    margin-bottom: 23px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -2279,9 +2396,21 @@ menu
   }
 }
 
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .menu_table.__perm {
+    margin-bottom: 38px;
+  }
+}
+
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   .menu_table.__perm {
     margin-bottom: 47px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .menu_table.__perm {
+    margin-bottom: 52px;
   }
 }
 
@@ -2293,12 +2422,30 @@ menu
   margin-left: 0;
 }
 
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .menu_table.__perm .menu_table_headspan {
+    font-size: 22px;
+    /*IE9以前に対応する*/
+    font-size: 1.375rem;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .menu_table.__perm .menu_table_headspan {
     font-size: 20px;
     /*IE9以前に対応する*/
     font-size: 1.25rem;
     margin-bottom: 32px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .menu_table.__perm .menu_table_headspan {
+    font-size: 12px;
+    /*IE9以前に対応する*/
+    font-size: 0.75rem;
+    margin-left: auto;
+    margin-bottom: 0;
   }
 }
 
@@ -2312,9 +2459,21 @@ menu
   margin-bottom: 20px;
 }
 
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .menu_table.__clr {
+    margin-bottom: 34px;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .menu_table.__clr {
     margin-bottom: 80px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .menu_table.__clr {
+    margin-bottom: 30px;
   }
 }
 
@@ -2326,7 +2485,7 @@ menu
 
 @media screen and (min-width: 1400px) {
   .menu_table.__clr {
-    margin-bottom: 65px;
+    margin-bottom: 30px;
   }
 }
 
@@ -2334,9 +2493,21 @@ menu
   margin-bottom: 19px;
 }
 
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .menu_table.__treat {
+    margin-bottom: 42px;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .menu_table.__treat {
     margin-bottom: 80px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .menu_table.__treat {
+    margin-bottom: 36px;
   }
 }
 
@@ -2349,7 +2520,7 @@ menu
 
 @media screen and (min-width: 1400px) {
   .menu_table.__treat {
-    margin-left: 14px;
+    margin-left: 0;
     font-size: 18px;
     /*IE9以前に対応する*/
     font-size: 1.125rem;
@@ -2360,6 +2531,12 @@ menu
   margin-bottom: 26px;
 }
 
+@media screen and (min-width: 1400px) {
+  .menu_table.__treat .menu_table_head_box {
+    margin-bottom: 20px;
+  }
+}
+
 .menu_table.__treat .menu_table_headspan {
   font-size: 15px;
   /*IE9以前に対応する*/
@@ -2368,11 +2545,33 @@ menu
   display: block;
 }
 
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .menu_table.__treat .menu_table_headspan {
+    font-size: 23px;
+    /*IE9以前に対応する*/
+    font-size: 1.4375rem;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .menu_table.__treat .menu_table_headspan {
     font-size: 20px;
     /*IE9以前に対応する*/
     font-size: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .menu_table.__treat .menu_table_headspan {
+    font-size: 12px;
+    /*IE9以前に対応する*/
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .menu_table.__treat .menu_table_headspan {
+    text-align-last: left;
   }
 }
 
@@ -2427,6 +2626,12 @@ menu
   margin-left: 0;
 }
 
+@media screen and (min-width: 1400px) {
+  .menu_table.__other .menu_table_head_box {
+    margin-bottom: 23px;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .menu_table.__other .menu_table_box.__dire {
     -webkit-box-orient: initial;
@@ -2444,11 +2649,37 @@ menu
   letter-spacing: 0.001em;
 }
 
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .menu_table_head {
+    font-size: 32px;
+    /*IE9以前に対応する*/
+    font-size: 2rem;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .menu_table_head {
     font-size: 25px;
     /*IE9以前に対応する*/
     font-size: 1.5625rem;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .menu_table_head {
+    font-size: 16px;
+    /*IE9以前に対応する*/
+    font-size: 1rem;
+  }
+  .menu_table_head.__row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+    -webkit-align-items: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
   }
 }
 
@@ -2467,10 +2698,34 @@ menu
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .menu_table_head {
+    font-size: 21px;
+    /*IE9以前に対応する*/
+    font-size: 1.3125rem;
+  }
+  .menu_table_head.__row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+    -webkit-align-items: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+}
+
 .menu_table_head_box {
   width: 274px;
   text-align: left;
   margin-bottom: 17px;
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .menu_table_head_box {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -2487,6 +2742,10 @@ menu
 }
 
 @media screen and (min-width: 1400px) {
+  .menu_table_head_box {
+    width: 100%;
+    margin-bottom: 13px;
+  }
   .menu_table_head_box span {
     font-size: 17px;
     /*IE9以前に対応する*/
@@ -2566,6 +2825,12 @@ menu
   line-height: 1;
 }
 
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .menu_table_box {
+    margin-bottom: 18px;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .menu_table_box {
     display: -webkit-box;
@@ -2576,9 +2841,21 @@ menu
   }
 }
 
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .menu_table_box {
+    margin-bottom: 4px;
+  }
+}
+
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   .menu_table_box {
     margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .menu_table_box {
+    margin-bottom: 11px;
   }
 }
 
@@ -2589,6 +2866,18 @@ menu
       -ms-flex-direction: column;
           flex-direction: column;
   margin-bottom: 13px;
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .menu_table_box.__dire {
+    margin-bottom: 19px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .menu_table_box.__dire {
+    margin-bottom: 5px;
+  }
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
@@ -2623,6 +2912,18 @@ menu
           justify-content: space-between;
 }
 
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .menu_table_box .menu_table_right.__price_treat {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .menu_table_box .menu_table_right.__price_treat span {
+    margin-left: 33px;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .menu_table_box .menu_table_right.__price_treat {
     -webkit-box-pack: end;
@@ -2635,9 +2936,31 @@ menu
   }
 }
 
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .menu_table_box .menu_table_right.__price_treat {
+    margin-left: 0;
+  }
+  .menu_table_box .menu_table_right.__price_treat span {
+    margin-left: 5px;
+    font-size: 10px;
+    /*IE9以前に対応する*/
+    font-size: 0.625rem;
+  }
+}
+
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   .menu_table_box .menu_table_right.__price_treat {
     margin-left: 7px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .menu_table_box .menu_table_right.__price_treat {
+    margin-left: -30px;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
 }
 
@@ -2690,11 +3013,39 @@ menu
   margin-left: 33px;
 }
 
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .menu_table .menu_table_headspan {
+    font-size: 22px;
+    /*IE9以前に対応する*/
+    font-size: 1.375rem;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .menu_table .menu_table_headspan {
     font-size: 18px;
     /*IE9以前に対応する*/
     font-size: 1.125rem;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .menu_table .menu_table_headspan {
+    font-size: 11px;
+    /*IE9以前に対応する*/
+    font-size: 0.6875rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .menu_table .menu_table_headspan {
+    font-size: 18px;
+    /*IE9以前に対応する*/
+    font-size: 1.125rem;
+    letter-spacing: .05em;
+    margin-left: 12px;
+    line-height: 2;
+    text-align: right;
   }
 }
 
@@ -2713,6 +3064,14 @@ menu
           justify-content: space-between;
 }
 
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .menu_table .menu_table_right.__price_other span {
+    font-size: 18px;
+    /*IE9以前に対応する*/
+    font-size: 1.125rem;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .menu_table .menu_table_right.__price_other {
     font-size: 20px;
@@ -2725,6 +3084,17 @@ menu
   }
 }
 
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .menu_table .menu_table_right.__price_other {
+    margin-left: 0;
+  }
+  .menu_table .menu_table_right.__price_other span {
+    font-size: 10px;
+    /*IE9以前に対応する*/
+    font-size: 0.625rem;
+  }
+}
+
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   .menu_table .menu_table_right.__price_other {
     margin-left: 0;
@@ -2733,9 +3103,11 @@ menu
 
 @media screen and (min-width: 1400px) {
   .menu_table .menu_table_right.__price_other {
-    font-size: 14px;
+    font-size: 13px;
     /*IE9以前に対応する*/
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
+    letter-spacing: -0.01em;
+    margin-left: 7%;
   }
 }
 
@@ -2745,11 +3117,27 @@ menu
   font-size: 0.8125rem;
 }
 
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .menu_table_left {
+    font-size: 19px;
+    /*IE9以前に対応する*/
+    font-size: 1.1875rem;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .menu_table_left {
     font-size: 20px;
     /*IE9以前に対応する*/
     font-size: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .menu_table_left {
+    font-size: 11px;
+    /*IE9以前に対応する*/
+    font-size: 0.6875rem;
   }
 }
 
@@ -2762,9 +3150,9 @@ menu
 }
 
 .menu_table_right {
-  font-size: 13px;
+  font-size: 20px;
   /*IE9以前に対応する*/
-  font-size: 0.8125rem;
+  font-size: 1.25rem;
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -2775,11 +3163,19 @@ menu
   }
 }
 
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .menu_table_right {
+    font-size: 12px;
+    /*IE9以前に対応する*/
+    font-size: 0.75rem;
+  }
+}
+
 @media screen and (min-width: 1400px) {
   .menu_table_right {
-    font-size: 18px;
+    font-size: 15px;
     /*IE9以前に対応する*/
-    font-size: 1.125rem;
+    font-size: 0.9375rem;
   }
 }
 
@@ -2795,11 +3191,27 @@ menu
   letter-spacing: 0;
 }
 
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .menu_table_txt {
+    font-size: 18px;
+    /*IE9以前に対応する*/
+    font-size: 1.125rem;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .menu_table_txt {
     font-size: 18px;
     /*IE9以前に対応する*/
     font-size: 1.125rem;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .menu_table_txt {
+    font-size: 11px;
+    /*IE9以前に対応する*/
+    font-size: 0.6875rem;
   }
 }
 
@@ -2821,15 +3233,33 @@ access
   background: #bac1c7;
 }
 
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .access {
+    padding: 80px 0 73px;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .access {
     padding: 80px 0 90px;
   }
 }
 
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .access {
+    padding: 80px 0 75px;
+  }
+}
+
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   .access {
-    padding: 70px 0 92px;
+    padding: 93px 0 92px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .access {
+    padding: 115px 0 115px;
   }
 }
 
@@ -2842,6 +3272,14 @@ access
   margin-bottom: 30px;
 }
 
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .access_imgbox {
+    width: 89%;
+    height: 44vw;
+    margin-bottom: 45px;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .access_imgbox {
     width: 728px;
@@ -2850,12 +3288,30 @@ access
   }
 }
 
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .access_imgbox {
+    width: 100%;
+    height: 345px;
+    background-position-y: -103px;
+    margin-bottom: 48px;
+  }
+}
+
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   .access_imgbox {
     width: 100%;
     height: 440px;
-    margin-bottom: 70px;
-    background-position-y: -97px;
+    margin-bottom: 37px;
+    background-position-y: -125px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .access_imgbox {
+    width: 100%;
+    height: 480px;
+    margin-bottom: 73px;
+    background-position-y: 50%;
   }
 }
 
@@ -2864,9 +3320,21 @@ access
   letter-spacing: 0.19em;
 }
 
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .access .section_ttl {
+    margin-bottom: 37px;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .access .section_ttl {
     margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .access .section_ttl {
+    margin-bottom: 50px;
   }
 }
 
@@ -2876,12 +3344,21 @@ access
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .access .section_ttl {
+    margin-bottom: 74px;
+  }
+}
+
 .access_txtbox {
   font-size: 14px;
   /*IE9以前に対応する*/
   font-size: 0.875rem;
   text-align: center;
   margin: 0 auto;
+  font-size: 18px;
+  /*IE9以前に対応する*/
+  font-size: 1.125rem;
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -2889,6 +3366,14 @@ access
     font-size: 25px;
     /*IE9以前に対応する*/
     font-size: 1.5625rem;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .access_txtbox {
+    font-size: 19px;
+    /*IE9以前に対応する*/
+    font-size: 1.1875rem;
   }
 }
 
@@ -2900,10 +3385,24 @@ access
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .access_txtbox {
+    font-size: 24px;
+    /*IE9以前に対応する*/
+    font-size: 1.5rem;
+  }
+}
+
 .access_txt {
   letter-spacing: 0.27em;
   line-height: 1.6;
   margin-bottom: 18px;
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .access_txt {
+    line-height: 2;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -2914,14 +3413,30 @@ access
   }
 }
 
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .access_txt {
+    margin-bottom: 34px;
+  }
+  .access_txt span {
+    margin-right: 23%;
+  }
+}
+
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   .access_txt {
-    margin-bottom: 45px;
+    margin-bottom: 52px;
     letter-spacing: 0.34em;
     line-height: 1.8;
   }
   .access_txt span {
     margin-right: 26%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .access_txt {
+    margin-bottom: 55px;
+    letter-spacing: .29em;
   }
 }
 
@@ -2952,6 +3467,20 @@ access
   margin-left: 10px;
 }
 
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .access_icontxt {
+    font-size: 21px;
+    /*IE9以前に対応する*/
+    font-size: 1.3125rem;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .access_icontxt {
+    margin-left: 38px;
+  }
+}
+
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   .access_icontxt {
     margin-left: 10px;
@@ -2967,6 +3496,14 @@ access
   margin-right: 5px;
   -webkit-transform: translateY(6px);
           transform: translateY(6px);
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .access_icontxt:before {
+    width: 22px;
+    height: 30px;
+    background-size: contain;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -3001,9 +3538,21 @@ staff
   background: #58656e;
 }
 
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .staff {
+    padding: 77px 0 33px;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .staff {
     padding: 85px 0 20px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .staff {
+    padding: 75px 0 20px;
   }
 }
 
@@ -3013,13 +3562,31 @@ staff
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .staff {
+    padding: 113px 0 47px;
+  }
+}
+
 .staff .section_ttl {
   margin-bottom: 21px;
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .staff .section_ttl {
+    margin-bottom: 40px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .staff .section_ttl {
     margin-bottom: 63px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .staff .section_ttl {
+    margin-bottom: 40px;
   }
 }
 
@@ -3031,6 +3598,20 @@ staff
 
 .staff_content {
   display: block;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .staff_content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 20px 0;
+  }
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
@@ -3047,16 +3628,44 @@ staff
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .staff_content {
+    margin: 60px 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 .staff_box {
   width: 275px;
   overflow: hidden;
   margin: 0 auto 30px;
 }
 
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .staff_box {
+    width: 100%;
+    margin: 0 auto 43px;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .staff_box {
     width: 568px;
     margin: 0 auto 60px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .staff_box {
+    width: 250px;
+    margin: 0 10px 35px;
   }
 }
 
@@ -3067,10 +3676,23 @@ staff
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .staff_box {
+    width: 355px;
+  }
+}
+
 .staff_imgbox {
   height: 163px;
   display: block;
   margin: 0 auto 8px;
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .staff_imgbox {
+    height: 250px;
+    margin: 0 auto 17px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -3080,10 +3702,24 @@ staff
   }
 }
 
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .staff_imgbox {
+    height: 170px;
+  }
+}
+
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   .staff_imgbox {
     height: 204px;
     margin: 0 auto 7px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .staff_imgbox {
+    width: 100%;
+    height: 234px;
+    margin: 0 auto 12px;
   }
 }
 
@@ -3111,6 +3747,14 @@ staff
   font-size: 0.9375rem;
 }
 
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .staff_txt_ja {
+    font-size: 22px;
+    /*IE9以前に対応する*/
+    font-size: 1.375rem;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .staff_txt_ja {
     font-size: 23px;
@@ -3119,10 +3763,35 @@ staff
   }
 }
 
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .staff_txt_ja {
+    font-size: 11px;
+    /*IE9以前に対応する*/
+    font-size: 0.6875rem;
+    letter-spacing: .1em;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .staff_txt_ja {
+    font-size: 20px;
+    /*IE9以前に対応する*/
+    font-size: 1.25rem;
+  }
+}
+
 .staff_txt_en {
   font-size: 12px;
   /*IE9以前に対応する*/
   font-size: 0.75rem;
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .staff_txt_en {
+    font-size: 17px;
+    /*IE9以前に対応する*/
+    font-size: 1.0625rem;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -3133,12 +3802,28 @@ staff
   }
 }
 
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .staff_txt_en {
+    font-size: 10px;
+    /*IE9以前に対応する*/
+    font-size: 0.625rem;
+  }
+}
+
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   .staff_txt_en {
     font-size: 11px;
     /*IE9以前に対応する*/
     font-size: 0.6875rem;
     letter-spacing: 0.09em;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .staff_txt_en {
+    font-size: 12px;
+    /*IE9以前に対応する*/
+    font-size: 0.75rem;
   }
 }
 
