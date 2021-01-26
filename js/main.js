@@ -53,12 +53,12 @@ $(() => {
 
   // スライドショー
   let mySwiper = new Swiper('.swiper-container', {
-    // loop: true,
-    // effect: 'fade',
-    // autoplay: {
-    //   delay: 3000,
-    // },
-    // speed: 2000,
+    loop: true,
+    effect: 'fade',
+    autoplay: {
+      delay: 3000,
+    },
+    speed: 2000,
   });
 
   // スムーズスクロール
@@ -116,12 +116,50 @@ $(() => {
     return false;
   });
 
-});
+  
+  
+  function fadeAnime() {
+    $('.fadeIntTrigger').each(function () {
+      let elemPos = $(this).offset().top - 50; //要素より50px上の
+      let scroll = $(window).scrollTop();
+      let windowHeight = $(window).height();
+      if (scroll >= elemPos - windowHeight) {
+        $(this).addClass('fadeIn'); //画面内に入ったらfadeInというclassを追加
+      } else { //それ以外
+        $(this).removeClass('fadeIn'); //画面外に出たらfadeInというclassを外す
+      }
+    });
 
-AOS.init({
-  offset: 300,
-  delay: 100,
-  duration: 700,
-  easing: 'ease',
-  once: true,
+    $('.fadeLeftTrigger').each(function () {
+      let elemPos = $(this).offset().top - 50; //要素より50px上の
+      let scroll = $(window).scrollTop();
+      let windowHeight = $(window).height();
+      //fadeLeftTriggerというクラス名が
+      if (scroll >= elemPos - windowHeight) {
+        $(this).addClass('fadeLeft'); // 画面内に入ったらfadeLeftというクラス名を追記
+      } else {
+        $(this).removeClass('fadeLeft'); // 画面外に出たらfadeLeftというクラス名を外す
+      }
+    });
+
+    $('.fadeRightTrigger').each(function () { //fadeRightTriggerというクラス名が
+      let elemPos = $(this).offset().top - 50; //要素より、50px上の
+      let scroll = $(window).scrollTop();
+      let windowHeight = $(window).height();
+      if (scroll >= elemPos - windowHeight) {
+        $(this).addClass('fadeRight'); // 画面内に入ったらfadeRightというクラス名を追記
+      } else {
+        $(this).removeClass('fadeRight'); // 画面外に出たらfadeRightというクラス名を外す
+      }
+    });
+
+
+
+
+  }
+
+  $(window).scroll(function () {
+    fadeAnime();
+  });
+
 });
