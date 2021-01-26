@@ -482,6 +482,7 @@ concept
       @include Tab {
         width: 628px;
         height: 366px;
+        margin-left: 0;
       }
 
       @include Lg {

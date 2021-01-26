@@ -1319,6 +1319,7 @@ concept
   .concept_imgBox:nth-child(5) {
     width: 628px;
     height: 366px;
+    margin-left: 0;
   }
 }
 
