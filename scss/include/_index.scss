@@ -911,18 +911,22 @@ contact
 menu
 
 *****************************************:*/
-// .concept {
-//   background-color: red;
-//   width: 100%;
-//   height: 1363px;
-// }
+
 
 .menu {
   padding: 96px 0 22px;
   background-color: $cBlack;
 
+  @include Sm {
+    padding: 80px 0 49px;
+  }
+
   @include Tab {
     padding: 110px 0 50px;
+  }
+
+  @include Lg {
+    padding: 77px 0 50px;
   }
 
   @include Xl {
@@ -939,12 +943,24 @@ menu
   .section_ttl {
     margin-bottom: 28px;
 
+    @include Sm {
+      margin-bottom: 40px;
+    }
+
     @include Tab {
       margin-bottom: 60px;
     }
 
+    @include Lg {
+      margin-bottom: 32px;
+    }
+
     @include Xl {
       margin-bottom: 40px;
+    }
+
+    @include XXl {
+      margin-bottom: 51px;
     }
   }
 
@@ -952,15 +968,40 @@ menu
   .section_inner {
     margin: 0 auto;
     padding: 0 30px;
+
+
+    @include Sm {
+      padding: 0;
+    }
   }
 
   &_container {
     display: block;
 
+    @include Lg {
+      padding: 0 100px;
+      display: flex;
+      justify-content: space-between;
+
+    }
+
     @include Xl {
       padding: 0 80px;
       display: flex;
       justify-content: space-between;
+    }
+
+    @include XXl {
+      padding: 0 106px;
+      display: flex;
+      justify-content: space-between;
+
+    }
+  }
+
+  &_content {
+    @include Lg {
+      width: 48%;
     }
   }
 
@@ -968,6 +1009,10 @@ menu
     width: 276px;
     display: block;
     margin: 0 auto;
+
+    @include Sm {
+      width: 100%;
+    }
 
     @include Tab {
       width: 90%;
@@ -989,48 +1034,16 @@ menu
     &.__cut {
       margin-bottom: 19px;
 
+      @include Sm {
+        margin-bottom: 40px;
+      }
+
       @include Tab {
         margin-bottom: 65px;
       }
 
-      @include Xl {
-        margin-bottom: 50px;
-      }
-    }
-
-    &.__perm {
-      margin-bottom: 27px;
-
-      @include Tab {
-        margin-bottom: 70px;
-      }
-
-      @include Xl {
-        margin-bottom: 47px;
-      }
-
-      .menu_table_headspan {
-        display: block;
-        @include rem(15);
-        margin-left: 0;
-
-        @include Tab {
-          @include rem(20);
-          margin-bottom: 32px;
-        }
-
-        @include Xl {
-          margin-left: 17px;
-        }
-      }
-    }
-
-
-    &.__clr {
-      margin-bottom: 20px;
-
-      @include Tab {
-        margin-bottom: 80px;
+      @include Lg {
+        margin-bottom: 39px;
       }
 
       @include Xl {
@@ -1038,7 +1051,84 @@ menu
       }
 
       @include XXl {
-        margin-bottom: 65px;
+        margin-bottom: 50px;
+      }
+    }
+
+    &.__perm {
+      margin-bottom: 27px;
+
+      @include Sm {
+        margin-bottom: 23px;
+      }
+
+      @include Tab {
+        margin-bottom: 70px;
+      }
+
+      @include Lg {
+        margin-bottom: 38px;
+      }
+
+
+      @include Xl {
+        margin-bottom: 47px;
+      }
+
+      @include XXl {
+        margin-bottom: 52px;
+      }
+
+      .menu_table_headspan {
+        display: block;
+        @include rem(15);
+        margin-left: 0;
+
+        @include Sm {
+          @include rem(22);
+        }
+
+        @include Tab {
+          @include rem(20);
+          margin-bottom: 32px;
+        }
+
+        @include Lg {
+          @include rem(12);
+          margin-left: auto;
+          margin-bottom: 0;
+        }
+
+        @include Xl {
+          margin-left: 17px;
+        }
+
+
+      }
+    }
+
+
+    &.__clr {
+      margin-bottom: 20px;
+
+      @include Sm {
+        margin-bottom: 34px;
+      }
+
+      @include Tab {
+        margin-bottom: 80px;
+      }
+
+      @include Lg {
+        margin-bottom: 30px;
+      }
+
+      @include Xl {
+        margin-bottom: 50px;
+      }
+
+      @include XXl {
+        margin-bottom: 30px;
       }
     }
 
@@ -1046,8 +1136,16 @@ menu
     &.__treat {
       margin-bottom: 19px;
 
+      @include Sm {
+        margin-bottom: 42px;
+      }
+
       @include Tab {
         margin-bottom: 80px;
+      }
+
+      @include Lg {
+        margin-bottom: 36px;
       }
 
       @include Xl {
@@ -1056,12 +1154,17 @@ menu
       }
 
       @include XXl {
-        margin-left: 14px;
+        // margin-left: 14px;
+        margin-left: 0;
         @include rem(18);
       }
 
       .menu_table_head_box {
         margin-bottom: 26px;
+
+        @include XXl {
+          margin-bottom: 20px;
+        }
       }
 
       .menu_table_headspan {
@@ -1069,8 +1172,20 @@ menu
         margin-left: 0;
         display: block;
 
+        @include Sm {
+          @include rem(23);
+        }
+
         @include Tab {
           @include rem(20);
+        }
+
+        @include Lg {
+          @include rem(12);
+        }
+
+        @include XXl {
+          text-align-last: left;
         }
 
       }
@@ -1082,6 +1197,7 @@ menu
 
 
       }
+
 
     }
 
@@ -1125,6 +1241,12 @@ menu
       //   margin-bottom: 61px;
       // }
 
+      .menu_table_head_box {
+        @include XXl {
+          margin-bottom: 23px;
+        }
+      }
+
       .menu_table_box.__dire {
         @include Tab {
           flex-direction: initial;
@@ -1141,8 +1263,21 @@ menu
       @include rem(20);
       letter-spacing: 0.001em;
 
+      @include Sm {
+        @include rem(32);
+      }
+
       @include Tab {
         @include rem(25);
+      }
+
+      @include Lg {
+        @include rem(16);
+
+        &.__row {
+          display: flex;
+          align-items: baseline;
+        }
       }
 
       @include Xl {
@@ -1155,10 +1290,25 @@ menu
         }
       }
 
+      @include XXl {
+        @include rem(21);
+
+        &.__row {
+          display: flex;
+          align-items: baseline;
+        }
+      }
+
+
+
       &_box {
         width: 274px;
         text-align: left;
         margin-bottom: 17px;
+
+        @include Sm {
+          width: 100%;
+        }
 
 
         @include Tab {
@@ -1166,12 +1316,16 @@ menu
           margin-bottom: 23px;
         }
 
+
         @include Xl {
           width: 100%;
         }
 
         ///
         @include XXl {
+          width: 100%;
+          margin-bottom: 13px;
+
           span {
             @include rem(17);
           }
@@ -1189,6 +1343,7 @@ menu
         margin-left: 22px;
         @include rem(16);
         line-height: 1;
+
 
         //   /
         @include Xl {
@@ -1231,9 +1386,17 @@ menu
       margin-bottom: 7px;
       line-height: 1;
 
+      @include Sm {
+        margin-bottom: 18px;
+      }
+
       @include Tab {
         display: flex;
         margin-bottom: 20px;
+      }
+
+      @include Lg {
+        margin-bottom: 4px;
       }
 
 
@@ -1241,9 +1404,21 @@ menu
         margin-bottom: 10px;
       }
 
+      @include XXl {
+        margin-bottom: 11px;
+      }
+
       &.__dire {
         flex-direction: column;
         margin-bottom: 13px;
+
+        @include Sm {
+          margin-bottom: 19px;
+        }
+
+        @include Lg {
+          margin-bottom: 5px;
+        }
 
         @include Xl {
           flex-direction: initial;
@@ -1264,6 +1439,14 @@ menu
         display: flex;
         justify-content: space-between;
 
+        @include Sm {
+          justify-content: flex-end;
+
+          span {
+            margin-left: 33px;
+          }
+        }
+
         @include Tab {
           justify-content: flex-end;
 
@@ -1273,8 +1456,22 @@ menu
 
         }
 
+        @include Lg {
+          margin-left: 0;
+
+          span {
+            margin-left: 5px;
+            @include rem(10);
+          }
+        }
+
         @include Xl {
           margin-left: 7px;
+        }
+
+        @include XXl {
+          margin-left: -30px;
+          justify-content: flex-end;
         }
 
 
@@ -1330,8 +1527,25 @@ menu
       @include rem(15);
       margin-left: 33px;
 
+      @include Sm {
+        @include rem(22);
+      }
+
       @include Tab {
         @include rem(18);
+      }
+
+      @include Lg {
+        @include rem(11);
+      }
+
+      @include XXl {
+        @include rem(18);
+        letter-spacing: .05em;
+        margin-left: 12px;
+        line-height: 2;
+        text-align: right;
+
       }
     }
 
@@ -1342,9 +1556,26 @@ menu
       display: flex;
       justify-content: space-between;
 
+      @include Sm {
+
+        span {
+          @include rem(18);
+        }
+      }
+
       @include Tab {
         @include rem(20);
         justify-content: flex-end;
+      }
+
+      @include Lg {
+
+        margin-left: 0;
+
+        span {
+          @include rem(10);
+
+        }
       }
 
       @include Xl {
@@ -1352,7 +1583,10 @@ menu
       }
 
       @include XXl {
-        @include rem(14);
+        @include rem(13);
+        letter-spacing: -0.01em;
+
+        margin-left: 7%;
       }
     }
 
@@ -1361,8 +1595,16 @@ menu
     &_left {
       @include rem(13);
 
+      @include Sm {
+        @include rem(19);
+      }
+
       @include Tab {
         @include rem(20);
+      }
+
+      @include Lg {
+        @include rem(11);
       }
 
       @include XXl {
@@ -1371,14 +1613,20 @@ menu
     }
 
     &_right {
-      @include rem(13);
+      // @include rem(13);
+
+      @include rem(20);
 
       @include Tab {
         @include rem(20);
       }
 
+      @include Lg {
+        @include rem(12);
+      }
+
       @include XXl {
-        @include rem(18);
+        @include rem(15);
       }
 
       &.__ml {
@@ -1391,8 +1639,16 @@ menu
       @include rem(12);
       letter-spacing: 0;
 
+      @include Sm {
+        @include rem(18);
+      }
+
       @include Tab {
         @include rem(18);
+      }
+
+      @include Lg {
+        @include rem(11);
       }
 
       @include XXl {
@@ -1412,12 +1668,24 @@ access
   padding: 50px 0 51px;
   background: $cGray;
 
+  @include Sm {
+    padding: 80px 0 73px;
+  }
+
   @include Tab {
     padding: 80px 0 90px;
   }
 
+  @include Lg {
+    padding: 80px 0 75px;
+  }
+
   @include Xl {
-    padding: 70px 0 92px;
+    padding: 93px 0 92px;
+  }
+
+  @include XXl {
+    padding: 115px 0 115px;
   }
 
   &_imgbox {
@@ -1428,6 +1696,12 @@ access
     margin-left: auto;
     margin-bottom: 30px;
 
+    @include Sm {
+      width: 89%;
+      height: 44vw;
+      margin-bottom: 45px;
+    }
+
     @include Tab {
       width: 728px;
       height: 345px;
@@ -1435,11 +1709,27 @@ access
       margin-bottom: 82px;
     }
 
+    @include Lg {
+      width: 100%;
+      height: 345px;
+      background-position-y: -103px;
+      margin-bottom: 48px;
+
+    }
+
     @include Xl {
       width: 100%;
       height: 440px;
-      margin-bottom: 70px;
-      background-position-y: -97px;
+      margin-bottom: 37px;
+      background-position-y: -125px;
+    }
+
+    @include XXl {
+      width: 100%;
+      height: 480px;
+      margin-bottom: 73px;
+      // background-position-y: -147px;
+      background-position-y: 50%;
     }
   }
 
@@ -1447,12 +1737,24 @@ access
     margin-bottom: 20px;
     letter-spacing: 0.19em;
 
+    @include Sm {
+      margin-bottom: 37px;
+    }
+
     @include Tab {
       margin-bottom: 60px;
     }
 
+    @include Lg {
+      margin-bottom: 50px;
+    }
+
     @include Xl {
       margin-bottom: 54px;
+    }
+
+    @include XXl {
+      margin-bottom: 74px;
     }
   }
 
@@ -1462,12 +1764,22 @@ access
     text-align: center;
     margin: 0 auto;
 
+    @include rem(18);
+
     @include Tab {
       @include rem(25);
     }
 
+    @include Lg {
+      @include rem(19);
+    }
+
     @include Xl {
       @include rem(20);
+    }
+
+    @include XXl {
+      @include rem(24);
     }
   }
 
@@ -1476,20 +1788,37 @@ access
     line-height: 1.6;
     margin-bottom: 18px;
 
+    @include Sm {
+      line-height: 2;
+    }
+
     @include Tab {
       margin-bottom: 40px;
       letter-spacing: 0.22em;
       line-height: 1.78;
     }
 
+    @include Lg {
+      margin-bottom: 34px;
+
+      span {
+        margin-right: 23%;
+      }
+    }
+
     @include Xl {
-      margin-bottom: 45px;
+      margin-bottom: 52px;
       letter-spacing: 0.34em;
       line-height: 1.8;
 
       span {
         margin-right: 26%;
       }
+    }
+
+    @include XXl {
+      margin-bottom: 55px;
+      letter-spacing: .29em;
     }
   }
 
@@ -1515,6 +1844,14 @@ access
     letter-spacing: 0.15em;
     margin-left: 10px;
 
+    @include Sm {
+      @include rem(21);
+    }
+
+    @include Lg {
+      margin-left: 38px;
+    }
+
     @include Xl {
       margin-left: 10px;
     }
@@ -1527,6 +1864,12 @@ access
       height: 21px;
       margin-right: 5px;
       transform: translateY(6px);
+
+      @include Sm {
+        width: 22px;
+        height: 30px;
+        background-size: contain;
+      }
 
       @include Tab {
         width: 22px;
@@ -1558,20 +1901,40 @@ staff
   padding: 50px 0 18px;
   background: $cBlack;
 
+  @include Sm {
+    padding: 77px 0 33px;
+  }
+
   @include Tab {
     // padding: 80px 0 20px;
     padding: 85px 0 20px;
+  }
+
+  @include Lg {
+    padding: 75px 0 20px;
   }
 
   @include Xl {
     padding: 100px 0 73px;
   }
 
+  @include XXl {
+    padding: 113px 0 47px;
+  }
+
   .section_ttl {
     margin-bottom: 21px;
 
+    @include Sm {
+      margin-bottom: 40px;
+    }
+
     @include Tab {
       margin-bottom: 63px;
+    }
+
+    @include Lg {
+      margin-bottom: 40px;
     }
 
     @include Xl {
@@ -1582,10 +1945,24 @@ staff
   &_content {
     display: block;
 
+    @include Lg {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+
+    }
+
     @include Xl {
       display: flex;
       justify-content: space-between;
       margin: 20px 0;
+    }
+
+    @include XXl {
+      margin: 60px 0;
+      display: flex;
+      justify-content: space-between;
+
     }
   }
 
@@ -1594,14 +1971,30 @@ staff
     overflow: hidden;
     margin: 0 auto 30px;
 
+    @include Sm {
+      width: 100%;
+      margin: 0 auto 43px;
+    }
+
     @include Tab {
       width: 568px;
       margin: 0 auto 60px;
     }
 
+    @include Lg {
+      width: 250px;
+      margin: 0 10px 35px;
+
+
+    }
+
     @include Xl {
       width: 305px;
       margin: 0;
+    }
+
+    @include XXl {
+      width: 355px;
     }
   }
 
@@ -1611,14 +2004,29 @@ staff
     display: block;
     margin: 0 auto 8px;
 
+    @include Sm {
+      height: 250px;
+      margin: 0 auto 17px;
+    }
+
     @include Tab {
       height: 347px;
       margin: 0 auto 8px;
     }
 
+    @include Lg {
+      height: 170px;
+    }
+
     @include Xl {
       height: 204px;
       margin: 0 auto 7px;
+    }
+
+    @include XXl {
+      width: 100%;
+      height: 234px;
+      margin: 0 auto 12px;
     }
 
     &.__left {
@@ -1643,21 +2051,46 @@ staff
   &_txt_ja {
     @include rem(15);
 
+    @include Sm {
+      @include rem(22);
+    }
+
     @include Tab {
       @include rem(23);
+    }
+
+    @include Lg {
+      @include rem(11);
+      letter-spacing: .1em;
+    }
+
+    @include XXl {
+      @include rem(20);
     }
   }
 
   &_txt_en {
     @include rem(12);
 
+    @include Sm {
+      @include rem(17);
+    }
+
     @include Tab {
       @include rem(20);
+    }
+
+    @include Lg {
+      @include rem(10);
     }
 
     @include Xl {
       @include rem(11);
       letter-spacing: 0.09em;
+    }
+
+    @include XXl {
+      @include rem(12);
     }
   }
 }
