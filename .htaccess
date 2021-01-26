@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Input your ID and Password."
+AuthUserFile /home/users/2/weblike.jp-faith-link/web/salon/.htpasswd
+require valid-user
