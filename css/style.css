@@ -2103,7 +2103,7 @@ contact
 }
 
 .contact_img {
-  width: 375px;
+  width: 100%;
   height: 191px;
   margin: 0 auto;
   overflow: hidden;
@@ -2901,7 +2901,7 @@ menu
 }
 
 .menu_table_box .menu_table_right.__price_treat {
-  margin-left: 62px;
+  margin-left: 17px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
