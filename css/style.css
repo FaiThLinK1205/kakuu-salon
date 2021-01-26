@@ -3265,7 +3265,7 @@ access
 }
 
 .access_imgbox {
-  background: url(/img/section-access/accecss.jpg) no-repeat;
+  background: url(../img/section-access/accecss.jpg) no-repeat;
   background-size: cover;
   width: 335px;
   height: 167px;
@@ -3491,7 +3491,7 @@ access
 .access_icontxt:before {
   display: inline-block;
   content: "";
-  background: url(/img/svg/map.svg) no-repeat;
+  background: url(../img/svg/map.svg) no-repeat;
   width: 15px;
   height: 21px;
   margin-right: 5px;
@@ -3725,19 +3725,19 @@ staff
 }
 
 .staff_imgbox.__left {
-  background: url(/img/section-staff/staff1.jpg) no-repeat;
+  background: url(../img/section-staff/staff1.jpg) no-repeat;
   background-size: 167%;
   background-position: 50% 60%;
 }
 
 .staff_imgbox.__center {
-  background: url(/img/section-staff/staff2.jpg) no-repeat;
+  background: url(../img/section-staff/staff2.jpg) no-repeat;
   background-size: 100%;
   background-position: 50% 26%;
 }
 
 .staff_imgbox.__right {
-  background: url(/img/section-staff/staff3.jpg) no-repeat;
+  background: url(../img/section-staff/staff3.jpg) no-repeat;
   background-size: 134%;
   background-position: 56% 40%;
 }
