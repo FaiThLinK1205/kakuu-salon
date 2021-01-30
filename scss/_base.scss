@@ -24,58 +24,6 @@ body {
 
 }
 
-/*************
-
-モック画像
-終わったら削除
-
-**************/
-
-
-.mock {
-    /* モック画像 */
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    width: 768px;
-    opacity: 0.3;
-
-    /* 反転 */
-    filter: hue-rotate(180deg);
-
-    /* テキストを掴まないように */
-    pointer-events: none;
-
-    z-index: 999;
-
-
-    @include Sm {
-        width: 576px;
-    }
-
-    @include Tab {
-        width: 768px;
-    }
-
-    @include Lg {
-        width: 992px;
-    }
-
-    @include Xl {
-        width: 1200px;
-    }
-
-    @include XXl {
-        width: 1400px;
-    }
-
-}
-
-
-
-
 //共通タイトル
 .section_ttl {
     @include rem(22);

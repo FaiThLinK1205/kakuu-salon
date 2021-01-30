@@ -64,7 +64,7 @@ header
     }
 
     @include XXl {
-      margin-left: 69px;
+      margin-left: 5%;
       padding-top: 26px;
       @include rem(55);
       letter-spacing: 11px;
@@ -151,7 +151,6 @@ nav (ハンバーガーメニュー含む)
   font-weight: bold;
   letter-spacing: 3.75px;
   display: flex;
-  // align-items: center;
   flex-direction: column;
   visibility: hidden;
   z-index: 990;
@@ -369,7 +368,7 @@ nav (ハンバーガーメニュー含む)
 
     &_list {
       @include flex($justify:start);
-      margin-left: 68px;
+      margin-left: 5%;
 
     }
 
