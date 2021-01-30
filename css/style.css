@@ -48,59 +48,6 @@ body {
   background: #58656e;
 }
 
-/*************
-
-モック画像
-終わったら削除
-
-**************/
-.mock {
-  /* モック画像 */
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  width: 768px;
-  opacity: 0.3;
-  /* 反転 */
-  -webkit-filter: hue-rotate(180deg);
-          filter: hue-rotate(180deg);
-  /* テキストを掴まないように */
-  pointer-events: none;
-  z-index: 999;
-}
-
-@media screen and (min-width: 576px) and (max-width: 768px) {
-  .mock {
-    width: 576px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 992px) {
-  .mock {
-    width: 768px;
-  }
-}
-
-@media screen and (min-width: 992px) and (max-width: 1200px) {
-  .mock {
-    width: 992px;
-  }
-}
-
-@media screen and (min-width: 1200px) and (max-width: 1400px) {
-  .mock {
-    width: 1200px;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .mock {
-    width: 1400px;
-  }
-}
-
 .section_ttl {
   font-size: 22px;
   /*IE9以前に対応する*/
@@ -515,7 +462,7 @@ header
 
 @media screen and (min-width: 1400px) {
   .header_ttl {
-    margin-left: 69px;
+    margin-left: 5%;
     padding-top: 26px;
     font-size: 55px;
     /*IE9以前に対応する*/
@@ -862,7 +809,7 @@ nav (ハンバーガーメニュー含む)
     -webkit-flex-wrap: nowrap;
         -ms-flex-wrap: nowrap;
             flex-wrap: nowrap;
-    margin-left: 68px;
+    margin-left: 5%;
   }
   .nav_item {
     padding-right: 28px;
@@ -1626,14 +1573,14 @@ info
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   .info {
     padding-bottom: 92px;
-    margin: -267px 0px 0 647px;
+    margin: -267px 0 0 647px;
   }
 }
 
 @media screen and (min-width: 1400px) {
   .info {
     padding-bottom: 114px;
-    margin: -300px 0px 0 770px;
+    margin: -300px 0 0 55%;
   }
 }
 
