@@ -919,10 +919,6 @@ contact
     }
 
     @include Xl {
-      // TO DO あとで熟考する
-      // width: 1130px;
-      // height: 415px;
-      // margin-right: 1005px;
       width: 95.5%;
       height: 35vw;
       margin-right: 5%;
@@ -1200,7 +1196,6 @@ menu
       }
 
       @include XXl {
-        // margin-left: 14px;
         margin-left: 0;
         @include rem(18);
       }
@@ -1282,10 +1277,6 @@ menu
         margin-left: 0;
       }
 
-      // ////////
-      // @include XXl {
-      //   margin-bottom: 61px;
-      // }
 
       .menu_table_head_box {
         @include XXl {
@@ -1391,7 +1382,6 @@ menu
         line-height: 1;
 
 
-        //   /
         @include Xl {
           @include rem(20);
         }
@@ -1410,7 +1400,6 @@ menu
           }
         }
 
-        //
         @include Xl {
           width: 100%;
         }
@@ -1419,10 +1408,6 @@ menu
           margin-bottom: 20px;
         }
       }
-
-      // @include Tab {
-      //   @include rem(20);
-      // }
 
     }
 
@@ -1640,7 +1625,6 @@ menu
     }
 
     &_right {
-      // @include rem(13);
 
       @include rem(20);
 
@@ -1755,7 +1739,6 @@ access
       width: 100%;
       height: 480px;
       margin-bottom: 73px;
-      // background-position-y: -147px;
       background-position-y: 50%;
     }
   }
@@ -1787,7 +1770,6 @@ access
 
   &_txtbox {
     @include rem(14);
-    // width: 252px;
     text-align: center;
     margin: 0 auto;
 
@@ -1933,7 +1915,6 @@ staff
   }
 
   @include Tab {
-    // padding: 80px 0 20px;
     padding: 85px 0 20px;
   }
 
@@ -2026,7 +2007,6 @@ staff
   }
 
   &_imgbox {
-    // width: 275px;
     height: 163px;
     display: block;
     margin: 0 auto 8px;
