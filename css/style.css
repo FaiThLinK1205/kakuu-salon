@@ -1573,7 +1573,7 @@ info
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   .info {
     padding-bottom: 92px;
-    margin: -267px 0 0 647px;
+    margin: -267px 0 0 55%;
   }
 }
 
